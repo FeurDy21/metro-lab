@@ -1,0 +1,297 @@
+
+
+   <div class="row">
+        <div class="col-md-4">
+        <h2 style="margin-lef:60px; margin-top:-34px;">Enregistrement de snag</h2>
+        
+         <h4>Vous uplodez un fichier excel contenant les information ou vous enregistrez snag par snag</h4>
+        </div> 
+        
+       <!-- <div class="col-md-8">
+         <table id="addTable" style="float:lef; margin-top:-40px;" >
+         <tr> <td> <a  href="#" class="btn btn-danger newAdmin">ajouter  nouveau</a> </td> <td>  <button  class="btn btn-primary attribuer">attribuer role</button></td></tr>
+         </table>
+        </div>-->
+       </div>
+
+ <div class="row mb-5">
+        
+</div>
+
+ <style> .panel { box-shadow:5px 5px 20px 5px #777; padding:20px 20px 20px 20px; margin-top:%;}  
+           .panel{font-size:1.5em!important;}
+            .panel .panel-heading{background-color:#0000 ;color:#FF6600!important; font-size:1em!important; text-align:cente;}
+            .panel a:hover{text-decoration: none;}
+    </style>
+   
+<div class="row">
+    <div  class="offset-md-3">
+      
+    </div>
+
+    <div  class="col-md-3 ">
+         
+         
+  <div class="panel panel-danger">
+  <div class="panel-heading">Importer base de site  <span class="fa fa-users" style="font-size: 1em!important; color:black!important; float: right; background-color: red;"></span></div>
+  <div class="panel-body">
+  	 <span style="color: green; font-size: 0.9em!important;"><?php if(isset($_GET['site'])) echo "Fichier bien importé."; ?></span>
+  <br>
+     <div style="color:black; text-align:center; font-weight:bold; text-underline:none;">
+        <form id="search-users" name="s" method="post" action="<?php echo $this->baseUrl();?>/snag/sendbox/import2" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="form-group col-12 col-lg-12">
+                   
+                <input class="form-control required" required aria-required="true" name="file" id="file" type="file">
+
+                 <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['site_file_false'])) echo "Veuillez charger un fichier excel."; ?></span>
+                  <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['error_size'])) echo "Chargez un fichier de snag."; ?></span>
+                    <br>
+                  <input type="submit"  class="btn btn-primary"name="uplaod" value="uplaod">
+                  </div>
+          </div>        
+        </form>
+  
+   </div>
+  
+   </div>
+  </div>
+            
+     </div>
+         
+      <div  class="col-md-3 " >
+          
+       <div class="panel panel-danger newSnag ">
+      <div class="panel-heading" >Importer base de snag  <span class="fa fa-users" style="font-size: 1.em!important; color:black!important;float: right;"></span></div>
+       <span style="color: green; font-size: 0.9em!important;"><?php if(isset($_GET['snag'])) echo "Fichier bien importé."; ?></span>
+    <br>
+
+    <div class="panel-body  " >
+ 
+       <div style="color:black; text-align:center; font-weight:bold;">
+      
+       <form id="search-users" name="s" method="post" action="<?php echo $this->baseUrl();?>/snag/sendbox/import" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="form-group col-12 col-lg-12">
+                   
+                    <input class="form-control required" required aria-required="true" name="file" id="file" type="file">
+
+                    <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['snag_file_false'])) echo "Veuillez charger un fichier excel."; ?></span>
+                     <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['error_size'])) echo "Chargez un fichier de snag."; ?></span>
+
+                    <br>
+                    <input type="submit"  class="btn btn-primary"name="uplaod" value="uplaod">
+                  </div>
+          </div>        
+        </form>
+  
+      </div>
+    
+    </div>
+    </div>
+         
+      </div>
+
+      
+
+  <div  class="offset-md-3">
+
+
+   </div> 
+
+ </div>
+        
+      </div> 
+
+
+     
+
+
+
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   
+    <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+  <!-- Data Table -->
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/dataTables.buttons.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.flash.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/jszip.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/pdfmake.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/vfs_fonts.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.html5.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.print.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/table_data.js" ></script>
+
+
+
+  <script>$(document).ready(function() {
+      $('.o-nav-local').prioritynav();
+
+      $("#news-table").tablesorter({
+        // pass the headers argument and assing a object
+        headers: {
+          // assign the secound column (we start counting zero)
+          4: {
+            // disable it by setting the property sorter to false
+            sorter: false
+          }
+        },
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
+        }
+      });
+
+
+
+      
+  </script>
+
+
+   <!-- end js include path -->
+  
+  <script>
+
+     $(document).ready(function(){
+
+$.ajaxSetup({
+        headers: {  //ceci est très important  pour travailler avec aja en laravel  
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+     });   
+            //var form=$('#ajouter-snag').serialize();
+            var firstIndex=0;
+            var site='<option> </opion>';
+           var snag='<option> </opion>';
+           var firstIndex2=0;
+       
+       $.ajax({
+    //requete d'ajax pour afficher le nom de tous les site dns le combox box du nom de site du formulaire 
+            url:"site-name-ajax",
+           type:"POST",
+           data:{data:'name'},
+           success:function(data){
+            
+              for(value in data.success){  
+                     
+                 site+='<option  value="'+data.success[firstIndex]['site_name']+'" class="'+data.success[firstIndex]['site_name']+'">'+data.success[firstIndex]['site_name']+' </opion>';
+                firstIndex++;
+               }
+              // $('.site_name').html(site);
+            }
+       });
+
+
+        $.ajax({
+//requete d'ajax pour afficher le nom de tous les type de snag dans le combox box du typede snag   du formulaire. 
+            url:"type_of_snag-ajax",
+           type:"POST",
+           data:{data:'name'},
+           success:function(data){
+            
+              for(value in data.succes){  
+                     
+                 snag+='<option  value="'+data.succes[firstIndex2]['type_of_snag']+'" class="'+data.succes[firstIndex2]['type_of_snag']+'">'+data.succes[firstIndex2]['type_of_snag']+' </opion>';
+                firstIndex2++;
+               }
+               //$('.type_of_snag').html(snag);
+            }
+       });
+
+ 
+ $('.type_of_snag').on("change",function(e){
+        e.preventDefault();
+          var type_snag = $('.type_of_snag').val();
+           var firstIndex=0;
+           var description ='<option></option>';
+          $.ajax({
+            url:"snag-descriptionn-ajax",
+           type:"POST",
+           data:{snag :type_snag},
+           success:function(data){
+            
+              for(value in data.success){  
+                     description+='<option class="'+data.success[firstIndex]['snag_description']+'" value="'+data.success[firstIndex]['snag_description']+'">'+data.success[firstIndex]['snag_description']+'</option>'; 
+                 
+                firstIndex++;
+               }
+               
+                $('select[name="snag_description"]').html(description);
+            }
+       });
+
+      });
+     
+
+     $('.snag_description').on("change",function(e){
+        e.preventDefault();
+          var type_snag = $('.type_of_snag').val();
+          var snag_description = $('.snag_description').val();
+           var firstIndex=0;
+           var description ='<option></option>';
+          $.ajax({
+            url:"severity-ajax",
+           type:"POST",
+           data:{snag :type_snag,description:snag_description},
+           success:function(data){
+            
+              for(value in data.success){  
+                     $('.severitey').val(data.success[firstIndex]['snag_description']);
+
+                firstIndex++;
+               } 
+
+
+            }
+       });
+
+      });
+     
+
+     $('.site_name').on("change",function(e){
+        e.preventDefault();
+          var site_name= $('.site_name').val();
+           var firstIndex=0;
+          $.ajax({
+            url:"site-select-ajax",
+           type:"POST",
+           data:{site:site_name},
+           success:function(data){
+            
+              for(value in data.success ){  
+                     
+                $('input[name="site_id"]').val(data.success[firstIndex]['site_id']);
+                 $('input[name="area"]').val(data.success[firstIndex]['area']);
+                 $('input[name="uir"]').val(data.success[firstIndex]['uir']);
+                  $('input[name="site_type"]').val(data.success[firstIndex]['site_type']);
+                   $('input[name="responsability"]').val(data.success[firstIndex]['responsability']);
+                     $('input[name="sendeur"]').val(data.success[firstIndex]['sendeur']);
+                firstIndex++;
+               }
+               
+            }
+       });
+
+      });
+
+      $('for').on("submi", function(e){
+        e.preventDefault();
+       var form=$('form').serialize();
+        $.ajax({
+           url:"ajouterFormulaire-ajax",
+           type:"POST",
+           data:form,
+           success:function(data){
+                     alert(data);
+                 }
+
+            });
+      });
+
+      });
+     </script>

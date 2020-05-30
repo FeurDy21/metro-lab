@@ -1,0 +1,424 @@
+   <style type="text/css">
+     #addTable a,#addTable button{box-shadow: 45px 45px 45px 7777; border-radius: 8px/6px;}
+   </style>
+      <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-5">
+        <h2 style="margin-lef:60px; margin-top:-34px;"><span id="title">Metro-Lab ingenieurs  </span> <a class="nav-link d-inline-flex align-items-center" href="<?php echo $this->baseUrl(); ?>/setting/admin/list">
+                  
+                  <span class="fa fa-refresh" aria-hidden="true"></span>
+                </a></h2>
+        
+         <h4>Les utilisateurs du systeme</h4>
+        </div> 
+        
+        <div class="col-md-7">
+         <table id="addTable" style="float:lef; margin-top:-40px;" >
+         <tr> <td> <a  href="#" class="btn btn-danger newAdmin btn-sm">Ajouter  nouveau</a> </td>
+          <td>  <button  class="btn btn-primary attribuer btn-sm">Ajouter Equipement  </button></td>
+       <td> <button  class="btn btn-success attribuer btn-sm"> Ajouter client</button></td>
+       <td> <button  class="btn btn-info attribuer btn-sm">Ajouter partenaire</button></td>
+         </tr>
+         </table>
+        </div>
+       </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-7 ">
+      
+      <div class="table-responsive5">
+      
+        <table  class="table tablesorter mb-12 table-bordered" id="example4" border="">
+          <caption>
+            <!--on peut ecrire dans ce manchin-->
+          
+          </caption>
+          <thead class="cf">
+            <tr>
+              
+              <th   class="header text-center" width="35%">Utilisateur</th>
+              <th  class="header text-center">Login</th>
+              <th class="header">Role</th>
+              
+              <th scope="col"  class="header text-center" width="30%"  sytle="align:center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+                  
+          
+            
+            <?php foreach($this->users as $u): ?>
+            <tr>
+              
+              <td class="align-middle" ><?php echo $u['ADMINISTRATEUR'];?></td>
+              <td class="align-middle"  ><?php echo $u['LOGIN'];?></td>
+              <td class="align-middle" > <?php echo $u['groupe'];?></td>
+              
+              
+              <td class="align-middle">
+              
+                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="icon-Pencil ml-1" aria-hidden="true"></span></a>
+                <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"  th:href="@{SupprimerAdmin(id=${p.idAdmin})}"  class="btn btn-sm btn-primary " ><span class="icon-Trash ml-1" aria-hidden="true"></span></a>
+              </td>
+            </tr>
+            <?php endforeach; ?>
+            
+          </tbody>
+        </table>
+        </div>
+         </div>
+         
+
+         <div  class="col-md-5" style="padding:30px 30px 30px 30px;">
+        
+              </div>
+              
+           <!--   <span th:if="${param.succesAdd==true}"><script type="text/javascript"> alert("Nouvel utilisateur ajouté");</script> </span>
+              <span th:if="${param.succesAdd==false}"><script type="text/javascript"> alert("Une erreur s'est produite");</script> </span>-->
+              
+             <div   class="col-md-5" style="padding:30px 30px 30px 30px; margin-top:-60px;">
+                 
+                <!--th:action="@{CreerNewAdmin}"-->
+                
+              </div>
+         
+         </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="confirm-dialog" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title h4" id="myModalLabel">Attribution de role</h2>
+                <!-- Boosted mod: using visually hidden text instead of aria-label -->
+                <button type="button" class="close" data-dismiss="modal">
+                  <span class="sr-only">Close confirmation modal</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+               
+                <p>
+                  <form class="row"  action="rechercherLogin" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
+                    <div class="col-12 col-lg-12">
+                  <div class="form-group">
+                    <label for="PostUser" class="is-required">Login</label>
+                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
+                    <span id="erreur_addnumero-client"></span>
+                 </div>
+                </div>
+                  
+
+                  <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                   <input  type="submit" class="btn btn-primary  " name="submit" value="Rechercher" />
+                  </div>
+                  </form>
+                </p>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+     
+    
+    
+    
+     <div class="modal fade" id="addModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title h4" id="myModalLabel">  message</h2>
+                <!-- Boosted mod: using visually hidden text instead of aria-label -->
+                <button type="button" class="close" data-dismiss="modal">
+                  <span class="sr-only">Close confirmation modal</span>
+                </button>
+              </div>
+                <div class="modal-body">
+               
+              
+
+              
+               </div>
+          </div>
+        </div>
+         </div>
+    
+    
+        <!-- fin modal -->
+        <!-- Nav tabs A-->
+   
+        <!-- fin nav tabs A -->
+      </div>
+   
+    <!--/.container-->
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   
+    <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+  <!-- Data Table -->
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/dataTables.buttons.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.flash.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/jszip.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/pdfmake.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/vfs_fonts.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.html5.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.print.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/table_data.js" ></script>
+
+    <script>window.jQuery.tablesorter || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.tablesorter.min.js"><\/script>')</script>
+
+    <script>$(document).ready(function() {
+      $('.o-nav-local').prioritynav();
+
+      $("#news-table").tablesorter({
+        // pass the headers argument and assing a object
+        headers: {
+          // assign the secound column (we start counting zero)
+          4: {
+            // disable it by setting the property sorter to false
+            sorter: false
+          }
+        },
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
+        }
+      });
+
+      $("#addTable").hide();
+      
+      $(document).on("click","#title", function(){
+          $("#addTable").show();
+      });
+      
+    $(document).on("click",".attribuer",function(){
+      $("#confirm-dialog").modal("show");
+    });
+
+  
+    
+ 
+
+
+
+ $(document).on("click",".update", function(){
+
+   var id =$(this).attr('id');
+
+      // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/findbyid",
+                  data : {id:id},
+                  dataType : 'text',
+                  success : function(result) {
+                      
+              if(result!=''){
+                   $("#addModal #myModalLabel").text("Mise à jour des info de  l'utilisateur");
+                   $("#addModal .modal-body").html(result);
+                   $("#addModal").modal("show");
+             } else{
+                alert("une erreur s'est produite lors de l'enregistrement");
+                           
+                    //console.log(result);
+                 } }
+                });          
+    });
+     
+
+
+   $(document).on('click','.updateuser',function(){
+       
+         var erreur_admin='';
+         var erreur_login='';
+         var erreur_mail='';
+         var erreur_type='';
+         var erreur_groupe='';
+         
+         
+        
+       
+            
+             if($.trim($('.addadministrateur').val())==''){
+             erreur_admin='Entrez le nom de l\'utilisateur';
+             $('.erreur-administrateur').text(erreur_admin);
+             $('.erreur-administrateur').css('color', 'red');
+              $('.addadministrateur').css('border-color', 'red');
+             
+         }else{
+          erreur_admin='';
+              $('.erreur-administrateur').text(erreur_admin);
+              $('.addadministrateur').css('border-color', 'black');
+         }
+         
+         if($.trim($('.addlogin').val())==''){
+             erreur_login='Entrez le login de l\'utilisateur ';
+             $('.erreur-login').text(erreur_login);
+             $('.erreur-login').css('color', 'red');
+              $('.addlogin').css('border-color', 'red');
+             
+         }else{
+                erreur_login='';
+              $('.erreur-login').text(erreur_login);
+              $('.addlogin').css('border-color', 'black');
+         }
+
+         if($.trim($('.addgroupe').val())==''){
+             erreur_groupe='choisissez le  role de l\'utilisateur ';
+             $('.erreur-groupe').text(erreur_groupe);
+             $('.erreur-groupe').css('color', 'red');
+              $('.addgroupe').css('border-color', 'red');
+             
+         }else{
+                erreur_groupe='';
+              $('.erreur-groupe').text(erreur_groupe);
+              $('.addgroupe').css('border-color', 'black');
+         }
+         
+         if(erreur_admin!='' || erreur_login!=''|| erreur_groupe!=''){
+             
+             return false;
+         }else{
+            
+          var formData = {
+                   administrateur:  $('.addadministrateur').val(), login: $('.addlogin').val(), mail:$('.addmail').val(),
+                   type:  $('.addtype').val(),groupe:$('.addgroupe').val(), id:$('.id_admin').val()
+          };
+        
+                  
+                  // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/edit",
+                  data : formData,
+                  dataType : 'text',
+                  success : function(result) {
+                      
+                    if(result=="ok")
+                    alert("Utilisteur mis à jour");
+
+                    //window.location.href="<?php //echo $this->baseUrl(); ?>/setting/admin/list";
+                    else
+                    alert("une erreur s'est produite lors de l'enregistrement");
+                           
+                    //console.log(result);
+                  }
+                });
+                 
+            
+         }
+       
+      }); 
+
+
+
+
+$(document).on("click",".newAdmin", function(){
+
+    var newFor=' <form   class="row" id="newForm"    accept-charset="utf-8"> <div class="col-12 col-lg-12"><div class="form-group"> <label for="PostUsee" class="is-required">Nom et prenom </label> <input  class="form-control addadministrateur" type="text"  maxlength="255" value="" nom="administrateur" aria-required="true"       title="autor is empty"/> <span  class="erreur-administrateur"></span> </div> <div class="form-group"><label for="PostUser" class="is-required">Login </label> <input  class="form-control addlogin"  type="text" maxlength="255" value=""  nom="login" aria-required="true"  title="autor is empty"/> <span class="erreur-login" ></span> </div> <div class="form-group"> <label for="PostUser" class="">Mail </label> <input  class="form-control addmail"  type="email" maxlength="255" value=""  nom="mail"    title="autor is empty"/><span  class="erreur-mail"></span> </div> <div class="form-group">  <label for="PostUser" class="is-required">Role </label> <Select class="form-control addgroupe"  maxlength="255"     aria-required="true" >   <?php foreach($this->groupes as $g): ?> <option value="<?php echo $g['ID_GROUPE']; ?>"> <?php echo $g['GROUPE'] ;?></option>  <?php endforeach; ?>
+    </Select> <span  class="erreur-groupe"></span></div> </div>  <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>  <buttont  type="submit" class="btn btn-primary  submit" name="submit" >Ajouter </button> </div> </form>';
+       $("#addModal #myModalLabel").text("Ajouter un nouvel utilisateur");
+     $("#addModal .modal-body").html(newFor);
+      $("#addModal").modal("show");
+    });
+
+
+    $(document).on('click','.submit',function(){
+       
+         var erreur_admin='';
+         var erreur_login='';
+         var erreur_mail='';
+         var erreur_type='';
+         var erreur_groupe='';
+         
+         
+        
+       
+            
+             if($.trim($('.addadministrateur').val())==''){
+             erreur_admin='Entrez le nom de l\'utilisateur';
+             $('.erreur-administrateur').text(erreur_admin);
+             $('.erreur-administrateur').css('color', 'red');
+              $('.addadministrateur').css('border-color', 'red');
+             
+         }else{
+          erreur_admin='';
+              $('.erreur-administrateur').text(erreur_admin);
+              $('.addadministrateur').css('border-color', 'black');
+         }
+         
+         if($.trim($('.addlogin').val())==''){
+             erreur_login='Entrez le login de l\'utilisateur ';
+             $('.erreur-login').text(erreur_login);
+             $('.erreur-login').css('color', 'red');
+              $('.addlogin').css('border-color', 'red');
+             
+         }else{
+                erreur_login='';
+              $('.erreur-login').text(erreur_login);
+              $('.addlogin').css('border-color', 'black');
+         }
+
+         if($.trim($('.addgroupe').val())==''){
+             erreur_groupe='choisissez le  role de l\'utilisateur ';
+             $('.erreur-groupe').text(erreur_groupe);
+             $('.erreur-groupe').css('color', 'red');
+              $('.addgroupe').css('border-color', 'red');
+             
+         }else{
+                erreur_groupe='';
+              $('.erreur-groupe').text(erreur_groupe);
+              $('.addgroupe').css('border-color', 'black');
+         }
+         
+         if(erreur_admin!='' || erreur_login!=''|| erreur_groupe!=''){
+             
+             return false;
+         }else{
+            
+          var formData = {
+                   administrateur:  $('.addadministrateur').val(), login: $('.addlogin').val(), mail:$('.addmail').val(),
+                   type:  $('.addtype').val(),groupe:$('.addgroupe').val()
+          };
+        
+                  
+                  // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/add",
+                  data : formData,
+                  dataType : 'text',
+                  success : function(result) {
+                      
+                    if(result=="ok")
+                    alert("Utilisteur bien enregistré");
+
+                    //window.location.href="<?php //echo $this->baseUrl(); ?>/setting/admin/list";
+                    else
+                    alert("une erreur s'est produite lors de l'enregistrement");
+                           
+                    //console.log(result);
+                  }
+                });
+                 
+            
+         }
+       
+      }); 
+        
+    }); 
+  
+  
+    </script>

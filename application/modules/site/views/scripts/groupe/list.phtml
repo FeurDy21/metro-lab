@@ -1,0 +1,214 @@
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/"><i class="ti-home"></i> Home</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/dashboard">Dashboard</a></li>
+            <li class="current"><a href="#">Groupes utilisateurs</a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">
+    <div dropdown="">
+        <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-cog"></i> GROUPE UTILISATEUR <span class="caret"></span>
+        </span>
+        <div class="dropdown-menu">
+            <a href="#" data-target="#add-modal" data-toggle="modal" class="dropdown-item">Ajouter un groupe d'utilisateur</a>
+        </div><!-- dropdown-menu -->
+    </div>
+</h2>
+
+<p class="mg-b-20 mg-lg-b-25">Liste des groupes utilisateurs</p>
+
+<div class="row row-sm mg-b-20">
+    <?php foreach ($this->groupes as $u) :?>
+
+        <div class="col-2">
+            <div class="card bg-dark">
+                <div class="card card-header bg-dark tx-white">
+                <h6><i class="fa fa-user"></i> <?php echo $u['groupe'];?></h6>
+                </div>
+                <div class="card card-body text-center height-180">
+                    <span class="fa-2x"> 
+                        <i class="fa fa-cogs fa-1x"></i>
+                    </span>
+                </div>
+                <div class="card card-footer bg-white"> 
+                    <div dropdown="" align="right">
+                        <span class="text-white- dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-cog"></i> Actions <span class="caret"></span>
+                        </span>
+                        <div class="dropdown-menu">
+                            <a href="<?php echo $this->baseUrl(); ?>/setting/groupe/module/g/<?php echo $u['id']; ?>" class="dropdown-item">Accès aux modules</a>
+                            <a href="#" data-target="#edit-modal-<?php echo $u['id']; ?>" data-toggle="modal" class="dropdown-item">Modifier</a>
+                            <a href="#" id="delete-<?php echo $u['id']; ?>" class="dropdown-item">Supprimer</a>
+                        </div><!-- dropdown-menu -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <script src="<?php echo $this->baseUrl(); ?>/private/vendor/jquery/jquery.min.js"></script>
+            <script src="<?php echo $this->baseUrl(); ?>/private/vendor/sweetalert/sweet-alert.min.js"></script>
+
+            
+            <div class="modal fade" id="edit-modal-<?php echo $u['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <form method="post" id="form-<?php echo $u['id']; ?>">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title"><strong>Groupe utilisateur</strong></h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="control-label">Groupe <span class="symbol required"></span></label>
+                                <input type="text" class="form-control" id="groupe-<?php echo $u['id']; ?>" value="<?php echo $u['groupe']; ?>" placeholder="Groupe utilisateur" required="">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                            <button type="button" id="edit-<?php echo $u['id']; ?>" class="btn btn-primary">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+
+            $('#edit-<?php echo $u['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $u['id']; ?>';
+                var groupe = $('#groupe-<?php echo $u['id'];?>').val();
+
+                $.ajax({
+                    type: 'POST',
+                    data: 'id=' + id + '&groupe=' + groupe,
+                    url: "<?php echo $this->baseUrl(); ?>/setting/groupe/edit",
+                    success: function (data) {
+                        if (data == 'OK')
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/setting/groupe/list"
+                    }
+                });
+            });
+
+
+            
+
+
+            $('#delete-<?php echo $u['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $u['id']; ?>';
+                swal({
+                    title: "",
+                    text: "Vous êtes sur le point de supprimer un enregistrement",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d43f3a",
+                    confirmButtonText: "continuer",
+                    cancelButtonText: "annuler",
+                    closeOnConfirm: false
+                }, function () {
+                    $.ajax({
+                        type: 'POST',
+                        data: 'id=' + id,
+                        url: "<?php echo $this->baseUrl(); ?>/setting/groupe/delete",
+                        success: function (data) {
+                            if (data == 'OK') {
+                                window.location.href = "<?php echo $this->baseUrl(); ?>/setting/groupe/list"
+                            }
+                        }
+                    });
+                });
+            });
+
+            </script>
+
+    <?php endforeach; ?>
+</div>
+
+
+<div class="modal fade parsley-style-1" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <form role="form" id="form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"><strong>Groupe utilisateur</strong></h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label">Groupe <span class="tx-danger">*</span></label>
+                        <input type="text" class="form-control" id="groupe" placeholder="Groupe utilisateur" required="">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                    <button type="button" name="add" id="add" class="btn btn-primary">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/jquery/jquery.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/select2/js/select2.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/sweetalert/sweet-alert.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    'use strict';
+
+    $('#add').on('click', function (e) {
+    
+    e.preventDefault();
+    var groupe = $('#groupe').val();
+
+    $.ajax({
+        type: 'POST',
+        data: 'groupe=' + groupe,
+        url: "<?php echo $this->baseUrl(); ?>/setting/groupe/add",
+        success: function (data) {
+            if (data == 'OK') {
+                window.location.href = "<?php echo $this->baseUrl(); ?>/setting/groupe/list";
+            }
+        }
+    });
+});
+
+    $('#dataTable').DataTable({
+            responsive: true,
+            language: {
+            searchPlaceholder: 'Rechercher...',
+            sSearch: '',
+            lengthMenu: '_MENU_',
+        }
+    });
+
+
+    // Select2
+    $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+});
+</script>
+

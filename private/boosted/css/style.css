@@ -1,0 +1,21 @@
+body{
+	font-family:helvertica!important;
+	
+}
+
+table{
+	font-size:1em!important;
+}
+
+table tr td{
+	font-size:0.8em!important;
+	font-weight:bold;
+}
+
+ main #localContainer{margin-top: -4%!important;}
+     .badge{border-radius: 50px 50px 50px 50px!important;}
+
+  .validerBtn{background-color: #00FF00!important; color:black; font-weight: bolder; }
+   .rejeterBtn{background-color: red!important; color:black; font-weight: bolder;}
+    .validerBtn,.rejeterBtn{ display: inline-block; border-radiu:50px 50px 50px 50px;}
+   .rejeterBtn:hover,.validerBtn:hover{color: #FFFFFF; background-color: black!important;}

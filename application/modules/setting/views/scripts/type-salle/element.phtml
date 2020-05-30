@@ -1,0 +1,253 @@
+<?php $mTypeSalleElement = new Application_Model_Mappers_TypesSallesElements();?>
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/"><i class="ti-home"></i> Home</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/dashboard">Dashboard</a></li>
+            <li class="current"><a href="#">Elements par salle</a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">
+    <div dropdown="">
+        <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-cog"></i> ELEMENT DE TYPE SALLE <span class="caret"></span>
+        </span>
+        <div class="dropdown-menu">
+            <a href="#" data-target="#add-modal" data-toggle="modal" class="dropdown-item">Ajouter un élément</a>
+        </div><!-- dropdown-menu -->
+    </div>
+</h2>
+
+<p class="mg-b-20 mg-lg-b-25">Gestion des éléments d'un type de salle </p>
+
+<div class="row row-sm">
+
+    <div class="col-lg-12">
+
+        <div class="card card-header">
+            <h6><i class="fa fa-cog"></i> ELEMENTS</h6>
+        </div>
+        <div class="card card-table-two">
+        
+
+            <div class="table-responsive">
+            <table id="dataTableS" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th class="wd-5p">Element</th>
+                <th class="wd-5p">Actions</th>
+                <?php foreach ($this->typeSalles as $u) :?>
+                <th class="wd-5p"><?php echo $u['type_salle']; ?></th>
+                <?php endforeach; ?>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $i=0;foreach ($this->elements as $e) :?>
+              <tr class="">
+                <td class="bg-dark tx-white tx-bold"><?php echo $e['element']; ?></td>
+                <td class="bg-dark tx-white tx-bold">
+                    <div dropdown="">
+                        <span class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-cog"></i> Actions <span class="caret"></span>
+                        </span>
+                        <div class="dropdown-menu">
+                            <a href="#" data-target="#edit-modal-<?php echo $e['id']; ?>" data-toggle="modal" class="dropdown-item">Modifier</a>
+                            <a href="#" id="delete-<?php echo $e['id']; ?>" class="dropdown-item">Supprimer</a>
+                        </div><!-- dropdown-menu -->
+                    </div>
+                </td>
+
+                <?php $j=0;foreach ($this->typeSalles as $u) :?>
+                <?php $element = $mTypeSalleElement->findAll(array('salle'=>$u['id'],'element'=>$e['id']));?>
+                <td>
+                    <div id="toogle-<?php echo $i;?>-<?php echo $j;?>" class="az-toggle az-toggle-dark <?php echo (sizeof($element)>0)?'on':'';?>">
+                    <input type="hidden" id="id-element-<?php echo $i;?>" value="<?php echo $e['id'];?>">
+                    <input type="hidden" id="id-salle-<?php echo $i;?>-<?php echo $j;?>" value="<?php echo $u['id'];?>">
+                    <span></span></div>
+                </td>
+                <?php $j++;endforeach; ?>
+                <input type="hidden" id="total-<?php echo $i;?>" value="<?php echo $j;?>">
+              </tr>
+            
+            <div class="modal fade" id="edit-modal-<?php echo $e['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <form method="post" id="form-<?php echo $e['id']; ?>">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title"><strong>Elément salle technique</strong></h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="control-label">Elément <span class="symbol required"></span></label>
+                                <input type="text" class="form-control" id="element-<?php echo $e['id']; ?>" value="<?php echo $e['element']; ?>" placeholder="Elément salle technique" required="">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                            <button type="button" id="edit-<?php echo $e['id']; ?>" class="btn btn-primary">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+
+            $('#edit-<?php echo $e['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $e['id'];?>';
+                var element = $('#element-<?php echo $e['id'];?>').val();
+
+                $.ajax({
+                    type: 'POST',
+                    data: 'id=' + id + '&element=' + element,
+                    url: "<?php echo $this->baseUrl(); ?>/setting/type-salle/edit-element",
+                    success: function (data) {
+                        if (data == 'OK')
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/setting/type-salle/element"
+                    }
+                });
+            });
+
+
+            $('#delete-<?php echo $e['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $e['id']; ?>';
+                swal({
+                    title: "",
+                    text: "Vous êtes sur le point de supprimer un enregistrement",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d43f3a",
+                    confirmButtonText: "continuer",
+                    cancelButtonText: "annuler",
+                    closeOnConfirm: false
+                }, function () {
+                    $.ajax({
+                        type: 'POST',
+                        data: 'id=' + id,
+                        url: "<?php echo $this->baseUrl(); ?>/setting/type-salle/delete-element",
+                        success: function (data) {
+                            if (data == 'OK') {
+                                window.location.href = "<?php echo $this->baseUrl(); ?>/setting/type-salle/element"
+                            }
+                        }
+                    });
+                });
+            });
+
+            </script>
+              <?php $i++;endforeach; ?>
+              <input type="hidden" id="total" value="<?php echo $i;?>">
+            </tbody>
+          </table>      
+            </div><!-- table-responsive -->
+        </div><!-- card-dashboard-five -->
+    </div>
+
+
+</div>
+
+<div class="modal fade parsley-style-1" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <form role="form" id="form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"><strong>Elément salle technique</strong></h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label">Elément <span class="tx-danger">*</span></label>
+                        <input type="text" class="form-control" id="element" placeholder="Elément salle technique" required="">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                    <button type="button" name="add" id="add" class="btn btn-primary">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    'use strict';
+
+    for (let i=0; i<$('#total').val(); ++i) {
+        for (let j=0; j<$('#total-'+i).val(); ++j) {
+
+            $('#toogle-'+i+'-'+j).on('click', function(){
+                
+                var element = $('#id-element-'+i).val();
+                var salle = $('#id-salle-'+i+'-'+j).val();
+
+                $.ajax({
+                    type: 'POST',
+                    data: 'element='+ element + '&salle='+ salle,
+                    url: "<?php echo $this->baseUrl(); ?>/setting/type-salle/action-element",
+                    success: function (data) {
+                        if (data == 'OK') {
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/setting/type-salle/element";
+                        }
+                    }
+                });
+                
+                $(this).toggleClass('on'); 
+            });
+
+        }
+    }
+
+    $('#add').on('click', function (e) {
+    
+        e.preventDefault();
+        var element = $('#element').val();
+
+        $.ajax({
+            type: 'POST',
+            data: 'element=' + element,
+            url: "<?php echo $this->baseUrl(); ?>/setting/type-salle/add-element",
+            success: function (data) {
+                if (data == 'OK') {
+                    window.location.href = "<?php echo $this->baseUrl(); ?>/setting/type-salle/element";
+                }
+            }
+        });
+    });
+
+    $('#dataTable').DataTable({
+            responsive: true,
+            language: {
+            searchPlaceholder: 'Rechercher...',
+            sSearch: '',
+            lengthMenu: '_MENU_',
+        }
+    });
+
+
+    // Select2
+    $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+});
+</script>
+

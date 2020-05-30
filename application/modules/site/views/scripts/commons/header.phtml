@@ -1,0 +1,30 @@
+  <div class="container-fluid">
+
+        <div class="az-header-left">
+          <a href="#" class="az-logo">KIN<span>ARA</span></a>
+          <a href="" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
+        </div><!-- az-header-left -->
+        <div class="az-header-center">
+        </div><!-- az-header-center -->
+        
+
+        <div class="az-header-right">
+
+          <div class="dropdown az-profile-menu az-header-notification">
+          <a href="" class="new-"><h4><i class="fa fa-user"></i></h4></a>
+            <div class="dropdown-menu">
+              <div class="az-dropdown-header d-sm-none">
+                <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
+              </div>
+              <div class="az-header-profile">
+                <small class="tx-bold"><?php echo $this->user['user'];?></small>
+                <span class="tx-gray"><?php echo $this->user['groupe'];?></span>
+              </div><!-- az-header-profile -->
+
+              <a href="<?php echo $this->baseUrl() . "/auth/logout"; ?>" class="dropdown-item"><i class="fa fa-power-off"></i> Déconnexion</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        
+        </div><!-- az-header-right -->
+
+</div><!-- container -->

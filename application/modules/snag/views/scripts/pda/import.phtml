@@ -1,0 +1,129 @@
+<?php
+ if ($this->message=="yes"):
+  echo "<script> alert('Operation effectuée avec succes');</script>";
+  elseif($this->message=="no"):
+   echo "<script> alert('Echec de l\'operation ');</script>";
+  else:
+   	$this->message="";
+
+ endif;
+?>
+<style type="text/css">
+	table tbody{font-size: 0.8em!important; font-weight:bold;font-family: helvertica; }
+	table thead{font-size: 1.2em!important;font-weight:bold;font-family: helvertica; }
+</style>
+
+<div class="container">
+		<div class="row"> 
+             <!-- start page content -->
+						<div class="col-md-12 ">
+								
+                                     
+									
+								
+								<div class=" table-responsive" id="bar-parent" >
+                   <span class="pull-right"></span>
+									<table id="exportTable" class="display nowrap table" >
+                      
+										<thead>
+											<tr>
+                                              <th>Numero</th>
+												<th>Site id</th>
+                                                <th>Area</th>
+												<th  >site name</th>
+												<th>uir</th>
+												<th>Site type</th>
+                                               
+                                                <th>sendeur</th>
+                                              
+                                                 <th>Type of snag</th>
+                                                 <th>Severity</th>
+                                                  <th width="5%">Snag description</th>
+                                                  <th width="5%">Action proposed</th>
+                                                  <th>Servey date</th>
+                                                  <th>Survey of week</th>
+                                                  <th>Report escalation date</th>
+                                                  <th>Responsibility</th>
+                                                  <th>Resolution deadline</th>
+                                                  <th>Status</th>
+                                                  <th>Execution planned</th>
+                                                  <th>Observation</th>
+                                                  <th>Classe</th>
+                                                  <th>periode</th>
+                                                  <th>Key</th>
+                                                  <th>Comment</th>
+                                                  <th>Balises</th>
+                                                  <th>AE</th>
+                                                  
+
+
+											</tr>
+										</thead>
+										<tbody>
+                                            <?php
+
+                                            if($this->snag){
+                                           foreach ($this->snag as  $value) {
+                                           		# code.
+                                           ?>
+                                         <tr >
+                                        <td><?php echo $value["numero"]; ?></td>
+                                         <td><?php echo $value['site_id']; ?></td>
+                                          <td><?php echo $value['area']; ?></td>
+                                          <td ><?php  echo $value['site_name']; ?></td>
+                                          <td><?php echo $value['uir']; ?></td>
+                                          <td><?php echo $value['site_type'];?></td>
+                                          <td><?php echo $value['sendeur'];?></td>
+                                          
+                                          <td><?php echo $value['type_of_snag']; ?></td>
+                                          <td><?php echo $value['severitey']; ?></td>
+                                          <td><?php echo $value['snag_description']; ?></td>
+                                          <td><?php echo $value['action_plan_proposed']; ?></td>
+                                           <td><?php echo $value['servey_date']; ?></td>
+                                            <td><?php echo $value['report_escalation_date']; ?></td>
+                                             <td><?php echo $value['responsability']; ?></td>
+                                              <td><?php echo $value['resolution_deadline']; ?></td>
+                                               <td><?php echo $value['status']; ?></td>
+                                                <td><?php echo $value['execution_planned_date']; ?></td>
+                                                 <td><?php echo $value['resolved_date']; ?></td>
+                                                  <td><?php echo $value['observations']; ?></td>
+                                                   <td><?php echo $value['classe']; ?></td>
+                                                    <td><?php echo $value['periode']; ?></td>
+                                                  <td><?php echo $value['key']; ?></td>  <td>
+                                               <?php echo $value['comment']; ?></td>
+                                                <td><?php echo $value['balises']; ?></td>
+                                                 <td><?php echo $value['batteries']; ?></td>                                          
+                                        </tr>
+                                         <?php 
+                                         }}
+                                            ?>
+                                            
+											
+										</tbody>
+										
+									</table>
+								</div>
+							
+						</div>
+					
+            <!-- end page content -->
+
+		</div>
+	</div>
+
+
+	 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="boosted/material/material.min.js"></script>
+  <!-- Data Table -->
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/dataTables.buttons.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.flash.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/jszip.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/pdfmake.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/vfs_fonts.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.html5.min.js"></script> 
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.print.min.js"></script> 
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/table_data.js" ></script>
+  

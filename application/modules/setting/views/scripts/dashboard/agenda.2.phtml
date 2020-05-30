@@ -1,0 +1,410 @@
+<link href="<?php echo $this->baseUrl(); ?>/private/vendor/fullcalendar/fullcalendar.min.css" rel="stylesheet" media="screen">
+<link href="<?php echo $this->baseUrl(); ?>/private/vendor/select2/select2.min.css" rel="stylesheet" media="screen">
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/select2/select2.min.js"></script>
+
+<!--section id="page-title" class="padding-top-15 padding-bottom-15">
+    <div class="row">
+		<div class="col-sm-12">
+            <h1 class="mainTitle">Agenda</h1>
+            <span class="mainDescription text-small">Agenda des interventions</span>
+        </div>
+    </div>
+</section-->
+
+<form class="form-full-event">
+					
+<div class="container-fluid container-fullw bg-white">
+
+
+	<div class="col-sm-11">
+		<div class="panel panel-white radius">
+			<div id='full-calendar'></div>
+		</div>
+	</div>
+
+
+	<div class="col-sm-1">
+
+		<!--div id="event-categories">
+			<?php //foreach($this->utilisateurs as $u):?>
+			<div class="event-category event-<?php //echo $u['id'];?> btn btn-squared btn-primary" data-class="generic">
+				<i class="ti-user"></i> <?php //echo $u['utilisateur'];?>
+			</div>
+			<?php //endforeach;?>
+		</div-->
+
+
+
+		<div class="modal fade modal-aside horizontal left" id="agenda-modal" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-lg-">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title"><strong><span id="reference" class="text-bold"></span></strong></h4>
+					</div>
+
+					<div class="modal-body col-md-12">
+
+						<div class="form-group col-md-12">
+							<label class="control-label">Client</label>
+							<input type="text" class="form-control" id="client" readonly>
+						</div>
+						<div class="form-group col-md-8">
+							<label class="control-label">Date debut</label>
+							<input type="text" class="form-control" id="dateDebut" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label class="control-label">Heure debut</label>
+							<input type="text" class="form-control" id="heureDebut" readonly>
+						</div>
+						<div class="form-group col-md-8">
+							<label class="control-label">Date fin</label>
+							<input type="text" class="form-control" id="dateFin" readonly>
+						</div>
+						<div class="form-group col-md-4">
+							<label class="control-label">Heure fin</label>
+							<input type="text" class="form-control" id="heureFin" readonly>
+						</div>
+						<div class="form-group col-md-12">
+							<label class="control-label">Description</label>
+							<input type="text" class="form-control" id="intervention" readonly>
+						</div>
+						<div class="form-group col-md-12">
+							<label class="control-label">Infos complémentaires</label>
+							<textarea class="form-control" id="description" readonly></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">Type intervention</label>
+							<input type="text" class="form-control" id="type" readonly>
+						</div>
+						<div class="form-group col-md-6">
+							<label class="control-label">Priorité</label>
+							<input type="text" class="form-control" id="priorite" readonly>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+						<span id="go-to-info" class="text-bold"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- start: EVENTS ASIDE -->
+		<div class="modal fade modal-aside horizontal right" role="dialog" aria-hidden="true" id="agenda-new-modal">
+			<div class="modal-dialog modal-lg- modal-sm-">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title"><strong>INTERVENTION</span></strong></h4>
+					</div>
+
+					<div class="modal-body">
+
+						<div class="form-group col-md-12">
+							<select class="js-basic form-control" id="operateur" required>
+								<optgroup label="Liste des clients">
+								<option value="">(Choisissez un client)</option>
+									<?php foreach($this->operateurs as $p):?>
+									<option value="<?php echo $p['id'];?>"><?php echo $p['operateur'];?></option>
+									<?php endforeach;?>
+								</optgroup>
+							</select>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Date debut intervention <span class="text-bold text-red">*</span></label>
+							<span class="input-icon">
+								<input type="text" class="form-control underline- datepicker-" id="date-debut-new" placeholder="Date debut">
+								<i class="fa fa-calendar"></i> 
+							</span>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Date fin intervention <span class="text-bold text-red">*</span></label>
+							<span class="input-icon">
+								<input type="text" class="form-control underline- datepicker-" id="date-fin-new" placeholder="Date fin">
+								<i class="fa fa-calendar"></i> 
+							</span>
+						</div>
+						
+						<div class="form-group col-md-12">
+							<label>Description</label>
+							<input type="text" class="form-control underline-" name="intervention" placeholder="Description">
+						</div>
+						<div class="form-group col-md-12">
+							<label class="">Informations complémentaires</label>
+							<textarea class="form-control underline-" placeholder="Informations complémentaires" name="description"></textarea>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Type intervention <span class="text-bold text-red">*</span></label>
+							<select class="form-control underline-" name="type">
+								<option value="">(Intervention)</option>
+								<option value="1">Manuelle</option>
+								<option value="2">Distance</option>
+							</select>
+						</div>
+						<div class="form-group col-md-6">
+							<label>Priorité <span class="text-bold text-red">*</span></label>
+							<select class="form-control underline-" name="priorite">
+								<option value="">(Priorité)</option>
+								<option value="1">Haute</option>
+								<option value="2">Moyenne</option>
+								<option value="3">Basse</option>
+							</select>
+						</div>
+						<div class="form-group col-md-12">
+							<button type="submit" name="record" class="btn btn-squared btn-primary text-bold">Enregistrer</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end: EVENTS ASIDE -->
+
+	
+	</div>
+	
+</div>
+
+</form>
+
+
+
+
+
+
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/moment/moment.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/fullcalendar/fullcalendar.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+
+<script type="text/javascript">
+var Calendar = function() {"use strict";
+	var dateToShow, calendar, _calendar, eventClass, eventCategory, subViewElement, subViewContent, $eventDetail;
+	var defaultRange = new Object;
+	defaultRange.start = moment();
+	defaultRange.end = moment().add(1, 'days');
+	//Calendar
+	var setFullCalendarEvents = function() {
+		var date = new Date();
+		dateToShow = date;
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+
+		_calendar = [
+            <?php foreach($this->interventions as $p):?>
+            {
+			idInt: "<?php echo $p['id']; ?>",
+			reference: "<?php echo $p['reference']; ?>",
+			client: "<?php echo $p['operateur'].' / '.$p['telephone']; ?>",
+			telephone: "<?php echo $p['telephone']; ?>",
+			dateDebut: "<?php echo $p['date_debut']; ?>",
+			heureDebut: "<?php echo $p['heure_debut']; ?>",
+			dateFin: "<?php echo $p['date_fin']; ?>",
+			heureFin: "<?php echo $p['heure_fin']; ?>",
+			type: "<?php echo ($p['type_intervention']==1)?'Manuelle':'Distance'; ?>",
+			priorite: "<?php echo ($p['priorite']==1)?'Haute':($p['priorite']==2)?'Moyenne':'Basse'; ?>",
+			date:"1111",
+			heure: "AAAA",
+			tmp: "AAAAA",
+			title: "<?php echo $p['operateur']; ?>",
+			start: "<?php echo $p['date_debut'].' '.$p['heure_debut']; ?>",
+			end: "<?php echo $p['date_fin'].' '.$p['heure_fin']; ?>",
+			allDay: false,
+			content: "<?php echo $p['description']; ?>"
+            },
+            <?php endforeach;?> 
+        ];
+	};
+	//function to initiate Full Calendar
+	var runFullCalendar = function() {
+
+		/*$(".add-event").off().on("click", function() {
+			alert("add-event");
+			eventInputDateHandler();
+			$('#agenda-new-modal').modal();
+		});
+		$('#agenda-new-modal').on('hide.bs.modal', function(event) {
+			eventInputDateHandler();
+			$(".form-full-event #date-debut-new").val("").data("DateTimePicker").destroy();
+			$(".form-full-event #date-fin-new").val("").data("DateTimePicker").destroy();
+		});*/
+
+		$('#event-categories div.event-category').each(function() {
+			// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+			// it doesn't need to have a start or end
+			var eventObject = {
+				title: $.trim($(this).text()) // use the element's text as the event title
+			};
+			// store the Event Object in the DOM element so we can get to it later
+			$(this).data('eventObject', eventObject);
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true, // will cause the event to go back to its
+				revertDuration: 50 //  original position after the drag
+			});
+		});
+
+		/* initialize the calendar
+		 -----------------------------------------------------------------*/
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		var form = '';
+		$('#full-calendar').fullCalendar({
+			buttonIcons: {
+				prev: 'fa fa-chevron-left',
+				next: 'fa fa-chevron-right'
+			},
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			events: _calendar,
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			droppable: true, // this allows things to be dropped onto the calendar !!!
+			drop: function(date, allDay) {// this function is called when something is dropped
+
+				// retrieve the dropped element's stored Event Object
+				var originalEventObject = $(this).data('eventObject');
+
+				var $category = $(this).attr('data-class');
+				
+				// we need to copy it, so that multiple events don't have a reference to the same object
+
+				var newEvent = new Object;
+				newEvent.title = originalEventObject.title;
+				newEvent.start = new Date(date);
+				newEvent.end = moment(new Date(date)).add(1, 'hours');
+				newEvent.allDay = true;
+				newEvent.category = $category;
+				newEvent.className = 'event-' + $category;
+
+				$('#full-calendar').fullCalendar('renderEvent', newEvent, true);
+				/*$(this).remove();
+				eventInputDateHandler();
+				$(".form-full-event #date-debut-new").data("DateTimePicker").date(moment(newEvent.start));
+				$(".form-full-event #date-fin-new").data("DateTimePicker").date(moment(newEvent.start).add(1, 'hours'));
+				$("#agenda-new-modal").modal();*/
+			},
+			selectable: true,
+			selectHelper: true,
+			select: function(start, end, allDay) {
+				eventInputDateHandler();
+				$(".form-full-event #date-debut-new").data("DateTimePicker").date(moment(start));
+				$(".form-full-event #date-fin-new").data("DateTimePicker").date(moment(start).add(1, 'hours'));
+				$("#agenda-new-modal").modal();
+			},
+			eventClick: function(calEvent, jsEvent, view) {
+
+				var eventId = calEvent._id;
+				for(var i = 0; i < _calendar.length; i++) {
+
+					if(_calendar[i]._id == eventId) {
+				
+						$(".form-full-event").click(
+							$("#reference").html(_calendar[i].reference),
+							$("#client").val(_calendar[i].client),
+							$("#telephone").val(_calendar[i].telephone),
+							$("#dateDebut").val(_calendar[i].dateDebut),
+							$("#heureDebut").val(_calendar[i].heureDebut),
+							$("#dateFin").val(_calendar[i].dateFin),
+							$("#heureFin").val(_calendar[i].heureFin),
+							$("#intervention").val(_calendar[i].title),
+							$("#description").val(_calendar[i].content),
+							$("#type").val(_calendar[i].type),
+							$("#priorite").val(_calendar[i].priorite),
+							$("#tmp").html('<img src="'+_calendar[i].tmp+'" width="100%">'),
+							$("#go-to-info").html('<a href="<?php echo $this->baseUrl();?>/backoffice/intervention/detail/id/'+_calendar[i].idInt+'" class="btn btn-squared btn-primary">Détails intervention</a>'),
+							(_calendar[i].reference)?$("#agenda-modal").modal():$("#agenda-new-modal").modal()
+						);
+
+					}
+				}
+				
+			}
+		});
+		_calendar = $("#full-calendar").fullCalendar("clientEvents");
+	};
+
+	var eventInputDateHandler = function() {
+		var startInput = $('#date-debut-new');
+		var endInput = $('#date-fin-new');
+		startInput.datetimepicker();
+		endInput.datetimepicker();
+		startInput.on("dp.change", function(e) {
+			endInput.data("DateTimePicker").minDate(e.date);
+		});
+		endInput.on("dp.change", function(e) {
+			startInput.data("DateTimePicker").maxDate(e.date);
+		});
+	};
+
+	return {
+		init: function() {
+			setFullCalendarEvents();
+			runFullCalendar();
+		}
+	};
+}();
+
+
+var FormElements = function() {
+        "use strict";
+
+        var select2Handler = function() {
+            $(".js-basic").select2();
+        };
+        var datePickerHandler = function() {
+            $('.datepicker').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+            $('.format-datepicker').datepicker({
+                format:  "M, d yyyy",
+                todayHighlight: true
+            });
+            
+        };
+        var timePickerHandler = function() {
+            $('#timepicker-debut').timepicker({
+				'timeFormat':'H:i'
+			});
+            $('#timepicker-fin').timepicker({
+				'timeFormat':'H:i'
+			});		
+        };
+    return {
+        //main function to initiate template pages
+        init: function() {
+            select2Handler();
+            datePickerHandler();
+            timePickerHandler();
+        }
+    };
+}();
+
+Calendar.init();
+FormElements.init();
+
+
+
+</script>

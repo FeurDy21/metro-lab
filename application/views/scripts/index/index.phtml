@@ -1,0 +1,78 @@
+
+ <style> .panel { box-shadow:5px 5px 20px 5px #777; padding:20px 20px 20px 20px; margin-top:20%;}  
+           body{font-size:1.8em!important;}
+            .panel .panel-heading{background-color:#0000 ;color:#FF6600!important; font-size:1.5em!important; text-align:cente;}
+             a:hover{text-decoration: none;}
+
+    </style>
+   
+<div class="row">
+    <div  class="offset-md-2">
+      
+    </div>
+
+    <div  class="col-md-4">
+         
+         <a href="setting/admin/list">
+         <div class="panel panel-danger">
+  <div class="panel-heading text-center">Administration  <span class="fa fa-users" style="font-size: 1.4em!important; color:black!important; float: right; background-color: red;"></span></div>
+  <div class="panel-body">
+     <div style="color:black; text-align:center; font-weight:bold; text-underline:none;">
+        Espace de gestion des utilisateurs    
+   </div>
+  </div>
+  </div>
+  </a>      
+</div>
+         
+  <div  class="col-md-4 " >
+    <a href="<?php echo $this->baseUrl();?>/snag/pda/add">
+       <div class="panel panel-danger">
+      <div class="panel-heading text-center" >Gestion de calcul  <span class="fa fa-users" style="font-size: 1.4em!important; color:black!important;float: right; background-color: red;" ></span></div>
+    <div class="panel-body">
+       <div style="color:black; text-align:center; font-weight:bold;">
+       Espace de gestion de vos calcul
+        
+   </div>
+  
+    </div>
+  </div>
+ </a>  
+</div>
+
+      
+
+  <div  class="offset-md-2">
+
+
+   </div> 
+
+ </div>
+
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    
+<script>$(document).ready(function() {
+      $('.o-nav-local').prioritynav();
+
+      $("#news-table").tablesorter({
+        // pass the headers argument and assing a object
+        headers: {
+          // assign the secound column (we start counting zero)
+          4: {
+            // disable it by setting the property sorter to false
+            sorter: false
+          }
+        },
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
+        }
+      });
+
+
+});
+  </script>

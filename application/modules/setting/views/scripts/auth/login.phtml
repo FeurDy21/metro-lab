@@ -1,0 +1,26 @@
+    <div class="az-signin-wrapper" style="background-color:#ccc">
+      <div class="az-card-signin" style="background-color:#fff">
+      <h1 class="az-logo">EDUCATHO</h1>
+        <p><?php echo $this->message; ?></p>
+        <div class="az-signin-header">
+          <h2>ADMINISTRATION</h2>
+          <h4>Authentifiez-vous pour continuer</h4>
+
+          <form method="post">
+            <div class="form-group">
+              <label>Login</label>
+              <input type="text" class="form-control" name="username" placeholder="Entrez votre identifiant">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Entrez votre mot de passe">
+            </div><!-- form-group -->
+            <button class="btn btn-az-primary btn-block">Connectez-vous</button>
+          </form>
+        </div><!-- az-signin-header -->
+        <div class="az-signin-footer">
+          <p><a href="">Mot de passe oublié?</a></p>
+          <p>Vous n'avez pas de compte? <a href="#">Contactez les administrateurs</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-card-signin -->
+    </div><!-- az-signin-wrapper -->

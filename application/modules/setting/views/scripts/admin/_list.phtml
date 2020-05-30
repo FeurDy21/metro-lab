@@ -1,0 +1,367 @@
+<!-- start: DASHBOARD TITLE -->
+<section id="page-title" class="padding-top-15 padding-bottom-15">
+    <div class="row">
+        <!-- start: ENTETE -->
+        <div class="col-sm-12">
+            <h1 class="mainTitle">Aiguilleurs
+            <div class="btn-group">
+                <a class="btn btn-squared btn-dark-blue dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                 <span class="caret"></span>
+                </a>
+                <ul role="menu" class="dropdown-menu dropdown-white pull-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#add-dialog" class="text-small"><i class="fa fa-plus"></i> Créer aiguilleur</a>
+                    </li>
+                </ul>
+            </div>
+            </h1>
+            <span class="mainDescription text-small">Liste des aiguilleurs </span>
+        </div>
+        <!-- end: ENTETE -->
+    </div>
+</section>
+<!-- end: DASHBOARD TITLE -->
+
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/backoffice/dashboard"><i class="ti-home"></i> Dashboard</a></li>
+            <li class="current"><a href="#">Aiguilleurs</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container-fluid container-fullw padding-bottom-10">
+    <div class="row">
+
+
+        <div class="col-md-10">
+            <div class="panel panel-white no-radius" id="visits">
+                <div class="panel-heading border-light">
+                    <h4 class="panel-title">Liste des aiguilleurs </h4>
+                    <ul class="panel-heading-tabs border-light">
+                        <li class="panel-tools">
+                            <a data-original-title="Nouveau administrateur" data-toggle="modal" data-target="#add-dialog" class="btn btn-transparent btn-sm" href="#"><i class="ti-plus"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div collapse="visits" class="panel-wrapper">
+                    <div class="panel-body">
+
+                                <div class="table-responsive col-md-12">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Nom & Prénoms</th>
+                                                <th>Identifiant</th>
+                                                <th>Mail</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($this->administrateurs as $p) :?>
+
+                                                <tr>
+
+                                                    <td><span class="btn btn-squared btn-primary text-bold"><i class="fa fa-user"></i> <?php echo $p['administrateur']; ?></span></td>
+                                                    <td><span class="btn btn-squared btn-success text-bold"><?php echo $p['login']; ?></span></td>
+                                                    <td><span class="btn btn-squared btn-primary"><?php echo $p['mail']; ?></span></td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                            <a class="btn btn-o btn-squared btn-dark-blue dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                                                                Actions <span class="caret"></span>
+                                                            </a>
+                                                            <ul role="menu" class="dropdown-menu dropdown-white pull-right">
+                                                                <li>
+                                                                    <a href="#" data-toggle="modal" data-target="#edit-dialog-<?php echo $p['id']; ?>"><i class="fa fa-edit"></i> Modifier</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" id="delete-<?php echo $p['id']; ?>"><i class="fa fa-trash"></i> Supprimer</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                                <div class="modal fade" id="edit-dialog-<?php echo $p['id']; ?>" role="dialog" aria-hidden="true">
+                                                    <form role="form" id="form-edit-<?php echo $p['id']; ?>">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title"><strong>Aiguilleur</strong></h4>
+                                                                </div>
+
+                                                                <div class="modal-body col-md-12">
+
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Nom & Prénoms <span class="symbol required"></span></label>
+                                                                        <input type="text" class="form-control" id="administrateur-<?php echo $p['id']; ?>" placeholder="Nom & Prénoms" required="true" value="<?php echo $p['administrateur'];?>">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Identifiant <span class="symbol required"></span></label>
+                                                                        <input type="text" class="form-control" id="login-<?php echo $p['id']; ?>" placeholder="Identifiant" required="true" value="<?php echo $p['login'];?>">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">E-mail</label>
+                                                                        <input type="text" class="form-control" id="mail-<?php echo $p['id']; ?>" placeholder="E-mail" value="<?php echo $p['mail'];?>">
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-squared btn-primary btn-o" data-dismiss="modal">Annuler</button>
+                                                                    <button type="submit" id="edit-<?php echo $p['id']; ?>" class="btn btn-squared btn-primary">Modifier</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                                <script>
+
+                                                $('#edit-<?php echo $p['id']; ?>').on('click', function (e) {
+
+                                                    e.preventDefault();
+                                                    var administrateur = $('#administrateur-<?php echo $p['id']; ?>').val();
+                                                    var login = $('#login-<?php echo $p['id']; ?>').val();
+                                                    var mail = $('#mail-<?php echo $p['id']; ?>').val();
+                                                    var id = '<?php echo $p['id']; ?>';
+
+                                                    
+                                                    $('#form-edit-<?php echo $p['id']; ?>').validate({
+                                                        rules: {
+                                                            adminisrateur: {
+                                                                minlength: 2,
+                                                                required: true,
+                                                            },
+                                                            login: {
+                                                                minlength: 2,
+                                                                required: true,
+                                                            }
+                                                        },
+                                                        highlight: function (element) {
+                                                            $(element).closest('.help-block').removeClass('valid');
+                                                            $(element).closest('.form-group').removeClass('has-success').addClass('has-error').find('.symbol').removeClass('ok').addClass('required');
+                                                        },
+                                                        unhighlight: function (element) { // revert the change done by hightlight
+                                                            $(element).closest('.form-group').removeClass('has-error');
+                                                        },
+                                                    });
+
+                                                    if (!$('#form-edit-<?php echo $p['id']; ?>').valid())
+                                                        return false;
+                                                        
+
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        data: 'administrateur=' + administrateur + '&login=' + login + '&mail=' + mail + '&id=' + id,
+                                                        url: "<?php echo $this->baseUrl(); ?>/backoffice/admin/edit",
+                                                        success: function (data) {
+                                                            if (data == 'OK') {
+                                                                window.location.href = "<?php echo $this->baseUrl(); ?>/backoffice/admin/list";
+                                                            }
+                                                        }
+                                                    });
+                                                });
+
+
+                                                $('#delete-<?php echo $p['id']; ?>').on('click', function (e) {
+
+                                                    e.preventDefault();
+                                                    var id = '<?php echo $p['id']; ?>';
+                                                    swal({
+                                                        title: "",
+                                                        text: "Vous êtes sur le point de supprimer un enregistrement",
+                                                        type: "warning",
+                                                        showCancelButton: true,
+                                                        confirmButtonColor: "#d43f3a",
+                                                        confirmButtonText: "continuer",
+                                                        cancelButtonText: "annuler",
+                                                        closeOnConfirm: false
+                                                    }, function () {
+
+                                                        $.ajax({
+                                                            type: 'POST',
+                                                            data: 'id=' + id,
+                                                            url: "<?php echo $this->baseUrl(); ?>/backoffice/admin/delete",
+                                                            success: function (data) {
+                                                                if (data == 'OK') {
+                                                                    window.location.href = "<?php echo $this->baseUrl(); ?>/backoffice/admin/list"
+                                                                }
+                                                            }
+                                                        });
+                                                    });
+                                                });
+
+
+                                                </script>
+
+                                        <?php endforeach; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="add-dialog" role="dialog" aria-hidden="true">
+    <form role="form" id="form-add">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"><strong>Aiguilleur</strong></h4>
+                </div>
+
+                <div class="modal-body col-md-12">
+
+                    <div class="form-group">
+                        <label class="control-label">Nom & Prénoms <span class="symbol required"></span></label>
+                        <input type="text" class="form-control" id="administrateur" placeholder="Nom & Prénoms" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Identifiant <span class="symbol required"></span></label>
+                        <input type="text" class="form-control" id="login" placeholder="Identifiant" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">E-mail</label>
+                        <input type="text" class="form-control" id="mail" placeholder="E-mail">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-squared btn-primary btn-o" data-dismiss="modal">Annuler</button>
+                    <button type="submit" id="add" class="btn btn-squared btn-primary">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/select2/select2.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/DataTables/jquery.dataTables.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/sweetalert/sweet-alert.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/jquery-validation/jquery.validate.min.js"></script>
+
+<script>
+
+$('#add').on('click', function (e) {
+
+    e.preventDefault();
+    var administrateur = $('#administrateur').val();
+    var login = $('#login').val();
+    var mail = $('#mail').val();
+
+
+    $('#form-add').validate({
+        rules: {
+            reference: {
+                minlength: 2,
+                required: true,
+            },
+            login: {
+                minlength: 2,
+                required: true,
+            }
+        },
+        highlight: function (element) {
+            $(element).closest('.help-block').removeClass('valid');
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error').find('.symbol').removeClass('ok').addClass('required');
+        },
+        unhighlight: function (element) { // revert the change done by hightlight
+            $(element).closest('.form-group').removeClass('has-error');
+        },
+    });
+
+    if (!$('#form-add').valid())
+        return false;
+        
+
+    $.ajax({
+        type: "POST",
+        data: 'administrateur=' + administrateur + '&login=' + login + '&mail=' + mail,
+        url: "<?php echo $this->baseUrl(); ?>/backoffice/admin/add",
+        success: function (data) {
+            if (data == 'OK') {
+                window.location.href = "<?php echo $this->baseUrl(); ?>/backoffice/admin/list";
+            }
+        }
+    });
+});
+
+/* Data table */
+var TableData = function () {
+    "use strict";
+    var runDataTable = function () {
+        var oTable = $('#dataTable').dataTable({
+            "aoColumnDefs": [{
+                "aTargets": [0]
+                }],
+            "oLanguage": {
+                "sLengthMenu": "_MENU_ lignes",
+                "sSearch": "",
+                "sSearchPlaceholder": "Rechercher",
+                "sInfo": "_START_ - _END_ / _TOTAL_",
+                "sInfoEmpty": "0 - _END_ / _TOTAL_",
+                "sInfoFiltered": " trouvé(s) sur _MAX_ enregistrement(s)",
+                "sZeroRecords": "Aucune donnée disponible",
+                "sPaginationType": "bootstrap",
+                "oPaginate": {
+                    "sPrevious": '',
+                    "sNext": '',
+                    }
+                },
+            "ordering": true,
+            "searching": true,
+            "bFilter": true,
+            "bLengthChange": true,
+            //"aaSorting": [[0, 'desc']],
+            "order": [[0, "asc"]],
+            "aLengthMenu": [[10, 15, 20, -1], [10, 15, 20, "Tout"]],
+            // set the initial value
+            "iDisplayLength": 10,
+        });
+
+    $('.dataTables_filter input').addClass("form-control input-sm").attr({"placeholder": "Rechercher", "size": "40px"});
+    $('.dataTables_length select').addClass("m-wrap small");
+    $('.dataTables_length select').select2();
+    $('input[type="checkbox"]').change(function () {
+        var iCol = parseInt($(this).attr("data-column"));
+        var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
+        oTable.fnSetColumnVis(iCol, (bVis ? false : true));
+    });
+};
+
+return{
+    init: function () {
+        runDataTable();
+        }
+    };
+}();
+
+jQuery(document).ready(function () {
+    TableData.init();
+});
+</script>

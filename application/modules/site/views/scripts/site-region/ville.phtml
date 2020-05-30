@@ -1,0 +1,212 @@
+
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/"><i class="ti-home"></i> Home</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/dashboard">Dashboard</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/ville/list">Liste des pays</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/ville/region/p/<?php echo $this->p; ?>"><?php echo $this->pays['pays']; ?> </a></li>
+            <li class="current"><a href="#"><?php echo $this->region['region']; ?></a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">
+    <div dropdown="">
+        <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-cog"></i> VILLES <span class="caret"></span>
+        </span>
+        <div class="dropdown-menu">
+            <a href="#" data-target="#add-modal" data-toggle="modal" class="dropdown-item">Ajouter une ville</a>
+        </div><!-- dropdown-menu -->
+    </div>
+</h2>
+
+<p class="mg-b-20 mg-lg-b-25">Liste des villes</p>
+
+<div class="row row-sm">
+
+    <div class="col-lg-6">
+        <div class="card card-table-two">
+
+            <div class="table-responsive">
+            <table id="dataTable" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th class="wd-5p">Ville</th>
+                <th class="wd-5p">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($this->villes as $u) :?>
+              <tr class="">
+                <td class=""><?php echo $u['ville']; ?></td>
+                <td>
+                <div dropdown="">
+                        <span class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-cog"></i> Actions <span class="caret"></span>
+                        </span>
+                        <div class="dropdown-menu">
+                            <a href="<?php echo $this->baseUrl(); ?>/setting/ville/ville/p/<?php echo $this->p; ?>/r/<?php echo $u['id']; ?>" class="dropdown-item">Voir villes</a>
+                            <a href="#" data-target="#edit-modal-<?php echo $u['id']; ?>" data-toggle="modal" class="dropdown-item">Modifier</a>
+                            <a href="#" id="delete-<?php echo $u['id']; ?>" class="dropdown-item">Supprimer</a>
+                        </div><!-- dropdown-menu -->
+                    </div>
+                </td>
+              </tr>
+            
+            <div class="modal fade" id="edit-modal-<?php echo $u['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <form method="post" id="form-<?php echo $u['id']; ?>">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title"><strong>Ville</strong></h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="control-label">Ville <span class="symbol required"></span></label>
+                                <input type="text" class="form-control" id="ville-<?php echo $u['id']; ?>" value="<?php echo $u['ville']; ?>" placeholder="Ville" required="">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                            <button type="button" id="edit-<?php echo $u['id']; ?>" class="btn btn-primary">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+
+            $('#edit-<?php echo $u['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $u['id'];?>';
+                var ville = $('#ville-<?php echo $u['id'];?>').val();
+
+                $.ajax({
+                    type: 'POST',
+                    data: 'id=' + id + '&ville=' + ville,
+                    url: "<?php echo $this->baseUrl(); ?>/setting/ville/edit-ville",
+                    success: function (data) {
+                        if (data == 'OK')
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/setting/ville/ville/p/<?php echo $this->p; ?>/r/<?php echo $this->r; ?>";
+                    }
+                });
+            });
+
+
+            $('#delete-<?php echo $u['id']; ?>').on('click', function (e) {
+
+                e.preventDefault();
+                var id = '<?php echo $u['id']; ?>';
+                swal({
+                    title: "",
+                    text: "Vous êtes sur le point de supprimer un enregistrement",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#d43f3a",
+                    confirmButtonText: "continuer",
+                    cancelButtonText: "annuler",
+                    closeOnConfirm: false
+                }, function () {
+                    $.ajax({
+                        type: 'POST',
+                        data: 'id=' + id,
+                        url: "<?php echo $this->baseUrl(); ?>/setting/ville/delete-ville",
+                        success: function (data) {
+                            if (data == 'OK') {
+                                window.location.href = "<?php echo $this->baseUrl(); ?>/setting/ville/ville/p/<?php echo $this->p; ?>/r/<?php echo $this->r; ?>";
+                            }
+                        }
+                    });
+                });
+            });
+
+            </script>
+              <?php endforeach; ?>
+            </tbody>
+          </table>      
+            </div><!-- table-responsive -->
+        </div><!-- card-dashboard-five -->
+    </div>
+
+
+</div>
+
+<div class="modal fade parsley-style-1" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <form role="form" id="form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title"><strong>Ville</strong></h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="control-label">Ville <span class="tx-danger">*</span></label>
+                        <input type="text" class="form-control" id="ville" placeholder="Ville" required="">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-grey btn-o" data-dismiss="modal">Annuler</button>
+                    <button type="button" name="add" id="add" class="btn btn-primary">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    'use strict';
+
+    $('#add').on('click', function (e) {
+    
+    e.preventDefault();
+    var region = '<?php echo $this->r;?>';
+    var ville = $('#ville').val();
+
+    $.ajax({
+        type: 'POST',
+        data: 'ville=' + ville + '&region=' + region,
+        url: "<?php echo $this->baseUrl(); ?>/setting/ville/add-ville",
+        success: function (data) {
+            if (data == 'OK') {
+                window.location.href = "<?php echo $this->baseUrl(); ?>/setting/ville/ville/p/<?php echo $this->p; ?>/r/<?php echo $this->r; ?>";
+            }
+        }
+    });
+});
+
+    $('#dataTable').DataTable({
+            responsive: true,
+            language: {
+            searchPlaceholder: 'Rechercher...',
+            sSearch: '',
+            lengthMenu: '_MENU_',
+        }
+    });
+
+
+    // Select2
+    $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
+});
+</script>
+

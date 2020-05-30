@@ -1,0 +1,97 @@
+<section id="page-title" class="padding-top-15 padding-bottom-15">
+    <div class="row">
+
+        <!-- start: ENTETE -->
+        <div class="col-sm-12">
+            <h1 class="mainTitle">Utilisateur</h1>
+            <span class="mainDescription">Informations sur le profil de  l'utilisateur</span>
+        </div>
+        <!-- end: ENTETE -->
+    </div>
+</section>
+
+
+<div class="container-fluid container-fullw padding-bottom-10">
+
+
+    <div class="col-sm-12">
+
+        <div class="row">
+
+            <div class="col-md-7 col-lg-12">
+                <div class="panel panel-white no-radius">
+
+                    <div collapse="visits" class="panel-wrapper">
+                        <div class="panel-body">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nom & Prénoms</label>
+                                    <input type="text" class="form-control" disabled="" value="<?php echo $this->utilisateur['administrateur']; ?>">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Identifiant</label>
+                                    <input type="text" class="form-control" disabled="" value="<?php echo $this->utilisateur['login']; ?>">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<form method="POST">
+<div class="container-fluid container-fullw padding-bottom-10">
+
+
+    <div class="col-sm-12">
+
+        <div class="row">
+
+            <div class="col-md-7 col-lg-12">
+                <div class="panel panel-white no-radius">
+
+                    <div collapse="visits" class="panel-wrapper">
+                        <div class="panel-body">
+                            <p><?php echo $this->message;?></p>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Ancien mot de passe</label>
+                                    <input type="password" class="form-control" name='old-password' id='old-password' required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Nouveau mot de passe</label>
+                                    <input type="password" class="form-control" name='new-password' id='new-password' required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Confirmer nouveau mot de passe</label>
+                                    <input type="password" class="form-control" name='confirm-password' id='confirm-password' required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Enregistrer les informations</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+    
+</form>

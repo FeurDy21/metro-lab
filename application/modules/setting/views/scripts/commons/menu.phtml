@@ -1,0 +1,31 @@
+<ul class="nav">
+          <li class="nav-label">Menu Principal</li>
+          
+          <li class="nav-item <?php echo $this->classDashboard;?>">
+            <a href="<?php echo $this->baseUrl() . "/setting/dashboard"; ?>" class="nav-link with-sub">
+            <i class="la la-pie-chart"></i>DASHBOARD</a>
+          </li><!-- nav-item -->
+          <li class="nav-item <?php echo $this->classUser;?>">
+            <a href="" class="nav-link with-sub"><i class="typcn typcn-contacts"></i>HABILITATIONS</a>
+            <nav class="nav-sub">
+              <a href="<?php echo $this->baseUrl() . "/setting/groupe/list"; ?>" class="nav-sub-link">Groupe utilisateurs</a>
+              <a href="<?php echo $this->baseUrl() . "/setting/admin/list"; ?>" class="nav-sub-link">Utilisateurs</a>
+            </nav>
+          </li><!-- nav-item -->
+          <li class="nav-item <?php echo $this->classSandbox;?>">
+            <a href="" class="nav-link with-sub"><i class="typcn typcn-cog-outline"></i>SANDBOX</a>
+            <nav class="nav-sub">
+              <a href="<?php echo $this->baseUrl() . "/setting/type-salle/element"; ?>" class="nav-sub-link">Elément pour salle</a>
+            </nav>
+          </li><!-- nav-item -->
+          <li class="nav-item <?php echo $this->classSetting;?>">
+            <a href="" class="nav-link with-sub"><i class="typcn typcn-spanner-outline"></i>SETTINGS</a>
+            <nav class="nav-sub">
+              <a href="<?php echo $this->baseUrl() . "/setting/ville/list"; ?>" class="nav-sub-link">Liste des villes</a>
+              <a href="<?php echo $this->baseUrl() . "/setting/type-site/list"; ?>" class="nav-sub-link">Types site technique</a>
+              <a href="<?php echo $this->baseUrl() . "/setting/type-salle/list"; ?>" class="nav-sub-link">Types salle technique</a>
+            </nav>
+          </li><!-- nav-item -->
+          
+          
+        </ul><!-- nav -->

@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS base */
+
+*{
+	margin:0;
+	padding:0;}
+
+body{
+	font-family:"Helvetica 55 roman", sans-serif;
+	font-size:14px;
+	height:100%;
+	line-height:1;
+	color:#000;
+	word-wrap:break-word;
+	background-color:#F2F2F2;}
+
+.container{
+	width:1000px;
+	padding:10px;
+	margin:0 auto;}
+a{
+	color:#818181;
+	cursor:pointer;}
+
+h1{
+	padding:10px;
+	font-size:36px;
+	font-weight:lighter;}
+
+h1 .material-icons{
+	font-size:30px;}
+
+.h1-small{
+	display:block;
+	font-size:25px;
+	margin-left:0;
+	padding-left:0;
+	color:#ff6600;
+	border-bottom:1px solid #ccc;}
+
+h2{
+	display:block;
+	font-size:25px;
+	margin-left:0;
+	padding:7px 0 10px 0;
+	font-weight:lighter;
+	color:#818181;}
+
+.h1-small-strong{
+	display:block;
+	margin:0;
+	padding:0;
+	color:#ff6600;
+	font-size:30px;
+	margin-bottom:15px;}
+
+h2{}
+
+h3{}
+
+.h3-connexion{
+	font-size:30px;
+	font-weight:lighter;
+	margin-bottom:20px;}
+
+h4{}
+
+h5{}
+
+h6{}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  vertical-align:middle;
+  padding-right:5px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+p{
+	margin:10px 0;}
+
+a{
+	text-decoration:none;}

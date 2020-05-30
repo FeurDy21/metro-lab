@@ -1,0 +1,24 @@
+<?php 
+$mPays = new Application_Model_Mappers_Pays();
+$mRegion = new Application_Model_Mappers_Regions();
+?>
+<ul class="nav">
+          <li class="nav-label">Menu Principal</li>
+          
+          <li class="nav-item <?php echo $this->classDashboard;?>">
+            <a href="<?php echo $this->baseUrl() . "/site/dashboard"; ?>" class="nav-link with-sub">
+            <i class="la la-pie-chart"></i>DASHBOARD</a>
+          </li><!-- nav-item -->
+          <?php foreach($mPays->findAll() as $p):?>
+          <li class="nav-item <?php echo ($p['id']==$this->MonPays)?"active":"";?>">
+            <a href="" class="nav-link with-sub"><i class="typcn typcn-contacts"></i> <?php echo strtoupper($p['pays']);?></a>
+            <nav class="nav-sub">
+              <?php foreach($mRegion->findAll(array('pays'=>$p['id'])) as $r):?>
+              <a href="<?php echo $this->baseUrl() . "/site/site-region/list/p/".$p['id']."/r/".$r['id']."";?>" class="nav-sub-link"><?php echo strtoupper($r['region']);?></a>
+              <?php endforeach;?>
+            </nav>
+          </li><!-- nav-item -->
+          <?php endforeach;?>
+          
+          
+</ul><!-- nav -->

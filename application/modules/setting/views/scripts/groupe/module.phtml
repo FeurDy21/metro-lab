@@ -1,0 +1,73 @@
+<?php $mGroupeModule = new Application_Model_Mappers_GroupesModules();?>
+<form method="post">
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/"><i class="ti-home"></i> Home</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/dashboard">Dashboard</a></li>
+            <li><a href="<?php echo $this->baseUrl(); ?>/setting/groupe/list">Groupes utilisateurs</a></li>
+            <li class="current"><a href="#"><?php echo $this->groupe['groupe'];?></a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">
+    <div dropdown="">
+        <span class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-cog"></i> <?php echo $this->groupe['groupe'];?> <span class="caret"></span>
+        </span>
+    </div>
+</h2>
+
+<p class="mg-b-20 mg-lg-b-25">Gestion des droits d'accès aux modules</p>
+
+<div class="row row-sm mg-b-20">
+
+    <?php $i=0;foreach ($this->modules as $u) :?>
+    <?php $m = $mGroupeModule->findByGroupeByModule(array('groupe'=>$this->g,'module'=>$u['id']));?>
+    <div class="col-2">
+        <div class="card bg-dark">
+            <div class="card card-header bg-dark tx-white">
+                <h6><i class="<?php echo $u['img'];?>"></i> <?php echo $u['module'];?></h6>
+            </div>
+            <div class="card card-body">
+                <div id="toogle-<?php echo $i;?>" class="az-toggle az-toggle-dark <?php echo (sizeof($m)>0)?'on':'';?>">
+                <input type="hidden" id="module-<?php echo $i;?>" value="<?php echo $u['id'];?>">
+                <span></span></div>
+            </div>
+        </div>
+    </div>
+    <?php $i++;endforeach; ?>
+    <input type="hidden" id="total" value="<?php echo $i;?>">
+
+</div>
+
+<script>
+$(document).ready(function(){
+    'use strict';
+
+    for (let i=0; i<$('#total').val(); ++i) {
+        $('#toogle-'+i).on('click', function(){
+            
+            var groupe = '<?php echo $this->g;?>';
+            var module = $('#module-'+i).val();
+
+            $.ajax({
+                type: 'POST',
+                data: 'groupe='+ groupe + '&module='+ module,
+                url: "<?php echo $this->baseUrl(); ?>/setting/groupe/action-module",
+                success: function (data) {
+                    if (data == 'OK') {
+                        window.location.href = "<?php echo $this->baseUrl(); ?>/setting/groupe/module/g/<?php echo $this->g;?>";
+                    }
+                }
+            });
+            
+            $(this).toggleClass('on'); 
+        });
+    }
+    
+});
+</script>
+
+</form>

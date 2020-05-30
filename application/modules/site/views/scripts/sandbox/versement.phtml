@@ -1,0 +1,233 @@
+<link href="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+<link href="<?php echo $this->baseUrl(); ?>/private/azia/lib/select2/css/select2.min.css" rel="stylesheet">
+
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/principal/dashboard"><i class="ti-home"></i> Dashboard</a></li>
+            <li class="current"><a href="#">Traiter les versements</a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">TRAITEMENT DES VERSEMENTS</h2>
+<p class="mg-b-20 mg-lg-b-25">Boîte à outils pour suivre les versements</p>
+
+
+
+<div class="row row-sm">
+
+    <div class="col-lg-2 mg-b-20">
+
+        <div class="card card-table-two">
+            <div class="az-content-label mg-b-5 text-center">ANOMALIE DETECTEE</div>
+            <div class="row row-sm">
+                <div class="form-group col-12">
+                    <div class="panel-body height-150 text-center">
+                        <h1 class="fa fa-5x text-dark text-bold"><?php echo number_format(sizeof($this->result));?></h1>
+                    </div>
+                    <label class="control-label text-center">Elèves avec des versements en doublon</label>
+                </div>
+            </div><!-- row -->
+        </div><!-- card-dashboard-five -->
+
+    </div>
+
+
+    <div class="col-lg-5 mg-b-20">
+
+        <form method="post" enctype="multipart/form-data">
+        <div class="card card-table-two">
+            <div class="az-content-label mg-b-5">FICHIER VERSEMENT</div>
+                
+            <div class="row row-sm">
+
+                <div class="form-group col-12"><?php echo $this->message;?></div>
+                <div class="form-group col-12">
+                    <label class="control-label">Etablissement <span class="symbol required"></span></label>
+                    <select class="form-control" name="ecole-versement" id="ecole-versement" required="" onchange="if (this.value) window.location.href='<?php echo $this->baseUrl();?>/principal/sandbox/versement/id/'+this.value">
+                        <option value="">(Choisissez une école)</option>
+                        <?php foreach ($this->ecoles as $e) : ?>
+                        <option value="<?php echo $e['id']; ?>" <?php if($e['id']==$this->id)echo 'selected';?>><?php echo $e['ecole']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group col-6">
+                    <label class="control-label">Année scolaire <span class="symbol required"></span></label>
+                    <select class="form-control" name="annee-versement" id="annee-versement" required="">
+                        <option value="">(Choisissez une année scolaire)</option>
+                        <?php foreach ($this->annees as $a) : ?>
+                        <option value="<?php echo $a['id']; ?>" <?php if($a['id']==$this->user['id-annee'])echo 'selected';?>><?php echo $a['annee']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group col-6">
+                    <label class="control-label">Niveau d'étude <span class="symbol required"></span></label>
+                    <select class="form-control" name="niveau-versement" id="niveau-versement" required="">
+                        <option value="">(Choisissez un niveau d'étude)</option>
+                        <?php foreach ($this->niveaux as $n) : ?>
+                        <option value="<?php echo $n['id_niveau']; ?>"><?php echo $n['niveau'].' '.$n['serie']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="form-group col-12">
+                    <label class="control-label">Fichier élève <span class="symbol required"></span></label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="fichier-versement" required>
+                        <label class="custom-file-label" for="customFile">Choix fichier</label>
+                    </div>
+                </div>
+                <?php if($this->reglements):?>
+                <?php $i=0;foreach ($this->reglements as $r) : ?>
+                <div class="col-lg-4 mg-t-20 mg-lg-t-0 mg-b-20">
+                    <label class="ckbox">
+                        <input type="checkbox" id="reglement-<?php echo $i; ?>" name="reglement-<?php echo $i; ?>" value="<?php echo $r['id_reglement']; ?>">
+                        <span><?php echo $r['reglement']; ?></span>
+                    </label>
+                </div>
+                <?php $i++;endforeach; ?>
+                <input type="hidden" name="total" id="total" value="<?php echo $i; ?>"/>
+                <?php endif;?>
+                <div class="form-group col-12">
+                    <input type="submit" name="valider-import-versement" class="btn btn-squared btn-primary form-control" value="Enregistrer les versements">
+                </div>
+
+            </div><!-- row -->
+        </div><!-- card-dashboard-five -->
+        <form>
+
+    </div>
+
+
+
+    <div class="col-lg-4 mg-b-20">
+
+        <div class="card card-table-two">
+            <div class="az-content-label mg-b-5">MODE D'EMPLOI</div>
+            <p class="mg-b-20">Instructions d'utilisation</p>
+                
+            <div class="row row-sm">
+
+                <div class="form-group col-12">
+                Fichier: <b>xls,xlsx</b><br>
+                Format du fichier: <b>MATRICULE;Référence paiement;Montant;Date règlement</b><br>
+                Exemple:<b>16-0012-EDU;MP0012;5000;2018-09-11</b>
+                                
+
+                </div>
+
+            </div><!-- row -->
+        </div><!-- card-dashboard-five -->
+
+    </div>
+
+
+    
+
+    
+
+</div>
+
+
+
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/jquery/jquery.min.js"></script>
+
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/sweetalert/sweet-alert.min.js"></script>
+
+<script>
+
+        $('#deleteEleve').on('click', function (e) {
+
+            e.preventDefault();
+            var annee = $('#annee').val();
+            var ecole = $('#ecole').val();
+            var type = $('#type').val();
+            var niveau = $('#niveau').val();
+            var classe = $('#classe').val();
+
+            if(!annee){
+
+                swal({
+                title: "",
+                text: "Veuillez choisir au moins une année scolaire",
+                type: "info",
+                showCancelButton: true,
+                confirmButtonColor: "#007AFF",
+                confirmButtonText: "continuer",
+                cancelButtonText: "annuler",
+                closeOnConfirm: false
+            }, function () {
+                window.location.href = "<?php echo $this->baseUrl(); ?>/system/import/eleve"
+            });
+
+            }
+            else{
+                swal({
+                title: "",
+                text: "Vous êtes sur le point de supprimer une liste d'élèves. \nCette action peut entraîner la perte de données sensibles",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d43f3a",
+                confirmButtonText: "continuer",
+                cancelButtonText: "annuler",
+                closeOnConfirm: false
+            }, function () {
+
+                swal({
+                    title: "",
+                    text: "En cours de traitement...",
+                    type: "info",
+                    showConfirmButton: false,
+                }),
+                $.ajax({
+                    type: 'POST',
+                    data: 'annee=' + annee + '&ecole=' + ecole + '&type=' + type + '&niveau=' + niveau + '&classe=' + classe,
+                    url: "<?php echo $this->baseUrl(); ?>/principal/sandbox/delete-eleve",
+                    success: function (data) {
+
+                        if (data == 'OK') {
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/principal/sandbox/eleve"
+                        }
+                    }
+                });
+            });
+            }
+            
+        });
+
+
+        $('#deleteEleveEcole').on('click', function (e) {
+
+            e.preventDefault();
+            
+            swal({
+                title: "",
+                text: "Vous allez supprimer une liste d'élèves sans école. \nCette action peut entraîner la perte de données sensibles",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#d43f3a",
+                confirmButtonText: "continuer",
+                cancelButtonText: "annuler",
+                closeOnConfirm: false
+            }, function () {
+
+                swal({
+                    title: "",
+                    text: "En cours de traitement...",
+                    type: "info",
+                    showConfirmButton: false,
+                }),
+                $.ajax({
+                    type: 'POST',
+                    url: "<?php echo $this->baseUrl(); ?>/principal/sandbox/delete-eleve-ecole",
+                    success: function (data) {
+
+                        if (data == 'OK') {
+                            window.location.href = "<?php echo $this->baseUrl(); ?>/principal/sandbox/eleve"
+                        }
+                    }
+                });
+            });
+            
+        });
+</script>

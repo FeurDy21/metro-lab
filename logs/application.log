@@ -1,0 +1,835 @@
+2016-08-20T13:21:22+00:00 INFO (6): /educatho/backoffice/eleve/add;YAO SEBASTIEN;127.0.0.1
+2016-08-20T14:49:34+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-20T15:13:53+00:00 INFO (6): /educatho/backoffice/eleve/add;YAO SEBASTIEN;127.0.0.1
+2016-08-22T09:46:51+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-23T13:58:39+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-23T15:10:24+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-28T11:45:09+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-28T11:45:19+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-29T11:14:58+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-29T11:54:55+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-29T12:48:23+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-29T12:54:00+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T11:27:15+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T11:27:32+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T11:27:59+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T11:28:37+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T11:30:17+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:04:41+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:08:45+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:08:59+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:11:17+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:12:24+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:14:17+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:14:42+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:16:43+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:17:09+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:17:44+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:20:45+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:22:44+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/5;YAO SEBASTIEN;127.0.0.1
+2016-08-30T12:24:11+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/4;YAO SEBASTIEN;127.0.0.1
+2016-08-30T13:23:09+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-30T13:28:17+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T13:28:44+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T13:29:07+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-30T13:33:30+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-30T18:28:48+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T18:42:29+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T18:47:50+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T18:50:59+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T18:51:41+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:03:14+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:45:54+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:47:06+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:47:45+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:47:58+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:48:20+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T19:56:02+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T21:25:46+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T21:26:44+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-30T21:33:49+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-30T21:34:05+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-30T21:34:32+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/3;YAO SEBASTIEN;127.0.0.1
+2016-08-31T11:44:47+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-31T12:23:29+00:00 INFO (6): /educatho/backoffice/eleve/edit-reglement/id/3/r/4/96e6081e42723d531d05dbf0db2f2e35;YAO SEBASTIEN;127.0.0.1
+2016-08-31T12:24:52+00:00 INFO (6): /educatho/backoffice/eleve/edit-reglement/id/3/r/4/96e6081e42723d531d05dbf0db2f2e35;YAO SEBASTIEN;127.0.0.1
+2016-08-31T12:26:40+00:00 INFO (6): /educatho/backoffice/eleve/edit-reglement/id/3/r/4/6a08e084511c81224f85adf1f1812234;YAO SEBASTIEN;127.0.0.1
+2016-08-31T12:28:24+00:00 INFO (6): /educatho/backoffice/eleve/edit-reglement/id/3/r/4/5f807f06c27aab3d8430dc6be630cbe3;YAO SEBASTIEN;127.0.0.1
+2016-08-31T14:03:41+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-08-31T21:14:34+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-08-31T21:14:44+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-02T09:06:56+00:00 INFO (6): /educatho/backoffice/professeur/add/f5759488b423b976d1cee3dc326f639d;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:20:19+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:20:38+00:00 INFO (6): /educatho/backoffice/salle/edit;;127.0.0.1
+2016-09-02T11:20:40+00:00 INFO (6): /educatho/backoffice/salle/edit;;127.0.0.1
+2016-09-02T11:22:38+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:29:43+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:29:50+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:30:23+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:30:33+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:30:40+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:30:48+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:31:11+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:31:19+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:31:45+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T11:31:58+00:00 INFO (6): /educatho/backoffice/salle/add;YAO SEBASTIEN;127.0.0.1
+2016-09-02T13:07:39+00:00 INFO (6): /educatho/backoffice/professeur/add-reglement/id/1/2673d48ec05f849791764ce720a865da;YAO SEBASTIEN;127.0.0.1
+2016-09-02T20:30:55+00:00 INFO (6): /educatho/backoffice/professeur/edit-reglement/id/1/r/1/5e6c51db46682a973976d4da6d3e2362;YAO SEBASTIEN;127.0.0.1
+2016-09-02T20:31:19+00:00 INFO (6): /educatho/backoffice/professeur/edit-reglement/id/1/r/1/5e6c51db46682a973976d4da6d3e2362;YAO SEBASTIEN;127.0.0.1
+2016-09-02T21:03:41+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3/10401badca106de17027fd7348275e76;YAO SEBASTIEN;127.0.0.1
+2016-09-02T21:05:27+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3/5e911dd02a47b8d223115b880dba4c0f;YAO SEBASTIEN;127.0.0.1
+2016-09-02T21:06:33+00:00 INFO (6): /educatho/backoffice/eleve/edit/id/3/5e911dd02a47b8d223115b880dba4c0f;YAO SEBASTIEN;127.0.0.1
+2016-09-04T12:54:28+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:17:21+00:00 INFO (6): /educatho/backoffice/niveau-reglement/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:17:34+00:00 INFO (6): /educatho/backoffice/niveau-reglement/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:17:44+00:00 INFO (6): /educatho/backoffice/niveau-reglement/edit;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:18:02+00:00 INFO (6): /educatho/backoffice/niveau-reglement/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:18:21+00:00 INFO (6): /educatho/backoffice/niveau-reglement/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:32:25+00:00 INFO (6): /educatho/backoffice/classe/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:32:33+00:00 INFO (6): /educatho/backoffice/classe/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:40:49+00:00 INFO (6): /educatho/backoffice/classe/edit;;127.0.0.1
+2016-09-04T13:40:52+00:00 INFO (6): /educatho/backoffice/classe/edit;;127.0.0.1
+2016-09-04T13:41:20+00:00 INFO (6): /educatho/backoffice/classe/edit;;127.0.0.1
+2016-09-04T13:43:13+00:00 INFO (6): /educatho/backoffice/classe/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T13:44:06+00:00 INFO (6): /educatho/backoffice/classe/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T14:04:13+00:00 INFO (6): /educatho/backoffice/eleve/add/85cd04b9af0420a9c96e2ce1da0a661e;YAO SEBASTIEN;127.0.0.1
+2016-09-04T14:50:10+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/1/374300ee41b57bf13251cfe59c742a4a;YAO SEBASTIEN;127.0.0.1
+2016-09-04T15:15:43+00:00 INFO (6): /educatho/backoffice/niveau-reglement/add;YAO SEBASTIEN;127.0.0.1
+2016-09-04T15:21:50+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-04T15:50:43+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-04T15:50:51+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-09-04T15:51:06+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-04T15:59:14+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/1/c8c433459d7c4f6b70d64d37b382ddb2;YAO SEBASTIEN;127.0.0.1
+2016-09-04T16:04:41+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/1/57eb1ed64278c6285fd8a9a4f182fa57;YAO SEBASTIEN;127.0.0.1
+2016-09-04T16:12:42+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-04T17:27:51+00:00 INFO (6): /educatho/backoffice/caisse;YAO SEBASTIEN;127.0.0.1
+2016-09-04T17:31:33+00:00 INFO (6): /educatho/backoffice/caisse;YAO SEBASTIEN;127.0.0.1
+2016-09-04T17:33:42+00:00 INFO (6): /educatho/backoffice/caisse;YAO SEBASTIEN;127.0.0.1
+2016-09-04T17:34:37+00:00 INFO (6): /educatho/backoffice/caisse;YAO SEBASTIEN;127.0.0.1
+2016-09-04T19:56:23+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-05T10:02:05+00:00 INFO (6): /educatho/backoffice/ecole;YAO SEBASTIEN;127.0.0.1
+2016-09-05T10:03:32+00:00 INFO (6): /educatho/backoffice/ecole;YAO SEBASTIEN;127.0.0.1
+2016-09-05T10:04:09+00:00 INFO (6): /educatho/backoffice/ecole;YAO SEBASTIEN;127.0.0.1
+2016-09-05T10:04:47+00:00 INFO (6): /educatho/backoffice/ecole;YAO SEBASTIEN;127.0.0.1
+2016-09-05T12:50:22+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-07T17:02:20+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-14T14:06:29+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-14T14:08:35+00:00 INFO (6): /educatho/backoffice/user/desactive;;127.0.0.1
+2016-09-14T14:13:08+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-16T11:35:48+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-16T11:36:32+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-16T11:37:46+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-16T12:25:03+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:25:42+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:26:16+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:28:49+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:29:19+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:30:35+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:30:53+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:31:05+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:31:20+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:31:31+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:32:18+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:38:51+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:39:34+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:39:50+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:40:03+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:41:09+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:51:02+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:52:31+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T12:56:00+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-16T14:36:39+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:38:48+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:39:29+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:40:10+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:41:16+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:41:58+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:45:12+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:45:55+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:46:06+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:47:58+00:00 INFO (6): /educatho/licence/import/eleve;AKILI4DEV;127.0.0.1
+2016-09-16T14:51:23+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-17T10:29:00+00:00 INFO (6): /educatho/backoffice/eleve/add-reglement/id/1/435014acf09a8d82733f3e62df342234;YAO SEBASTIEN;127.0.0.1
+2016-09-17T12:07:14+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-09-17T12:07:35+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-17T12:16:39+00:00 INFO (6): /educatho/backoffice/auth/login;ABOU STEPHANE;127.0.0.1
+2016-09-17T12:20:07+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-09-19T10:44:32+00:00 INFO (6): /educatho/licence/ecole/add-niveau-reglement;AKILI4DEV;127.0.0.1
+2016-09-19T10:46:13+00:00 INFO (6): /educatho/licence/ecole/add-niveau-reglement;AKILI4DEV;127.0.0.1
+2016-09-19T10:46:28+00:00 INFO (6): /educatho/licence/ecole/edit-niveau-reglement;AKILI4DEV;127.0.0.1
+2016-09-19T15:21:24+00:00 INFO (6): /educatho/backoffice/auth/login;;127.0.0.1
+2016-09-19T15:25:29+00:00 INFO (6): /educatho/backoffice/auth/login;ABOU STEPHANE;127.0.0.1
+2016-09-19T15:25:29+00:00 INFO (6): /educatho/backoffice/auth/login;ABOU STEPHANE;127.0.0.1
+2016-09-19T15:34:42+00:00 INFO (6): /educatho/backoffice/auth/login;ABOU STEPHANE;127.0.0.1
+2016-09-20T21:52:57+00:00 INFO (6): /educatho/licence/personnel/add;AKILI4DEV;127.0.0.1
+2016-10-03T15:28:01+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-10-03T15:29:53+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-10-03T22:44:54+00:00 INFO (6): /educatho/licence/key;AKILI4DEV;127.0.0.1
+2016-10-05T10:05:26+00:00 INFO (6): /educatho/licence/caisse;AKILI4DEV;127.0.0.1
+2016-10-05T10:11:41+00:00 INFO (6): /educatho/licence/caisse;AKILI4DEV;127.0.0.1
+2016-10-05T10:24:09+00:00 INFO (6): /educatho/licence/eleve/add-reglement/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-05T13:23:29+00:00 INFO (6): /educatho/backoffice/auth/login;YAO SEBASTIEN;127.0.0.1
+2016-10-06T15:24:28+00:00 INFO (6): /educatho/licence/eleve/add-urgence/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-06T16:37:21+00:00 INFO (6): /educatho/licence/eleve/edit-evenement/id/18/e/1/ev/1;AKILI4DEV;127.0.0.1
+2016-10-08T11:25:16+00:00 INFO (6): /educatho/licence/eleve/add-urgence/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-08T11:57:45+00:00 INFO (6): /educatho/licence/eleve/add-evenement/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-08T12:00:08+00:00 INFO (6): /educatho/licence/eleve/edit-urgence/id/18/e/1/u/1;AKILI4DEV;127.0.0.1
+2016-10-08T12:54:25+00:00 INFO (6): /educatho/licence/eleve/add-urgence/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-09T10:36:00+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/1/s/1;AKILI4DEV;127.0.0.1
+2016-10-09T10:42:16+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere;AKILI4DEV;127.0.0.1
+2016-10-09T10:42:18+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere;AKILI4DEV;127.0.0.1
+2016-10-09T10:43:33+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere;AKILI4DEV;127.0.0.1
+2016-10-09T10:45:42+00:00 INFO (6): /educatho/licence/eleve/delete-session-matiere;AKILI4DEV;127.0.0.1
+2016-10-09T10:45:54+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/1/s/1;AKILI4DEV;127.0.0.1
+2016-10-09T10:50:51+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere;AKILI4DEV;127.0.0.1
+2016-10-09T10:57:47+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/1/s/1;AKILI4DEV;127.0.0.1
+2016-10-09T14:54:54+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere-;AKILI4DEV;127.0.0.1
+2016-10-09T14:55:25+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere-;AKILI4DEV;127.0.0.1
+2016-10-09T14:56:52+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere-;AKILI4DEV;127.0.0.1
+2016-10-09T14:57:25+00:00 INFO (6): /educatho/licence/eleve/edit-session-matiere-;AKILI4DEV;127.0.0.1
+2016-10-10T15:57:05+00:00 INFO (6): /educatho/licence/eleve/add/id/18;AKILI4DEV;127.0.0.1
+2016-10-10T15:59:48+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/2/s/1;AKILI4DEV;127.0.0.1
+2016-10-10T16:01:30+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/2/s/1;AKILI4DEV;127.0.0.1
+2016-10-10T17:41:29+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/1/s/1;AKILI4DEV;127.0.0.1
+2016-10-10T17:55:21+00:00 INFO (6): /educatho/licence/eleve/add/id/18;AKILI4DEV;127.0.0.1
+2016-10-10T17:55:45+00:00 INFO (6): /educatho/licence/eleve/add/id/18;AKILI4DEV;127.0.0.1
+2016-10-10T17:57:14+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/3/s/1;AKILI4DEV;127.0.0.1
+2016-10-10T17:57:53+00:00 INFO (6): /educatho/licence/eleve/add-session-matiere/id/18/e/4/s/1;AKILI4DEV;127.0.0.1
+2016-10-11T13:30:50+00:00 INFO (6): /educatho/licence/professeur/edit/id/1;AKILI4DEV;127.0.0.1
+2016-10-11T14:57:51+00:00 INFO (6): /educatho/licence/eleve/edit/id/18/e/1;AKILI4DEV;127.0.0.1
+2016-10-14T15:12:26+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1/n/1/m/4;AKILI4DEV;127.0.0.1
+2016-10-14T15:54:38+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1/n/1/m/4;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:49+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:50+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:50+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:51+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:52+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:27:54+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:28:01+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:28:03+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:28:04+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1;AKILI4DEV;127.0.0.1
+2016-10-14T16:51:41+00:00 INFO (6): /educatho/licence/professeur/add;AKILI4DEV;127.0.0.1
+2016-10-14T16:52:13+00:00 INFO (6): /educatho/licence/professeur/add;AKILI4DEV;127.0.0.1
+2016-10-14T16:53:14+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/6/n/3/m/1;AKILI4DEV;127.0.0.1
+2016-10-15T09:31:33+00:00 INFO (6): /educatho/licence/ecole/add-classe-horaire/id/18/c/1/n/1/m/4;AKILI4DEV;127.0.0.1
+2016-10-15T12:50:57+00:00 INFO (6): /educatho/system/ecole/add-classe-horaire/id/18/c/1/n/1/m/1;AKILI4DEV;127.0.0.1
+2016-10-15T12:51:41+00:00 INFO (6): /educatho/system/ecole/add-classe-horaire/id/18/c/1/n/1/m/6;AKILI4DEV;127.0.0.1
+2016-10-15T13:09:12+00:00 INFO (6): /educatho/system/ecole/add-classe-horaire/id/18/c/1/n/1/m/1;AKILI4DEV;127.0.0.1
+2016-10-15T13:19:14+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:22:14+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:22:55+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:24:22+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:24:54+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:25:18+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:25:42+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:28:23+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:28:43+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-15T13:28:56+00:00 INFO (6): /educatho/system/caisse;AKILI4DEV;127.0.0.1
+2016-10-17T12:00:13+00:00 INFO (6): /educatho/system/parent/add/e/18/n/1;AKILI4DEV;127.0.0.1
+2016-10-17T12:08:20+00:00 INFO (6): /educatho/system/parent/add/e/18/n/1;AKILI4DEV;127.0.0.1
+2016-10-17T12:37:18+00:00 INFO (6): /educatho/system/parent/add/e/18/n/1;AKILI4DEV;127.0.0.1
+2016-12-19T15:34:57+00:00 INFO (6): /educatho/system/key;AKILI4DEV;127.0.0.1
+2016-12-27T09:54:41+00:00 INFO (6): /educatho/system/eleve/add-evenement/id/18/e/2;AKILI4DEV;127.0.0.1
+2016-12-27T11:17:00+00:00 INFO (6): /educatho/system/eleve/add-reglement/id/18/e/2;AKILI4DEV;127.0.0.1
+2016-12-27T11:42:01+00:00 INFO (6): /educatho/system/ecole/add-niveau-reglement;AKILI4DEV;127.0.0.1
+2016-12-27T11:44:21+00:00 INFO (6): /educatho/system/ecole/edit-niveau-reglement;AKILI4DEV;127.0.0.1
+2016-12-27T11:48:15+00:00 INFO (6): /educatho/system/eleve/edit/id/18/e/2;AKILI4DEV;127.0.0.1
+2016-12-27T15:26:05+00:00 INFO (6): /educatho/system/eleve/add-reglement/id/18/e/2;AKILI4DEV;127.0.0.1
+2016-12-27T15:29:52+00:00 INFO (6): /educatho/system/eleve/add-reglement/id/18/e/2;AKILI4DEV;127.0.0.1
+2016-12-27T16:04:56+00:00 INFO (6): /educatho/system/eleve/add-pastoral/id/18/e/2;AKILI4DEV;127.0.0.1
+2017-01-19T11:15:09+00:00 INFO (6): /educatho/system/professeur/add-formation/id/2|{"profil":"TEST","lieu":"TEST","debut":"2017-01-19","fin":"2017-01-19"}|AKILI4DEV|127.0.0.1
+2017-01-19T11:20:59+00:00 INFO (6): /educatho/system/professeur/add-formation/id/2|{"profil":"TEST","lieu":"TEST","debut":"2017-01-19","fin":"2017-01-19"}|AKILI4DEV|127.0.0.1
+2017-01-19T11:31:59+00:00 INFO (6): /educatho/system/professeur/add-experience/id/2|{"profil":"TEST 2","lieu":"TEST 2","debut":"2017-01-19","fin":"2017-01-19"}|AKILI4DEV|127.0.0.1
+2017-01-19T11:32:13+00:00 INFO (6): /educatho/system/professeur/edit-formation/id/2/p/2|{"profil":"TEST 1","lieu":"TEST 1","debut":"2017-01-19","fin":"2017-01-19"}|AKILI4DEV|127.0.0.1
+2017-01-23T12:13:31+00:00 INFO (6): /educatho/system/professeur/add-evenement/id/1|{"date-evenement":"2017-01-23","reference":"REG-3771-20170123","id-evenement":"5","observation":"ras"}|AKILI4DEV|127.0.0.1
+2017-01-23T12:26:16+00:00 INFO (6): /educatho/system/professeur/edit-evenement/id/1/e/1|{"date-evenement":"2017-01-23","id-evenement":"5","observation":"ras"}|AKILI4DEV|127.0.0.1
+2017-01-23T12:33:01+00:00 INFO (6): /educatho/system/professeur/add-pastoral/id/1|{"date-evenement":"2017-01-23","reference":"REG-0B79-20170123","id-evenement":"10","observation":"test"}|AKILI4DEV|127.0.0.1
+2017-01-23T12:33:13+00:00 INFO (6): /educatho/system/professeur/edit-pastoral/id/1/e/2|{"date-evenement":"2017-01-23","id-evenement":"10","observation":"test"}|AKILI4DEV|127.0.0.1
+2017-01-23T13:34:35+00:00 INFO (6): /educatho/system/professeur/add-enfant/id/1|{"enfant":"TEST","sexe":"H","date":"2017-01-23"}|AKILI4DEV|127.0.0.1
+2017-01-23T13:35:56+00:00 INFO (6): /educatho/system/professeur/edit-enfant/id/1/p/1|{"enfant":"TEST","sexe":"H","date":"2017-01-23"}|AKILI4DEV|127.0.0.1
+2017-01-23T13:36:03+00:00 INFO (6): /educatho/system/professeur/edit-enfant/id/1/p/1|{"enfant":"TEST1","sexe":"H","date":"2017-01-23"}|AKILI4DEV|127.0.0.1
+2017-01-23T13:36:11+00:00 INFO (6): /educatho/system/professeur/delete-enfant|{"id":"1"}|AKILI4DEV|127.0.0.1
+2017-01-23T14:10:42+00:00 INFO (6): /educatho/system/professeur/add-horaire/id/1|{"ecole":"18","date":"2017-01-23","debut":"12:07 AM","fin":"12:07 AM"}|AKILI4DEV|127.0.0.1
+2017-01-23T14:31:46+00:00 INFO (6): /educatho/system/professeur/add-horaire/id/1|{"ecole":"","date":"2017-01-23","debut":"14:31","fin":"14:31"}|AKILI4DEV|127.0.0.1
+2017-01-23T14:33:23+00:00 INFO (6): /educatho/system/professeur/add-horaire/id/1|{"ecole":"18","date":"2017-01-23","debut":"14:33","fin":"14:33"}|AKILI4DEV|127.0.0.1
+2017-01-23T14:33:33+00:00 INFO (6): /educatho/system/professeur/delete-horaire|{"id":"1"}|AKILI4DEV|127.0.0.1
+2017-01-24T10:23:07+00:00 INFO (6): /educatho/system/professeur/add-horaire/id/2|{"ecole":"18","date":"2017-01-24","debut":"10:22","fin":"11:22"}|AKILI4DEV|127.0.0.1
+2017-01-26T10:12:03+00:00 INFO (6): /educatho/system/professeur/edit-horaire/id/1/p/3|{"ecole":"18","date":"2017-01-23","debut":"14:33","fin":"15:33"}|AKILI4DEV|127.0.0.1
+2017-02-08T10:46:01+00:00 INFO (6): /educatho/system/internat/add-interne/id/1|{"reference":"17-E0C8C-EC","cni":"CNI6666","nom":"TEST","prenom":"TEST","sexe":"H","date":"2017-2-1","lieu":"TEST","nationalite":"TEST"}|AKILI4DEV|127.0.0.1
+2017-02-08T17:05:04+00:00 INFO (6): /educatho/system/internat/edit-interne/id/1/i/1||AKILI4DEV|127.0.0.1
+2017-02-08T18:41:28+00:00 INFO (6): /educatho/system/internat/add-reglement||AKILI4DEV|127.0.0.1
+2017-02-08T18:44:18+00:00 INFO (6): /educatho/system/internat/delete-reglement|{"id":"1"}||127.0.0.1
+2017-02-08T18:44:29+00:00 INFO (6): /educatho/system/internat/delete-reglement|{"id":"1"}||127.0.0.1
+2017-02-08T18:46:05+00:00 INFO (6): /educatho/system/internat/add-reglement|{"reglement":"1","montant":"15000","internat":"1"}|AKILI4DEV|127.0.0.1
+2017-02-11T05:10:36+00:00 INFO (6): /educatho/system/professeur/edit-experience/id/2/p/3|{"profil":"TEST 2","type":"2","lieu":"TEST 2","debut":"2017-01-19","fin":"2017-01-19"}|AKILI4DEV|127.0.0.1
+2017-02-11T10:36:21+00:00 INFO (6): /educatho/system/ecole/add-classe-horaire/id/18/c/6/n/3/m/4||AKILI4DEV|127.0.0.1
+2017-02-11T11:35:58+00:00 INFO (6): /educatho/system/eleve/add-evenement/id/18/e/1||AKILI4DEV|127.0.0.1
+2017-03-28T14:13:10+00:00 INFO (6): /educatho/system/professeur/add-horaire/id/2/e/18|{"date":"2017-03-28","ecole":"\/educatho\/system\/professeur\/add-horaire\/id\/2\/e\/18","classe":"1","matiere":"1","debut":"14:15","fin":"15:15"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:47:28+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"Superviseur"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:47:51+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"Superviseur"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:47:56+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"Superviseurs"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:48:00+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"Superviseurs"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:50:03+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"SUPERVISEURS1"}|AKILI4DEV|127.0.0.1
+2017-04-03T11:50:18+00:00 INFO (6): /educatho/system/groupe/edit|{"id":"1","groupe":"SUPERVISEURS"}|AKILI4DEV|127.0.0.1
+2017-04-06T14:07:06+00:00 INFO (6): /educatho/system/groupe/module/id/1||AKILI4DEV|127.0.0.1
+2017-04-06T14:08:48+00:00 INFO (6): /educatho/system/groupe/module/id/1||AKILI4DEV|127.0.0.1
+2017-04-06T14:10:24+00:00 INFO (6): /educatho/system/groupe/module/id/1||AKILI4DEV|127.0.0.1
+2017-04-06T14:13:25+00:00 INFO (6): /educatho/system/groupe/module/id/1||AKILI4DEV|127.0.0.1
+2017-05-13T07:12:31+00:00 INFO (6): /educatho/system/eleve/add-cantine-reglement/id/18/e/2||ADMIN|127.0.0.1
+2017-05-13T07:15:40+00:00 INFO (6): /educatho/system/eleve/add-cantine-reglement/id/18/e/2||ADMIN|127.0.0.1
+2017-05-13T07:16:04+00:00 INFO (6): /educatho/system/eleve/add-cantine-reglement/id/18/e/2||ADMIN|127.0.0.1
+2017-05-13T07:17:33+00:00 INFO (6): /educatho/system/eleve/add-cantine-reglement/id/18/e/2||ADMIN|127.0.0.1
+2017-05-13T07:18:11+00:00 INFO (6): /educatho/system/eleve/add-cantine-reglement/id/18/e/2|{"reference":"REG-61FB-20170513","reglement":"Versement de DIARRA Drissa du 2017\/05\/13","date-reglement":"2017-05-13","type-reglement":"1","reference-type-reglement":"","description-reglement":"","montant":""}|ADMIN|127.0.0.1
+2017-05-29T20:57:27+00:00 INFO (6): /educatho/system/internat/add|{"internat":"INTERNAT MAN 2","ville":"5","telephone":"09777777","adresse":"ATTATATA"}|ADMIN|127.0.0.1
+2017-05-29T20:57:39+00:00 INFO (6): /educatho/system/internat/edit|{"id":"1","internat":"INTERNAT MAN 1","ville":"12","telephone":"0999","adresse":"09999"}|ADMIN|127.0.0.1
+2017-05-29T20:57:52+00:00 INFO (6): /educatho/system/internat/edit|{"id":"2","internat":"INTERNAT MAN 2","ville":"12","telephone":"09777777","adresse":"ATTATATA"}|ADMIN|127.0.0.1
+2017-05-29T20:58:06+00:00 INFO (6): /educatho/system/internat/add|{"internat":"INTERNAT MAN 3","ville":"12","telephone":"1111","adresse":"AAAAA"}|ADMIN|127.0.0.1
+2017-05-29T20:58:23+00:00 INFO (6): /educatho/system/internat/add|{"internat":"INTERNAT MAN 4","ville":"12","telephone":"2222","adresse":"ZZZZZ"}|ADMIN|127.0.0.1
+2017-05-29T20:58:39+00:00 INFO (6): /educatho/system/internat/add|{"internat":"INTERNAT MAN 5","ville":"12","telephone":"3333","adresse":"AAAA"}|ADMIN|127.0.0.1
+2017-05-29T21:00:26+00:00 INFO (6): /educatho/system/internat/add|{"internat":"INTERNAT MAN 6","ville":"12","telephone":"333","adresse":"AAAA"}|ADMIN|127.0.0.1
+2017-05-30T10:23:08+00:00 INFO (6): /educatho/system/internat/add-interne-evenement/id/1/i/1||ADMIN|127.0.0.1
+2017-05-30T19:26:56+00:00 INFO (6): /educatho/system/internat/add-interne-evenement/id/1/i/1||ADMIN|127.0.0.1
+2017-05-30T20:26:53+00:00 INFO (6): /educatho/system/internat/edit-interne/id/1/i/1|{"reference":"17-E0C8C-EC","cni":"CNI6666","nom":"KOUAKOU","prenom":"Emmanuel","sexe":"H","date":"2017-02-01","lieu":"TEST","nationalite":"TEST"}|ADMIN|127.0.0.1
+2017-05-30T23:45:03+00:00 INFO (6): /educatho/system/professeur/add-enfant/id/2|{"enfant":"BAMBA ISSIAKA","sexe":"H","date":"2017-5-1"}|ADMIN|127.0.0.1
+2017-05-30T23:45:17+00:00 INFO (6): /educatho/system/professeur/add-enfant/id/2|{"enfant":"BAMBA MARIAM","sexe":"F","date":"2017-5-8"}|ADMIN|127.0.0.1
+2017-05-30T23:57:36+00:00 INFO (6): /educatho/system/professeur/edit-formation/id/2/p/2|{"profil":"TEST 1","type":"1","lieu":"TEST 1","debut":"2017-01-19","fin":"2017-01-19"}|ADMIN|127.0.0.1
+2017-05-31T11:07:15+00:00 INFO (6): /educatho/system/eleve/delete-session-matiere||ADMIN|127.0.0.1
+2017-05-31T11:07:17+00:00 INFO (6): /educatho/system/eleve/delete-session-matiere||ADMIN|127.0.0.1
+2017-05-31T11:07:42+00:00 INFO (6): /educatho/system/eleve/delete-session-matiere||ADMIN|127.0.0.1
+2017-05-31T11:09:40+00:00 INFO (6): /educatho/system/eleve/delete-session-matiere|{"id":"5"}|ADMIN|127.0.0.1
+2017-05-31T11:11:23+00:00 INFO (6): /educatho/system/eleve/add-session-matiere/id/18/e/2/s/1||ADMIN|127.0.0.1
+2017-08-19T14:53:53+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:54:20+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:54:54+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:55:19+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:55:42+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:56:06+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-08-19T14:56:20+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-02T13:36:45+00:00 INFO (6): /educatho/system/groupe/add|{"groupe":"COMPTABILITE"}|ADMIN|127.0.0.1
+2017-09-02T13:36:46+00:00 INFO (6): /educatho/system/groupe/add|{"groupe":"COMPTABILITE"}|ADMIN|127.0.0.1
+2017-09-02T13:36:58+00:00 INFO (6): /educatho/system/groupe/add|{"groupe":"COMPTABILITE"}|ADMIN|127.0.0.1
+2017-09-02T13:37:58+00:00 INFO (6): /educatho/system/groupe/delete|{"id":"4"}|ADMIN|127.0.0.1
+2017-09-02T13:38:02+00:00 INFO (6): /educatho/system/groupe/delete|{"id":"3"}|ADMIN|127.0.0.1
+2017-09-05T18:25:00+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-05T18:53:22+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-05T18:58:58+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-05T19:06:13+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-05T19:07:07+00:00 INFO (6): /educatho/system/eleve/add/id/18||ADMIN|127.0.0.1
+2017-09-06T15:53:21+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T15:53:34+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:01:34+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:02:12+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:04:10+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:04:26+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:04:43+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:05:06+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-06T16:05:13+00:00 INFO (6): /educatho/system/import/delete|{"annee":"1","ecole":"","type":"","niveau":"","classe":""}|ADMIN|127.0.0.1
+2017-09-11T12:29:59+00:00 INFO (6): /educatho/system/eleve/add/id/18|{"reference":"16340881Q","cni":"","nom":"TEST","prenom":"TEST","sexe":"H","date":"","lieu":"","nationalite":"Ivoirienne","cantine":"","transport":"","religion":"","type":"2","niveau":"1","classe":"1"}|ADMIN|127.0.0.1
+2017-09-13T09:14:15+00:00 INFO (6): /educatho/system/auth/profil|{"old-password":"admin","new-password":"123","confirm-password":"123"}|ADMIN|127.0.0.1
+2017-09-13T09:17:35+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"tv1"}||127.0.0.1
+2017-09-13T09:17:40+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2017-09-13T10:41:34+00:00 INFO (6): /educatho/system/produit/add|{"produit":"TEST","type":"5"}|ADMIN|127.0.0.1
+2017-09-13T11:03:11+00:00 WARN (4): /educatho/system/produit/delete|{"id":"2"}|ADMIN|127.0.0.1
+2017-09-13T11:03:21+00:00 WARN (4): /educatho/system/produit/delete|{"id":"9"}|ADMIN|127.0.0.1
+2017-09-20T21:54:39+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2017-09-20T22:54:26+00:00 INFO (6): /educatho/system/generator|{"ecole":"18","session":"1","niveau":"1","classe":"1","bareme":"10"}|ADMIN|127.0.0.1
+2017-09-20T22:54:38+00:00 INFO (6): /educatho/system/generator|{"ecole":"18","session":"1","niveau":"1","classe":"1","bareme":"10"}|ADMIN|127.0.0.1
+2017-09-20T22:54:43+00:00 INFO (6): /educatho/system/generator|{"ecole":"18","session":"1","niveau":"1","classe":"2","bareme":"10"}|ADMIN|127.0.0.1
+2017-09-26T08:55:30+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2017-09-27T05:50:19+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"1","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-09-27T05:51:06+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"1","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-09-27T05:51:19+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"12","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-09-27T05:51:38+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"12","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-09-27T05:52:15+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"12","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-09-27T05:53:24+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"12","classe":"1","bareme":"10"}|YAO SEBASTIEN|127.0.0.1
+2017-10-19T14:30:53+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2017-10-19T15:11:19+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"syao","password":"password"}||127.0.0.1
+2017-10-19T15:11:25+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"syao","password":"zaza"}||127.0.0.1
+2017-10-19T15:11:46+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"kdiomande","password":"password"}||127.0.0.1
+2017-10-23T21:55:52+00:00 INFO (6): /educatho/system/import/eleve/id/18|{"annee":"1","ecole":"18","type":"1","niveau":"1","classe":"1","valider-import":"1"}|ADMIN|127.0.0.1
+2017-10-23T21:56:32+00:00 INFO (6): /educatho/system/import/eleve/id/18|{"annee":"1","ecole":"18","type":"1","niveau":"1","classe":"1","valider-import":"1"}|ADMIN|127.0.0.1
+2017-10-23T21:56:52+00:00 INFO (6): /educatho/system/import/eleve/id/18|{"annee":"1","ecole":"18","type":"1","niveau":"1","classe":"1","valider-import":"1"}|ADMIN|127.0.0.1
+2017-11-22T16:44:30+00:00 INFO (6): /educatho/system/eleve/add/id/18|{"reference":"17-84430-EC","cni":"","nom":"test","prenom":"test","sexe":"H","date":"","lieu":"","nationalite":"TEST","pere":"test","pere-telephone":"08888","pere-nationalite":"","mere":"test","mere-telephone":"666","mere-nationalite":"","reduction":"","type":"1","niveau":"1","classe":"1","religion":"","cantine":"","transport":""}|ADMIN|127.0.0.1
+2017-11-22T16:51:42+00:00 INFO (6): /educatho/system/eleve/add/id/18|{"reference":"17-84430-EC","cni":"","nom":"test","prenom":"test","sexe":"H","date":"","lieu":"","nationalite":"TEST","pere":"test","pere-telephone":"08888","pere-nationalite":"","mere":"test","mere-telephone":"666","mere-nationalite":"","reduction":"","type":"1","niveau":"1","classe":"1","religion":"","cantine":"","transport":""}|ADMIN|127.0.0.1
+2017-11-22T16:54:21+00:00 INFO (6): /educatho/system/eleve/add/id/18|{"reference":"17-A655B-EC","cni":"","nom":"eez","prenom":"rere","sexe":"F","date":"","lieu":"","nationalite":"eeee","pere":"AAA","pere-telephone":"1111","pere-nationalite":"","mere":"AAA","mere-telephone":"111","mere-nationalite":"","reduction":"","type":"1","niveau":"2","classe":"3","religion":"","cantine":"","transport":""}|ADMIN|127.0.0.1
+2018-05-24T14:06:01+00:00 INFO (6): /educatho/ws/json/set-reglement-eleve/ref/181EFCCEC/key/CWlQKFY9ASgHOgR3Vj0/idF/13/mnt/23/refMM/MTN001|null|CWlQKFY9ASgHOgR3Vj0|::1
+2018-05-24T14:08:51+00:00 INFO (6): /educatho/ws/json/set-reglement-eleve/ref/181EFCCEC/key/CWlQKFY9ASgHOgR3Vj0/idF/13/mnt/23/rMM/MTN001|{"statut":"OK","MM":"MTN","refMM":"MTN001","frais":"BOITE DE CRAIE","montant":"23"}|CWlQKFY9ASgHOgR3Vj0|::1
+2018-05-24T14:18:02+00:00 INFO (6): /educatho/ws/json/set-reglement-eleve/ref/181EFCCEC/key/CWlQKFY9ASgHOgR3Vj0/idF/13/mnt/23/rMM/MTN001|{"statut":"KO","info":"Reference de paiement inexistante (SETTER:004)"}|CWlQKFY9ASgHOgR3Vj0|::1
+2018-08-28T22:12:43+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||::1
+2018-08-28T22:12:52+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||::1
+2018-08-28T22:13:33+00:00 INFO (6): /educatho/system/auth/login|{"username":"kdiomande","password":"password"}||::1
+2018-08-28T22:13:55+00:00 INFO (6): /educatho/system/auth/login|{"username":"akili","password":"password"}||::1
+2018-09-12T06:57:33+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2018-09-12T07:00:28+00:00 INFO (6): /educatho/backoffice/generator|{"session":"1","niveau":"1","classe":"1","bareme":"20"}|YAO SEBASTIEN|127.0.0.1
+2018-09-13T09:21:16+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"mouss","password":"mouss"}|COULIBALY Moustapha|127.0.0.1
+2018-09-13T09:21:54+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"bamba","password":"bamba"}|BAMBA Daouda|127.0.0.1
+2018-09-13T09:25:31+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"bamba","password":"bamba"}|BAMBA Daouda|127.0.0.1
+2018-09-13T09:25:59+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"bamba","password":"bamba"}|BAMBA Daouda|127.0.0.1
+2018-09-13T09:44:56+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"bamba","password":"bamba"}|BAMBA Daouda|127.0.0.1
+2018-09-13T17:08:33+00:00 INFO (6): /educatho/teacher/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2018-09-13T20:23:57+00:00 INFO (6): /educatho/system/generator|{"ecole":"18","session":"1","niveau":"1","classe":"1","bareme":"20"}|ADMIN|127.0.0.1
+2018-09-26T11:58:43+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||::1
+2018-09-26T12:20:50+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee":"1","ecole":"18","type":"1","niveau":"1","classe":"1","valider-import":"1"}|ADMIN|::1
+2018-09-26T12:21:02+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","reglement-0":"1","valider-import-versement":"1"}|ADMIN|::1
+2018-09-26T12:21:41+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","reglement-0":"1","valider-import-versement":"1"}|ADMIN|::1
+2018-09-26T12:21:49+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","reglement-1":"2","valider-import-versement":"1"}|ADMIN|::1
+2018-09-26T12:22:14+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","valider-import-versement":"1"}|ADMIN|::1
+2018-09-26T12:28:43+00:00 INFO (6): /educatho/system/import/eleve/id/18/nv/1|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","valider-import-versement":"1"}|ADMIN|::1
+2018-09-28T09:57:58+00:00 INFO (6): /educatho/system/import/eleve-versement/id/18|{"annee-versement":"1","ecole-versement":"18","niveau-versement":"1","reglement-0":"1","total":"3","valider-import-versement":"1"}|ADMIN|127.0.0.1
+2018-11-07T13:21:41+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2018-11-07T13:21:45+00:00 INFO (6): /educatho/system/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018#"}||127.0.0.1
+2018-11-07T13:22:15+00:00 INFO (6): /educatho/system/auth/login|{"username":"kdiomande","password":"password"}||127.0.0.1
+2018-11-07T13:22:33+00:00 INFO (6): /educatho/system/auth/login|{"username":"akili","password":"password"}||127.0.0.1
+2018-11-07T13:22:49+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018#"}||127.0.0.1
+2018-11-07T13:51:29+00:00 INFO (6): /educatho/system/eleve/recu-all-reglement-pdf/id/18/e/115|null|ADMIN|127.0.0.1
+2018-11-07T13:52:15+00:00 INFO (6): /educatho/system/eleve/recu-reglement-pdf/id/18/e/115/r/4|null|ADMIN|127.0.0.1
+2018-11-13T12:08:29+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2018-11-13T12:14:12+00:00 INFO (6): /educatho/system/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018#"}||127.0.0.1
+2018-11-13T12:14:17+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"zazazaz"}||127.0.0.1
+2018-11-13T12:14:22+00:00 INFO (6): /educatho/system/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018#"}||127.0.0.1
+2018-11-13T13:12:09+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||::1
+2018-11-23T11:25:19+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-02-19T11:00:44+00:00 INFO (6): /educatho/system/auth/login|{"username":"admin","password":"admin"}||127.0.0.1
+2019-02-19T11:00:48+00:00 INFO (6): /educatho/system/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-02-19T11:00:53+00:00 INFO (6): /educatho/system/auth/login|{"username":"system","password":"password"}||127.0.0.1
+2019-02-19T11:02:58+00:00 INFO (6): /educatho/system/auth/login|{"username":"akili","password":"password"}||127.0.0.1
+2019-02-19T14:38:02+00:00 INFO (6): /educatho/system/key||ADMIN|127.0.0.1
+2019-02-19T14:38:02+00:00 INFO (6): /educatho/system/key|[]|ADMIN|127.0.0.1
+2019-02-25T10:01:19+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||::1
+2019-03-02T19:00:12+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||::1
+2019-03-03T17:56:15+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:15+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:15+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:16+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:32+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:32+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:33+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:33+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:33+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:33+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:34+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:46+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:46+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:56:46+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:57:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:42+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:43+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:43+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:44+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:58:45+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T17:59:39+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:00:12+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:00:30+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:01:59+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:00+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:00+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:00+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:01+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:01+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:01+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:01+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:02+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:02:03+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"fgfgfgf","ville":"2","telephone":"","adresse":""}||127.0.0.1
+2019-03-03T18:07:50+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"AAAAA","ville":"3","telephone":"","adresse":""}|ADMIN|127.0.0.1
+2019-03-03T18:19:09+00:00 WARN (4): /educatho/system/ecole/delete|{"id":"undefined"}||127.0.0.1
+2019-03-03T18:27:50+00:00 WARN (4): /educatho/principal/ecole/delete|{"id":"undefined"}|ADMIN|127.0.0.1
+2019-03-03T18:27:52+00:00 WARN (4): /educatho/principal/ecole/delete|{"id":"undefined"}|ADMIN|127.0.0.1
+2019-03-03T18:28:03+00:00 WARN (4): /educatho/principal/ecole/delete|{"id":"undefined"}|ADMIN|127.0.0.1
+2019-03-03T18:28:47+00:00 WARN (4): /educatho/principal/ecole/delete|{"id":"75"}|ADMIN|127.0.0.1
+2019-03-03T18:28:58+00:00 WARN (4): /educatho/principal/ecole/delete|{"id":"74"}|ADMIN|127.0.0.1
+2019-03-24T12:27:00+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-03-24T12:27:05+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-03-26T11:33:11+00:00 INFO (6): /educatho/principal/ecole/add-classe-horaire/id/18/c/1/n/1/m/6|{"niveau":"1","matiere":"6","professeur":"","salle":"1","jour-1":"1","heure-debut":"11:30 AM","heure-fin":"11:45 AM","valider":"Enregistrer les informations"}|ADMIN|127.0.0.1
+2019-03-26T11:43:29+00:00 INFO (6): /educatho/principal/ecole/add-classe-horaire/id/18/c/1/n/1/m/1|{"niveau":"1","matiere":"1","professeur":"3","salle":"1","jour-1":"1","heure-debut":"11:45 AM","heure-fin":"12:00 PM","valider":"Enregistrer les informations"}|ADMIN|127.0.0.1
+2019-03-26T13:25:22+00:00 INFO (6): /educatho/principal/eleve/edit-note|{"id":"8","note":"4","bareme":"10"}|ADMIN|127.0.0.1
+2019-03-27T18:43:35+00:00 INFO (6): /educatho/principal/ecole/add-classe|{"ecole":"18classe=AAAA","place":"12"}||127.0.0.1
+2019-03-27T18:43:37+00:00 INFO (6): /educatho/principal/ecole/add-classe|{"ecole":"18classe=AAAA","place":"12"}||127.0.0.1
+2019-03-27T18:44:33+00:00 INFO (6): /educatho/principal/ecole/add-classe|{"ecole":"18classe=AAAA","place":"12"}||127.0.0.1
+2019-03-27T18:44:49+00:00 WARN (4): /educatho/principal/ecole/delete-classe|{"id":"9"}||127.0.0.1
+2019-03-27T18:46:12+00:00 WARN (4): /educatho/principal/ecole/delete-classe|{"id":"9"}|ADMIN|127.0.0.1
+2019-03-27T18:46:28+00:00 WARN (4): /educatho/principal/ecole/delete-classe|{"id":"8"}|ADMIN|127.0.0.1
+2019-03-27T18:47:19+00:00 WARN (4): /educatho/principal/ecole/delete-classe|{"id":"7"}|ADMIN|127.0.0.1
+2019-03-27T18:48:07+00:00 INFO (6): /educatho/principal/ecole/add|{"ecole":"","ville":"","telephone":"","adresse":"","type":""}|ADMIN|127.0.0.1
+2019-03-27T18:52:52+00:00 INFO (6): /educatho/principal/ecole/add-niveau-reglement|{"niveau":"3","reglement":"1","montant":"1000","ecole":"18","type":"1"}|ADMIN|127.0.0.1
+2019-03-27T18:55:08+00:00 INFO (6): /educatho/principal/ecole/edit-niveau-reglement|{"id":"9","niveau":"3","reglement":"1","montant":"1500","type":"1"}|ADMIN|127.0.0.1
+2019-05-30T08:52:39+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T08:53:24+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T08:55:27+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T08:56:02+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T08:59:26+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:00:36+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:00:39+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:01:28+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:02:02+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:06:57+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T09:11:14+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T11:41:58+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T11:42:26+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T11:44:03+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-05-30T11:44:51+00:00 INFO (6): /educatho/principal/auth/login|{"username":"admin","password":"123"}|ADMIN|127.0.0.1
+2019-06-02T21:32:28+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:30+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:31+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:32+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:33+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:34+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:42+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:42+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:43+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:43+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:43+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:43+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:43+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:44+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:32:44+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:35:44+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:35:46+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:35:47+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:35:47+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:36:12+00:00 INFO (6): /educatho/principal/annee/active|{"id":"undefined"}||127.0.0.1
+2019-06-02T21:37:24+00:00 INFO (6): /educatho/principal/annee/active|{"id":"1"}||127.0.0.1
+2019-06-02T21:39:19+00:00 INFO (6): /educatho/principal/annee/desactive|{"id":"1"}|ADMIN|127.0.0.1
+2019-06-02T21:39:25+00:00 INFO (6): /educatho/principal/annee/active|{"id":"1"}|ADMIN|127.0.0.1
+2019-06-16T08:43:21+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-06-16T08:50:56+00:00 INFO (6): /educatho/backoffice/auth/login|{"username":"admin","password":"123"}||::1
+2019-06-16T09:47:24+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:49:32+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:51:35+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:52:30+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:53:09+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:53:37+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:53:58+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:54:17+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:55:32+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:55:43+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:57:33+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:59:37+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T09:59:45+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:01:12+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:02:02+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:02:33+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:03:41+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:05:20+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:05:59+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/9|null|ADMIN|127.0.0.1
+2019-06-16T10:22:05+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T10:23:09+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T10:25:12+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T10:26:42+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T10:27:48+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T10:28:13+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/112/r/10|null|ADMIN|127.0.0.1
+2019-06-16T14:01:10+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/8|null|ADMIN|127.0.0.1
+2019-06-16T14:01:23+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/8|null|ADMIN|127.0.0.1
+2019-06-16T14:39:51+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/8|null|ADMIN|127.0.0.1
+2019-06-17T08:15:31+00:00 INFO (6): /educatho/principal/ecole/add-classe-horaire/id/18/c/1/n/1/m/1|{"niveau":"1","matiere":"1","professeur":"3","salle":"1","jour-2":"2","heure-debut":"8:00 AM","heure-fin":"9:00 AM","valider":"Enregistrer les informations"}|ADMIN|127.0.0.1
+2019-06-17T08:16:29+00:00 INFO (6): /educatho/principal/ecole/add-classe-horaire/id/18/c/1/n/1/m/1|{"niveau":"1","matiere":"1","professeur":"3","salle":"1","jour-3":"3","heure-debut":"10:00 AM","heure-fin":"11:00 AM","valider":"Enregistrer les informations"}|ADMIN|127.0.0.1
+2019-06-19T11:23:33+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"syao","password":"syao"}||127.0.0.1
+2019-06-19T12:35:46+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/114/r/8|null|YAO SEBASTIEN|127.0.0.1
+2019-06-19T12:36:59+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/96/r/12|null|YAO SEBASTIEN|127.0.0.1
+2019-06-19T13:04:09+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-07-22T11:18:31+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-07-22T11:29:09+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T11:29:18+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T14:46:39+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/17|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T14:49:53+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c//e/10/r/16|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T14:51:09+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c//e/10/r/19|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T14:53:23+00:00 INFO (6): /educatho/principal/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/20|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T15:03:57+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T15:10:10+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/21|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T17:39:05+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/113/r/6|null|ABOU STEPHANE|127.0.0.1
+2019-07-22T18:03:15+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-07-23T11:37:28+00:00 INFO (6): /educatho/ws/json/get-info-eleve/ref/1111111/key/CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|null|CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|127.0.0.1
+2019-07-23T11:38:32+00:00 INFO (6): /educatho/ws/json/get-info-eleve/ref/1111111/key/CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|"KO"|CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|127.0.0.1
+2019-07-23T11:38:44+00:00 INFO (6): /educatho/ws/json/get-info-eleve/ref/111/key/CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|{"statut":"OK","MM":"ORANGE C\u00f4te d'Ivoire","eleve":{"idEleve":10,"reference":"111","nom":"AAA","prenom":"AAA","sexe":"H","dateNaissance":null,"lieuNaissance":null,"nationalite":null,"groupeSanguin":null},"etude":{"idAnnee":1,"annee":"EXERCICE 2016-2017","idEcole":18,"ecole":"COLLEGE JEAN DE LA MENNAIS","idNiveau":1,"niveau":"CP1","statut":"NON AFFECTE","idEcoleClasse":1,"classe":"CP1 A"}}|CmgNc1UxDTYJPgJgUyoGOwAjVmMBbVpnCzg=|127.0.0.1
+2019-07-23T16:00:48+00:00 INFO (6): /educatho/principal/ecole/add-niveau-reglement|{"niveau":"3","reglement":"2","montant":"50000","ecole":"18","type":"2"}|ADMIN|127.0.0.1
+2019-07-24T14:33:46+00:00 INFO (6): /educatho/parent/auth/login|{"username":"AAAAA","password":"zazazaz"}||127.0.0.1
+2019-07-24T14:35:34+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"1111"}|AAA AAA|127.0.0.1
+2019-07-24T14:35:53+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"080900603"}|AAA AAA|127.0.0.1
+2019-07-24T14:40:22+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"08550777"}|EHAKO Mathieu|127.0.0.1
+2019-07-24T14:41:24+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"59102463"}|EHAKO Mathieu|127.0.0.1
+2019-07-24T14:48:43+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"08550777"}||127.0.0.1
+2019-07-24T15:35:26+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"08550777"}|EHAKO Mathieu|127.0.0.1
+2019-07-24T15:37:13+00:00 INFO (6): /educatho/parent/auth/login|{"username":"111","password":"08550777"}|EHAKO Mathieu|127.0.0.1
+2019-07-25T18:57:27+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:08:45+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:10:15+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:11:55+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:13:09+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:14:36+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:16:11+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:18:05+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:24:44+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:24:44+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/img/logo_educatho.png|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:24:44+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/img/logo_aecad_3.jpg|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:26:06+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:26:06+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/private/assets/images/logo_aecad_3.jpg|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:26:07+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/private/assets/images/logo_educatho.png|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:26:31+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:30:22+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:31:06+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:31:20+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:34:34+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:40:01+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:40:30+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:41:37+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:43:24+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:43:34+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:44:25+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:45:41+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:45:56+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:46:52+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:47:21+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:47:57+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:48:31+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:48:52+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:49:22+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:49:40+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:50:13+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:51:31+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:52:09+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:52:24+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:52:34+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:58:08+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:58:21+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:58:55+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T19:59:07+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/10/r/13|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T21:56:44+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:07:37+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:08:54+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:09:44+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:10:46+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:11:20+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:12:11+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:12:22+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:12:48+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:14:01+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:14:40+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:15:22+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:16:01+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:16:41+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:17:06+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:17:32+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:18:02+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:18:23+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:18:53+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:19:04+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:20:47+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:21:10+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:21:45+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:22:48+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:23:26+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:24:30+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:25:43+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:26:16+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:26:37+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:28:30+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:29:23+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:29:41+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:31:05+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:31:25+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:32:16+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:33:14+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:33:39+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:36:22+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:37:05+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:37:31+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:37:34+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:37:34+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:37:36+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:38:41+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:41:05+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:41:08+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:41:31+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:41:59+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:42:00+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:43:01+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:43:57+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:50:51+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:51:54+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:53:16+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:54:46+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:55:24+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:56:58+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:57:25+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-25T22:58:59+00:00 INFO (6): /educatho/caisse/eleve/recu-reglement-pdf/id/18/c/1/e/97/r/19|null|YAO SEBASTIEN|127.0.0.1
+2019-07-31T10:25:36+00:00 INFO (6): /educatho/principal/ecole/add-classe|{"ecole":"20","classe":"test","place":"1"}|ADMIN|127.0.0.1
+2019-08-01T14:06:07+00:00 INFO (6): /educatho/principal/ecole/edit|{"id":"20","ecole":"COLLEGE SAINT-HENRI DE OSSO","ville":"12","telephone":"","adresse":"","type":"3,4"}|ADMIN|127.0.0.1
+2019-08-02T00:48:44+00:00 INFO (6): /educatho/principal/ecole/duplicate/id/18|{"ecole":"Copie de COLLEGE JEAN DE LA MENNAIS","type":["1","2"],"ville":"12","telephone":"22254543","adresse":"","catalogue":"on","salle":"on","classe":"on"}|ADMIN|127.0.0.1
+2019-08-02T00:52:55+00:00 INFO (6): /educatho/principal/ecole/duplicate/id/18|{"ecole":"Copie de COLLEGE JEAN DE LA MENNAIS","type":["1","2"],"ville":"12","telephone":"22254543","adresse":"","catalogue":"on","salle":"on","classe":"on"}|ADMIN|127.0.0.1
+2019-08-02T00:53:10+00:00 INFO (6): /educatho/principal/ecole/duplicate/id/18|{"ecole":"Copie de COLLEGE JEAN DE LA MENNAIS","type":["1","2"],"ville":"12","telephone":"22254543","adresse":"","catalogue":"on","salle":"on","classe":"on"}|ADMIN|127.0.0.1
+2019-08-02T01:11:28+00:00 INFO (6): /educatho/principal/ecole/duplicate/id/18|{"ecole":"Copie de COLLEGE JEAN DE LA MENNAIS","type":["1","2"],"ville":"12","telephone":"22254543","adresse":"","catalogue":"on","salle":"on","classe":"on"}|ADMIN|127.0.0.1
+2019-08-02T01:48:28+00:00 INFO (6): /educatho/principal/ecole/edit-classe|{"id":"1","classe":"CP1 A","place":"7","type":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:10:24+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:10:37+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:11:02+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:11:07+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:12:11+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:12:16+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:12:21+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:12:28+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:49:15+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:49:22+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:49:30+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:49:35+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-04T10:49:48+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-05T01:33:30+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-05T01:37:50+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-05T11:32:48+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-12T18:27:58+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-12T18:32:55+00:00 INFO (6): /educatho/principal/eleve/add/id/18/c/1|{"reference":"19-EBEAA-EC","cni":"1000","nom":"TEST","prenom":"TEST","sexe":"H","date":"08\/12\/2019","lieu":"","nationalite":"","pere":"TEST","pere-telephone":"08550777","pere-nationalite":"","mere":"TEST","mere-telephone":"08550777","mere-nationalite":"","reduction":"","type":"1","religion":"","cantine":""}|ADMIN|127.0.0.1
+2019-08-19T09:44:30+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-08-19T16:43:14+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-08-19T16:43:40+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-08-19T16:43:53+00:00 INFO (6): /educatho/ecole/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-09-04T19:57:49+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-09-20T11:02:01+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-09-20T11:02:21+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-09-22T10:00:23+00:00 INFO (6): /educatho/ecole/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-09-22T10:00:28+00:00 INFO (6): /educatho/ecole/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-09-22T10:16:08+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-10-01T15:33:12+00:00 INFO (6): /educatho/ecole/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-10-01T15:34:01+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-10-01T15:39:12+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-10-01T15:39:18+00:00 INFO (6): /educatho/principal/auth/login|{"username":"syao","password":"syao"}||127.0.0.1
+2019-12-03T12:11:34+00:00 INFO (6): /educatho/principal/annee/active|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:11:47+00:00 INFO (6): /educatho/principal/annee/desactive|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:11:54+00:00 INFO (6): /educatho/principal/annee/active|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:12:01+00:00 INFO (6): /educatho/principal/annee/type|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:18:08+00:00 INFO (6): /educatho/principal/annee/type|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:21:13+00:00 INFO (6): /educatho/principal/annee/type|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:21:25+00:00 INFO (6): /educatho/principal/annee/desactive|{"id":"2"}|ADMIN|127.0.0.1
+2019-12-03T12:21:31+00:00 INFO (6): /educatho/principal/annee/active|{"id":"1"}|ADMIN|127.0.0.1
+2019-12-03T12:21:34+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-12-03T12:34:19+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"1","salle":"CP1_A"}|ADMIN|127.0.0.1
+2019-12-03T12:34:28+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"2","salle":"CP1_B"}|ADMIN|127.0.0.1
+2019-12-03T12:34:42+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"3","salle":"S_CP2_A"}|ADMIN|127.0.0.1
+2019-12-03T12:34:49+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"1","salle":"S_CP1_A"}|ADMIN|127.0.0.1
+2019-12-03T12:34:56+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"2","salle":"S_CP1_B"}|ADMIN|127.0.0.1
+2019-12-03T12:35:11+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"4","salle":"S_CP2_B"}|ADMIN|127.0.0.1
+2019-12-03T12:35:32+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"5","salle":"S_6EME_1"}|ADMIN|127.0.0.1
+2019-12-03T12:35:46+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"6","salle":"S_6EME_2"}|ADMIN|127.0.0.1
+2019-12-03T12:36:01+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"7","salle":"S_5EME_1"}|ADMIN|127.0.0.1
+2019-12-03T12:36:22+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"9","salle":"S_LABO_1"}|ADMIN|127.0.0.1
+2019-12-03T12:36:38+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"10","salle":"S_LABO_2"}|ADMIN|127.0.0.1
+2019-12-03T12:36:52+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"11","salle":"S_SPORT"}|ADMIN|127.0.0.1
+2019-12-03T12:37:21+00:00 INFO (6): /educatho/principal/ecole/edit-salle|{"id":"12","salle":"S_AMPHITHEATRE"}|ADMIN|127.0.0.1
+2019-12-03T22:30:19+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-12-06T12:47:34+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-12-06T12:47:55+00:00 INFO (6): /educatho/principal/annee/type|{"id":"1"}|ADMIN|127.0.0.1
+2019-12-19T12:30:12+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-12-19T12:30:19+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2019-12-19T12:30:26+00:00 INFO (6): /educatho/caisse/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2019-12-27T12:58:45+00:00 WARN (4): /educatho/note/dashboard/note-validate|{"classe":"2","matiere":"4","session":"1","id":"15"}|YAO SEBASTIEN|127.0.0.1
+2019-12-27T13:03:48+00:00 WARN (4): /educatho/note/dashboard/note-no-validate|{"classe":"2","matiere":"4","session":"1","id":"15"}|YAO SEBASTIEN|127.0.0.1
+2019-12-27T13:39:56+00:00 WARN (4): /educatho/note/dashboard/note-update|{"id":"15","note":"12"}|YAO SEBASTIEN|127.0.0.1
+2019-12-27T14:12:09+00:00 WARN (4): /educatho/note/dashboard/note-validate|{"classe":"2","matiere":"4","session":"1","id":"15"}|YAO SEBASTIEN|127.0.0.1
+2019-12-27T14:12:42+00:00 WARN (4): /educatho/note/dashboard/note-update|{"id":"15","note":"17"}|YAO SEBASTIEN|127.0.0.1
+2019-12-27T14:14:41+00:00 WARN (4): /educatho/note/dashboard/note-no-validate|{"classe":"2","matiere":"4","session":"1","id":"15"}|YAO SEBASTIEN|127.0.0.1
+2019-12-30T06:53:15+00:00 INFO (6): /educatho/note/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2020-01-03T10:25:14+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0"}|YAO SEBASTIEN|127.0.0.1
+2020-01-03T10:32:10+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0"}|YAO SEBASTIEN|127.0.0.1
+2020-01-03T10:32:47+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-03T10:33:26+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-03T10:33:41+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-03T10:33:51+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"1","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-04T10:12:18+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"0","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-04T10:12:33+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"3","matiere":"1","session":"1","eleve":"113","statut":"1","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-04T10:16:39+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"1","matiere":"1","session":"1","eleve":"115","statut":"1","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-04T10:16:55+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"1","matiere":"1","session":"1","eleve":"115","statut":"0","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-04T10:17:01+00:00 WARN (4): /educatho/note/eleve/statut|{"moyenne":"1","matiere":"1","session":"1","eleve":"115","statut":"1","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-07T12:33:07+00:00 INFO (6): /educatho/note/auth/login|{"username":"admin","password":"123"}||127.0.0.1
+2020-01-07T12:33:12+00:00 INFO (6): /educatho/note/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2020-01-07T12:33:18+00:00 INFO (6): /educatho/note/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018####@@"}||127.0.0.1
+2020-01-12T09:20:42+00:00 WARN (4): /educatho/note/eleve/delete|{"moyenne":"1","eleve":"115","annee":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-12T09:36:47+00:00 WARN (4): /educatho/note/eleve/delete-session|{"moyenne":"1","eleve":"115","annee":"1","ecole":"18","session":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-01-12T12:51:50+00:00 INFO (6): /educatho/principal/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2020-01-12T12:56:30+00:00 INFO (6): /educatho/ecole/ecole/edit-salle|{"id":"8","salle":"S_5EME_2"}|YAO SEBASTIEN|127.0.0.1
+2020-01-21T10:48:12+00:00 INFO (6): /educatho/note/auth/login|{"username":"kdiomande","password":"kdiomande"}||::1
+2020-02-03T21:31:51+00:00 INFO (6): /educatho/principal/auth/login|{"username":"kdiomande","password":"$3cur1t3@2018####@@"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T20:45:59+00:00 WARN (4): /educatho/caisse/dashboard/delete-caisse|{"id":"2"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T20:46:18+00:00 WARN (4): /educatho/caisse/dashboard/delete-caisse|{"id":"1"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T20:50:45+00:00 WARN (4): /educatho/caisse/dashboard/edit-caisse|{"id":"3","caisse":"CAISSE FOURNISSEUR 1"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T20:50:46+00:00 WARN (4): /educatho/caisse/dashboard/edit-caisse|{"id":"3","caisse":"CAISSE FOURNISSEUR 1"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T20:51:41+00:00 WARN (4): /educatho/caisse/dashboard/edit-caisse|{"id":"3","caisse":"CAISSE FOURNISSEUR"}|YAO SEBASTIEN|127.0.0.1
+2020-02-13T21:25:25+00:00 WARN (4): /educatho/caisse/dashboard/edit-caisse|{"id":"4","caisse":"CAISSE CHARGE FIXE"}|YAO SEBASTIEN|127.0.0.1
+2020-02-17T17:32:27+00:00 INFO (6): /educatho/auth/login|{"username":"siban","password":"siban"}||127.0.0.1
+2020-02-25T10:51:10+00:00 INFO (6): /kinara/auth/login|{"username":"siban","password":"siban"}||::1
+2020-02-25T10:51:17+00:00 INFO (6): /kinara/auth/login|{"username":"kdiomande","password":"siban"}||::1
+2020-02-25T10:52:58+00:00 INFO (6): /kinara/auth/login|{"username":"kdiomande","password":"siban"}||::1
+2020-02-25T10:56:59+00:00 INFO (6): /kinara/auth/login|{"username":"kdiomande","password":"siban"}||::1
+2020-02-25T11:00:53+00:00 INFO (6): /kinara/auth/login|{"username":"kdiomande","password":"siban"}||::1
+2020-02-25T11:01:08+00:00 INFO (6): /kinara/auth/login|{"username":"kdiomande","password":"siban"}||::1
+2020-02-25T12:56:07+00:00 INFO (6): /kinara/auth/login|{"username":"syao","password":"syaoa"}||::1
+2020-02-25T18:16:13+00:00 INFO (6): /kinara/auth/login|{"username":"jhd","password":"djjudjhd"}||::1
+2020-02-25T18:21:43+00:00 INFO (6): /kinara/auth/login|{"username":"","password":""}||::1
+2020-02-26T09:55:23+00:00 INFO (6): /kinara/auth/login|{"username":"feurdy","password":"galogbe.djessa@g\u00f9ail.com"}||::1
+2020-02-28T09:41:52+00:00 INFO (6): /kinara/auth/login|{"username":"feurdy","password":"galogbe.djessa@gmail.com"}||::1
+2020-02-28T09:44:33+00:00 INFO (6): /kinara/auth/login|{"username":"feurdy","password":"galogbe.djessa@g\u00f9ail.com"}||::1
+2020-03-07T13:14:51+00:00 INFO (6): /kinara/auth/login|{"username":"feurdy","password":"galogbe.djessa@gmail.com"}||::1
+2020-03-07T13:16:26+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:27+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:30+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:32+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:34+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:36+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:39+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:41+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:45+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:47+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:50+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"4"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:16:51+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"4"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:29+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:31+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:34+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:35+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:36+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:17:38+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"1","module":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:33:38+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"7"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:33:56+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"2"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:34:01+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"6"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:34:07+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"3"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:34:12+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"5"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:34:13+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:34:15+00:00 WARN (4): /kinara/setting/type-salle/action-element|{"element":"6","salle":"4"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-07T13:40:44+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-09T14:55:10+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-09T14:55:11+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-09T14:55:14+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-09T14:55:15+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"1"}|DIOMANDE KEVIN SIBAN|::1
+2020-03-09T14:56:06+00:00 WARN (4): /kinara/setting/groupe/action-module|{"groupe":"2","module":"3"}|DIOMANDE KEVIN SIBAN|::1
+2020-04-04T18:42:55+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"","password":""}||127.0.0.1
+2020-04-04T18:43:33+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"laurent","password":"ddjd"}||127.0.0.1
+2020-04-04T18:43:51+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"laurent","password":"jjjd"}||127.0.0.1
+2020-04-04T18:46:20+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"laurent","password":"hdhd"}||127.0.0.1
+2020-04-04T21:57:51+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"feurdy","password":"galogbe.djessa@gmail.com"}||::1
+2020-04-04T22:44:01+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"feurdy","password":""}||::1
+2020-04-05T23:05:55+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"zjlc5736","password":"feurdy"}||::1
+2020-04-05T23:06:07+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"feurdy","password":""}||::1
+2020-04-05T23:07:40+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"sjjd","password":"hdsh"}||::1
+2020-04-05T23:19:53+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"ssjj","password":"js"}||::1
+2020-04-05T23:20:43+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"sjjsj","password":"jjjd"}||::1
+2020-04-05T23:20:53+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"skkkekj","password":"jjdj"}||::1
+2020-04-05T23:21:07+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"wjcl5736","password":"jdjjd"}||::1
+2020-04-05T23:21:21+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"WJLC5736","password":"jjje"}|GALOGBE DJESSA|::1
+2020-04-06T14:26:57+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"WJLC5","password":"jdjdjd"}||::1
+2020-04-23T08:49:26+00:00 INFO (6): /PDA/kibona/auth/login|{"username":"FeurDy","password":"hjdhhdh"}||::1
+2020-05-30T17:02:22+00:00 INFO (6): /metro-lab/auth/login|{"username":"feurdy","password":"galogbe.djessa@gmail.com"}||::1
+2020-05-30T17:02:27+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
+2020-05-30T17:02:47+00:00 INFO (6): /metro-lab/auth/login|{"username":"WJLC3657","password":"jdjd"}||::1
+2020-05-30T17:03:18+00:00 INFO (6): /metro-lab/auth/login|{"username":"WJL5736","password":"jdjd"}||::1

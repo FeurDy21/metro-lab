@@ -1,0 +1,616 @@
+
+   <div class="row">
+        <div class="col-md-4">
+        <h2 style="margin-lef:60px; margin-top:-34px;">Enregistrement de snag</h2>
+        
+         <h4>Vous uplodez un fichier excel contenant les information ou vous enregistrez snag par snag</h4>
+        </div> 
+        
+       <!-- <div class="col-md-8">
+         <table id="addTable" style="float:lef; margin-top:-40px;" >
+         <tr> <td> <a  href="#" class="btn btn-danger newAdmin">ajouter  nouveau</a> </td> <td>  <button  class="btn btn-primary attribuer">attribuer role</button></td></tr>
+         </table>
+        </div>-->
+       </div>
+
+ <div class="row mb-5">
+        
+</div>
+
+ <style> .panel { box-shadow:5px 5px 20px 5px #777; padding:20px 20px 20px 20px; margin-top:%;}  
+           .panel{font-size:1.5em!important;}
+            .panel .panel-heading{background-color:#0000 ;color:#FF6600!important; font-size:1em!important; text-align:cente;}
+            .panel a:hover{text-decoration: none;}
+    </style>
+   
+<div class="row">
+    <div  class="offset-md-3">
+      
+    </div>
+
+    <div  class="col-md-3 ">
+         
+         
+  <div class="panel panel-danger">
+  <div class="panel-heading">Importez fichier excel  <span class="fa fa-users" style="font-size: 1.4em!important; color:black!important; float: right; background-color: red;"></span></div>
+  <div class="panel-body">
+  <br>
+     <div style="color:black; text-align:center; font-weight:bold; text-underline:none;">
+        <form id="search-users" name="s" method="post" action="<?php echo $this->baseUrl();?>/snag/pda/import" enctype="multipart/form-data">
+                <div class="row">
+                  <div class="form-group col-12 col-lg-12">
+                   
+                    <input class="form-control required" required aria-required="true" name="file" id="file" type="file">
+
+                    <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['errorFile'])) echo "Veuillez charger un fichier excel."; ?></span>
+                     <span style="color: red; font-size: 0.7em!important;"><?php if(isset($_GET['error_size'])) echo "Chargez un fichier de snag."; ?></span>
+                    <br>
+                    <input type="submit"  class="btn btn-primary"name="uplaod" value="uplaod">
+                  </div>
+          </div>        
+        </form>
+  
+   </div>
+  
+   </div>
+  </div>
+            
+     </div>
+         
+      <div  class="col-md-3 " >
+          
+       <div class="panel panel-danger newSnag ">
+      <div class="panel-heading" >Nouveau  snag  <span class="fa fa-users" style="font-size: 1.4em!important; color:black!important;float: right;"></span></div>
+    <br>
+    <div class="panel-body  " >
+    <a href="#" class="newAdmin">
+       <div style="color:black; text-align:center; font-weight:bold;">
+       <img src="<?php echo $this->baseUrl();?>/public/images/imageplus.jpg" width="45%">
+        
+  <br>
+   </div>
+    </a>
+    </div>
+    </div>
+         
+      </div>
+
+      
+
+  <div  class="offset-md-3">
+
+
+   </div> 
+
+ </div>
+        <!--<div class="col col-md-6 pl-lg-5">
+          <table id="myTable" class="table tablesorter table-responsive">
+            <caption>Alerts received</caption>
+            <thead class="cf">
+              <tr>
+                <th class="header" scope="col">Status</th>
+                <th class="header" scope="col">Date</th>
+                <th class="header hide-when-small" scope="col">ID</th>
+                <th class="header" scope="col">Type</th>
+                <th class="header hide-when-small" scope="col">Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span></td>
+                <td class="align-middle">08/10/12</td>
+                <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896321</a></td>
+                <td class="align-middle">BT</td>
+                <td class="align-middle">0:05:40</td>
+              </tr>
+              <tr>
+                <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+                <td class="align-middle">09/10/12</td>
+                <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896327</a></td>
+                <td class="align-middle">Warn</td>
+                <td class="align-middle">0:19:09</td>
+              </tr>
+              <tr>
+                <td class="alert alert-warning border-0 mb-0"><span class="alert-icon"><span class="sr-only">Warning</span></span></td>
+                <td class="align-middle">10/10/12</td>
+                <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447765896322</a></td>
+                <td class="align-middle">MMK</td>
+                <td class="align-middle">0:10:06</td>
+              </tr>
+              <tr>
+                <td class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span></td>
+                <td class="align-middle">11/10/12</td>
+                <td class="align-middle"><a href="#"><span class="sr-only">View system with ID </span>447754233245</a></td>
+                <td class="align-middle">YYI</td>
+                <td class="align-middle">-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+      </div> 
+
+
+     <div class="modal fade" id="addModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title h4" id="myModalLabel"> Enregistrement de nouveaux snag</h2>
+                <!-- Boosted mod: using visually hidden text instead of aria-label -->
+                <button type="button" class="close" data-dismiss="modal">
+                  <span class="sr-only">Close confirmation modal</span>
+                </button>
+              </div>
+                <div class="modal-body">
+ 
+        <span class="message"></span>
+
+          <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" href="#site" data-toggle="tab">Site</a></li>
+            <li class="nav-item"><a class="nav-link" href="#snag" data-toggle="tab">Snag</a></li>
+            <!--<li class="nav-item"><a class="nav-link" href="#messages" data-toggle="tab">Messages</a></li>-->
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="site">
+
+
+              <form id="snagForm" name="searchUsers" method="post" action="/">
+                <div class="row">
+
+                   <div class="form-group col-12 col-lg-6">
+                        <label class="offset-md-1">Nom du  site:<span  class="text-danger">*</span></label>
+                        <div class="  col-md-12">
+                            <select  name="site_name"  data-required="1" placeholder="" class="form-control site_name input-height " > 
+                               <?php if($this->site){
+
+                               foreach($this->site as $value){  ?>   
+                                  
+                                <option value="<?php echo $value['id'];?> "> 
+                                  <?php  echo $value["site_name"];  ?>
+                               </option>
+                                <?php  }} ?>   
+                            </select>
+                            <span id="erreur_site_name" class="text-danger">
+                            
+                            </span>
+                        </div>
+                     </div>  
+
+                  <div class="form-group col-12 col-lg-6">
+                    <label class="offset-md-1">ID (IHS & CAMUSAT) du  site: <span  class="text-danger">*</span></label>
+                            <div class=" col-md-12">
+                          <input type="text" name="site_id"  value="" data-required="1" placeholder="" class="form-control input-height direction" /> 
+                          <span id="erreur_site_id" class="text-danger">
+                          
+                          </span>
+                  </div>
+                  </div>
+
+                   <div class="form-group col-12 col-lg-6">
+                         <label class="offset-md-1">Zone(IHS & CAMUSAT) du site: <span  class="text-danger">*</span></label>
+                        <div class="  col-md-12">
+                            <input type="text" name="area" value="" data-required="1" placeholder="" class="form-control input-height departement" /> 
+                            <span id="erreur_area" class="text-danger">
+                            
+                        </span>
+                    </div>
+                  
+                  </div>
+
+
+                   <div class="form-group col-12 col-lg-6">
+                    <label class="offset-md-1">ID (OCI) du  site: <span  class="text-danger">*</span></label>
+                            <div class=" col-md-12">
+                          <input type="text" name="site_id_oci"  value="" data-required="1" placeholder="" class="form-control input-height site_id_oci" /> 
+                          <span id="erreur_site_id" class="text-danger">
+                          
+                          </span>
+                  </div>
+                  </div>
+
+
+               <div class="form-group col-12 col-lg-6">
+                         <label class="offset-md-1">Zone(OCI) du site: <span  class="text-danger">*</span></label>
+                        <div class="  col-md-12">
+                            <input type="text" name="area_oci" value="" data-required="1" placeholder="" class="form-control input-height departement" /> 
+                            <span id="erreur_area" class="text-danger"></span>
+                    </div>
+                     </div>
+
+                   <div class="form-group col-12 col-lg-6">
+                     <label class="offset-md-1">uir wh:<span  class="text-danger">*</span></label>
+                      <div class="  col-md-12">
+                          <input type="text" name="uir_hw"  value="" data-required="1" placeholder="" class="form-control input-height service" /> 
+                          <span id="erreur_uir" class="text-danger"></span>
+                      </div>
+                  </div>
+
+
+
+                     <div class="form-group col-12 col-lg-6">
+                      <label class="control-label offset-md-1  control-label">Type de site
+                          <span class="required" class="text-danger">* </span>
+                          </label>
+                          <div class=" col-md-12">
+                              <input type="text" name="site_type"  value="" data-required="1" placeholder="" class="form-control input-height service" /> 
+                              <span id="erreur_site_type" class="text-danger"></span>
+                          </div>
+                  </div>
+
+                     
+
+                     <div class="form-group col-12 col-lg-6">
+                     <label class="offset-md-1">uir oci:<span  class="text-danger">*</span></label>
+                      <div class="  col-md-12">
+                          <input type="text" name="uir_oci"  value="" data-required="1" placeholder="" class="form-control input-height service" /> 
+                          <span id="erreur_uir" class="text-danger"></span>
+                      </div>
+                  </div>
+
+                  
+                  
+
+                 
+                </div>
+              
+            </div>
+
+
+            <div class="tab-pane" id="snag">
+             
+                <div class="row">
+
+                 
+
+                  <div class="form-group col-12 col-lg-6">
+                      <label class="control-label offset-md-1  control-label">
+                                                  type de snag
+                   <span class="required" class="text-danger">* </span>
+                          </label>
+                            <div class="col-md-12">
+                              <select  name="type_of_snag" value="" data-required="1" placeholder="" class="form-control type_of_snag input-height direction" > 
+                                   <?php if($this->snag){
+
+                               foreach($this->snag as $value){  ?>   
+                                  
+                                <option value="<?php echo $value["type"];?> " > 
+                                  <?php  echo $value["type"];  ?>
+                               </option>
+                                <?php  }} ?>   
+
+                              </select>
+                              <span id="erreur_type_of_snag" class="text-danger"></span>
+                         
+                          </div>
+                  </div>
+                  
+
+                   <div class="form-group col-12 col-lg-6">
+                          <label class="control-label  offset-md-1  control-label">Severité:
+                         <span class="required" class="text-danger">* </span>
+                          </label>
+                          <div class="col-md-12" >
+                              <input type="text" name="severitey" disabled value="" data-required="1" placeholder="" class="form-control input-height severitey " /> 
+                              <span id="erreur_severitey" class="text-danger"></span>
+                          
+                          </div>
+                  </div>
+                  
+
+                   <div class="form-group col-12 col-lg-6">
+                      <label class=" offset-md-1">Description  du snag: <span  class="text-danger">*</span></label>
+                      <div class="col-md-12">
+                        <select  name="snag_description" value="" data-required="1" placeholder="" class="form-control snag_description input-height " > 
+                                
+
+                          </select>
+                        
+                          <span id="erreur_snag_description" class="text-danger"></span>
+                      </div>
+                  </div>
+                   
+
+                    
+                    <div class="form-group col-12 col-lg-6">
+                 <label class="offset-md-1">Delai de resolution: <span  class="text-danger">*</span></label>
+                             
+                    <div class=" col-md-12 ">
+                      
+                        <input class="form-control input-height delai" disabled name=" resolution_deadline"   type="text" value="">
+                          <span id="erreur_resolution_deadline" class="text-danger"></span>  
+                  </div>
+                
+                   </div>
+              
+
+                    <div class="form-group col-12 col-lg-6">
+                 <label class="offset-md-1">Categorie: <span  class="text-danger">*</span></label>
+                    
+                    <div class=" col-md-12 ">
+                      
+                        <input class="form-control input-height categorie" disabled name=" resolution_deadline"   type="text" value="">
+                          <span id="erreur_categorie" class="text-danger"></span>    
+                  </div>
+                   </div>
+              
+                   <div class="form-group col-12 col-lg-6">
+                       <label class="offset-md-1">Responsable:<span  class="text-danger">*</span></label>
+                        <div class=" col-md-12">
+                           <select  name="responsability"   data-required="1" placeholder="" class="form-control responsability input-height " > 
+                                  <option value="">   ------- </option>
+                                <option value="IHS">   IHS </option>
+                                <option value="CAMUSAT">   CAMUSAT </option> 
+                                <option value="HUAWEI">   HUAWEI</option> 
+
+                            </select>
+                            <span id="erreur_responsability" class="text-danger">
+                            
+                            </span>
+                        </div>
+                  </div>
+
+                  <div class="form-group col-12 col-lg-6">
+                       <label class="offset-md-1">Action proposée:<span  class="text-danger">*</span></label>
+                        <div class=" col-md-12">
+                           <textarea name="action_proposed"   data-required="1" placeholder="" class="form-control  input-height action_proposed" > 
+                                 
+
+                            </textarea> 
+                            <span id="erreur_action" class="text-danger">
+                            
+                            </span>
+                        </div>
+                  </div>
+                  
+                  <div class="form-group col-12 col-lg-6 mb-lg-0">
+                     <label class="offset-md-1">Date du survey: <span  class="text-danger">*</span></label>
+                       <div class="   col-md-12" >
+             
+                            <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="dd-mm-yyyy">
+                                <input class="form-control input-height date_de_fin" name="servey_date" size="16"  type="date" value="">
+                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                <span id="erreur_servey_date" class="text-danger"></span>
+                            </div>
+                            <input type="hidden" id="dtp_input2" value="" />
+                        </div>
+                  </div>
+
+                </div>
+            </div>
+
+
+           <!-- <div class="tab-pane" id="messages">
+             
+                <div class="row">
+                  <div class="form-group col-12 mb-0">
+                    <label for="regexp" class="is-required">Regular expression</label>
+                  </div>
+                  <div class="input-group col-12 col-md-10">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control" id="regexp" placeholder="regexp" title="Found a message by regexp">
+                  </div>
+                  
+                </div>
+              
+              
+               </div>-->
+
+              
+               </form>
+               </div>
+               <br>
+                <div class="row">
+               <div class="col-lg-3 col-md-2">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                  </div>
+                  <div class="col-lg-9 col-md-9">
+                    <input type="checkbox"  class="saveSite" width="45%" id="saveSite" /><label for="saveSite" style="color: ; font-weight: bold;">  Mise à jour du site pendant l'enregistrement du probleme</label>
+                  </div>
+              </div>
+          </div>
+        </div>
+         </div>
+    
+
+
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   
+    <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+  <!-- Data Table -->
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/dataTables.buttons.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.flash.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/jszip.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/pdfmake.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/vfs_fonts.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.html5.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/export/buttons.print.min.js"></script>
+  <script src="<?php echo $this->baseUrl(); ?>/private/boosted/datatables/table_data.js" ></script>
+
+
+
+  <script>$(document).ready(function() {
+      $('.o-nav-local').prioritynav();
+
+      $("#news-table").tablesorter({
+        // pass the headers argument and assing a object
+        headers: {
+          // assign the secound column (we start counting zero)
+          4: {
+            // disable it by setting the property sorter to false
+            sorter: false
+          }
+        },
+        // manipulate the template string after is it created
+        onRenderTemplate : function(i, t){
+          // put a span arround the text
+          return '<span>' + t + '</span>';
+        }
+      });
+
+
+
+      $("#addTable").hide();
+      
+      $(document).on("click","h2", function(){
+          $("#addTable").show();
+      });
+      
+    $(document).on("click",".newSnag",function(){
+      $("#addModal").modal("show");
+    });
+
+    });
+  </script>
+
+
+   <!-- end js include path -->
+  
+  <script>
+
+     $(document).ready(function(){
+
+$.ajaxSetup({
+        headers: {  //ceci est très important  pour travailler avec aja en laravel  
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+     });   
+            //var form=$('#ajouter-snag').serialize();
+            var firstIndex=0;
+            var site='<option> </opion>';
+           var snag='<option> </opion>';
+           var firstIndex2=0;
+       
+       $.ajax({
+    //requete d'ajax pour afficher le nom de tous les site dns le combox box du nom de site du formulaire 
+            url:"site-name-ajax",
+           type:"POST",
+           data:{data:'name'},
+           success:function(data){
+            
+              for(value in data.success){  
+                     
+                 site+='<option  value="'+data.success[firstIndex]['site_name']+'" class="'+data.success[firstIndex]['site_name']+'">'+data.success[firstIndex]['site_name']+' </opion>';
+                firstIndex++;
+               }
+              // $('.site_name').html(site);
+            }
+       });
+
+
+        $.ajax({
+//requete d'ajax pour afficher le nom de tous les type de snag dans le combox box du typede snag   du formulaire. 
+            url:"type_of_snag-ajax",
+           type:"POST",
+           data:{data:'name'},
+           success:function(data){
+            
+              for(value in data.succes){  
+                     
+                 snag+='<option  value="'+data.succes[firstIndex2]['type_of_snag']+'" class="'+data.succes[firstIndex2]['type_of_snag']+'">'+data.succes[firstIndex2]['type_of_snag']+' </opion>';
+                firstIndex2++;
+               }
+               //$('.type_of_snag').html(snag);
+            }
+       });
+
+ 
+ $('.type_of_snag').on("change",function(e){
+        e.preventDefault();
+          var type_snag = $('.type_of_snag').val();
+        
+         $('.severitey').val("");
+            $('.delai').val("");
+            $('.categorie').val("");
+
+           var description ='<option></option>';
+           $('select[name="snag_description"]').html(description);
+
+          $.ajax({
+            url:"<?php echo $this->baseUrl();?>/snag/sendbox/findsnag",
+           type:"POST",
+           data:{snag :type_snag},
+           success:function(data){
+            
+             if(data!=""){
+              $('select[name="snag_description"]').html(data);
+             }else{
+
+                $('select[name="snag_description"]').html(description);
+            }
+             }
+       });
+
+      });
+     
+
+     $('.snag_description').on("change",function(e){
+        e.preventDefault();
+          var type_snag = $('.type_of_snag').val();
+          
+          var snag_description = $('.snag_description').val();
+           
+           var description ='<option></option>';
+          $.ajax({
+            url:"<?php echo $this->baseUrl();?>/snag/sendbox/findsnagelement",
+           type:"POST",
+           dataType:"json",
+           data:{type :type_snag,description:snag_description},
+           success:function(data){
+            
+                     $('.severitey').val(data.severite);
+                      $('.delai').val(data.delai);
+                       $('.categorie').val(data.categorie);
+
+                
+            }
+       });
+
+      });
+     
+
+     $('.site_name').on("change",function(e){
+        e.preventDefault();
+          var site_name= $(this).val();
+          
+          $.ajax({
+            url:"<?php echo $this->baseUrl();?>/snag/sendbox/findsite",
+           type:"POST",
+           data:{id:site_name},
+           dataType:"json",
+           success:function(data){
+          //  alert(data);
+           
+             
+                $('input[name="site_id"]').val(data.site_id_partners);
+                 $('input[name="area"]').val(data.area_partners);
+                 $('input[name="uir"]').val(data.uir_hw);
+                  //$('input[name="site_type"]').val(data.type);
+                   //$('input[name="responsability"]').val(data.responsability;
+                   $('input[name="site_id_oci"]').val(data.site_id_oci);
+               
+            }
+       });
+
+      });
+
+      $('for').on("submi", function(e){
+        e.preventDefault();
+       var form=$('form').serialize();
+        $.ajax({
+           url:"ajouterFormulaire-ajax",
+           type:"POST",
+           data:form,
+           success:function(data){
+                     alert(data);
+                 }
+
+            });
+      });
+
+      });
+     </script>

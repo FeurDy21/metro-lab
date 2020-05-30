@@ -1,0 +1,129 @@
+<!-- start: DASHBOARD TITLE -->
+<section id="page-title" class="padding-top-15 padding-bottom-15">
+    <div class="row">
+        <!-- start: ENTETE -->
+        <div class="col-sm-12">
+            <h1 class="mainTitle">INTERVENTION PLANIFIEE</h1>
+            <span class="mainDescription text-small">Planification automatique des interventions </span>
+        </div>
+        <!-- end: ENTETE -->
+    </div>
+</section>
+<!-- end: DASHBOARD TITLE -->
+
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/backoffice/dashboard"><i class="ti-home"></i> Dashboard</a></li>
+            <li class="current"><a href="#">Portfolio</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container-fluid container-fullw padding-bottom-10">
+    <div class="row">
+
+        <div class="col-md-9">
+
+            <?php $i=0;foreach($this->utilisateurs as $u):?>
+            <input type="hidden" name="utilisateur-<?php echo $i;?>" value="<?php echo $u['id'];?>">
+            <div class="form-group col-sm-4">
+                
+                <div class="panel panel-white no-radius" id="info-cheque">
+                    <div class="panel-heading border-bottom">
+                        <h4 class="panel-title"><i class="ti-user"></i> <?php echo $u['utilisateur'];?></h4>
+                    </div>
+                    <div class="panel-body panel-scroll height-180">
+
+                        <?php $j=0;foreach($this->operateurs as $o):?>
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="operateur-<?php echo $i;?>-<?php echo $j;?>" id="operateur-<?php echo $i;?>-<?php echo $j;?>" value="<?php echo $o['id'];?>">
+                            <label class="text-bold-" for="operateur-<?php echo $i;?>-<?php echo $j;?>"><?php echo $o['operateur'];?></label>
+                        </div>
+                        <?php $j++;endforeach;?>
+                        <input type="hidden" name="total-<?php echo $i;?>" value="<?php echo $j;?>">
+
+                    </div>
+                    <div class="panel-footer text-small">Choisissez des clients</div>
+                </div>
+
+            </div>
+            <?php $i++;endforeach;?>
+            <input type="hidden" name="total" value="<?php echo $i;?>">
+
+		</div>
+
+        <div class="col-md-3">
+
+            <div class="panel panel-blue no-radius" id="info-cheque">
+                <div class="panel-heading border-bottom">
+                    <h4 class="panel-title"><i class="ti-calendar"></i> Jour de notification</h4>
+                </div>
+                <div class="panel-body panel-scroll height-180">
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-0" id="jour-0" value="1">
+                            <label class="text-white" for="jour-0">LUNDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-1" id="jour-1" value="2">
+                            <label class="text-white" for="jour-1">MARDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-2" id="jour-2" value="3">
+                            <label class="text-white" for="jour-2">MERCREDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-3" id="jour-3" value="4">
+                            <label class="text-white" for="jour-3">JEUDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-4" id="jour-4" value="5">
+                            <label class="text-white" for="jour-4">VENDREDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-5" id="jour-5" value="6">
+                            <label class="text-white" for="jour-5">SAMEDI</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="checkbox clip-check check-primary checkbox-inline col-md-12 checkbox-type-competence">
+                            <input type="checkbox" name="jour-6" id="jour-6" value="7">
+                            <label class="text-white" for="jour-6">DIMANCHE</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div class="panel panel-green no-radius">
+                <div class="panel-body text-center">
+                    <label class="text-white text-bold">ENREGISTRER PLANNING</label>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</div>
+

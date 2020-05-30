@@ -1,0 +1,139 @@
+<link href="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+<link href="<?php echo $this->baseUrl(); ?>/private/azia/lib/select2/css/select2.min.css" rel="stylesheet">
+
+<div class="breadLine">
+    <div class="breadCrumbsLeft">
+        <ul>
+            <li><a href="<?php echo $this->baseUrl(); ?>/principal/dashboard"><i class="ti-home"></i> Dashboard</a></li>
+            <li class="current"><a href="#">Envoi SMS destinataire multiple</a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="az-content-title tx-24 mg-b-5">ENVOI SMS MULTIPLE</h2>
+<p class="mg-b-20 mg-lg-b-25"><a href="<?php echo $this->baseUrl(); ?>/principal/sandbox/rapid-sms">Cliquez ici pour envoyer un SMS à un seul destinaire</a></p>
+
+
+
+<div class="row row-sm">
+
+    <div class="col-lg-4 mg-b-20">
+
+        <form method="post" enctype="multipart/form-data">
+        <div class="card card-table-two">
+            <div class="az-content-label mg-b-5">DESTINATAIRE MULTIPLE</div>
+            <p class="mg-b-20">Envoyez un message à plusieurs destinataires</p>
+                
+            <div class="row row-sm">
+
+                <div class="form-group col-12"><?php echo $this->message;?></div>
+                <div class="form-group col-12">
+                    <label class="control-label">Fichier de N°Téléphone <span class="symbol required"></span></label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" name="fichier" required>
+                        <label class="custom-file-label" for="customFile">Choix fichier</label>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label class="control-label">Message <span class="symbol required"></span></label>
+                    <textarea class="form-control" name="sms" placeholder="Message" required></textarea>
+                </div>
+                <div class="form-group col-12">
+                    <input type="submit" class="btn btn-squared btn-primary form-control" value="Envoyer">
+                </div>
+
+            </div><!-- row -->
+        </div><!-- card-dashboard-five -->
+        </form>
+
+    </div>
+
+
+    <div class="col-lg-4 mg-b-20">
+
+        <div class="card card-table-two">
+            <div class="az-content-label mg-b-5">MODE D'EMPLOI</div>
+            <p class="mg-b-20">Instructions d'utilisation</p>
+                
+            <div class="row row-sm">
+
+                <div class="form-group col-12">
+                    # Pour envoyer un message non personnalisé à votre liste de destinataire, 
+                    vous devez juste renseigner les N°Téléphone dans un fichier Excel, 
+                    puis saisissez votre message dans le formulaire.
+                </div>
+
+                <div class="form-group col-12">
+                    # Pour envoyer un message personnalisé à votre liste de destinataire, 
+                    vous devez renseigner les informations de la manière suivante dans le fichier excel:
+                    <b>N°Téléphone;Info1;Info2;Info3,Info4.</b><br><br>
+                    Le message à saisir dans le formulaire devra contenir les variables <b>#1,#2,#3,#4</b> en fonction des
+                    informations à traiter.<br><br>
+                    Exple fichier excel:<br>
+                    07001012;GUEU YAO;10.000;50.000;2019/07/09<br>
+                    07001112;GUEU PATRICK;5.000;30.000;2019/07/09<br><br>
+                    Exple message:<br> 
+                    Bonjour #1, total paiement: #2, reste à payer:#3 Date limite:#4. La comptabilité
+
+                </div>
+
+            </div><!-- row -->
+        </div><!-- card-dashboard-five -->
+
+    </div>
+
+
+    
+
+    
+
+</div>
+
+
+
+<script src="<?php echo $this->baseUrl(); ?>/private/azia/lib/jquery/jquery.min.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/private/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script>
+
+$(function(){
+        'use strict'
+
+        $(document).ready(function(){
+
+          $('.select2').select2({
+            placeholder: 'Choisissez un élément'
+          });
+
+          $('.select2-no-search').select2({
+            minimumResultsForSearch: Infinity,
+            placeholder: 'Choisissez un élément'
+          });
+        });
+
+});
+
+    var DatePicker = function () {
+        "use strict";
+
+
+        var datePickerHandler = function () {
+            $('.datepicker').datepicker({
+                autoclose: true,
+                format: "yyyy-m-d",
+                todayHighlight: true
+            });
+
+        };
+
+        return {
+            //main function to initiate template pages
+            init: function () {
+                datePickerHandler();
+            }
+        };
+    }();
+
+    jQuery(document).ready(function () {
+        DatePicker.init();
+    });
+</script>

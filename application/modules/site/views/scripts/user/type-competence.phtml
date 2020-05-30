@@ -1,0 +1,9 @@
+<div class="form-group col-md-6">
+    <?php $i=0;foreach($this->utilisateurs as $t):?>
+    <div class="checkbox clip-check check-primary checkbox-inline col-md-12">
+		<input type="checkbox" name="user-<?php echo $i;?>" id="user-<?php echo $i;?>" value="<?php echo $t['id_utilisateur'];?>">
+		<label class="text-bold-" for="user-<?php echo $i;?>"><?php echo $t['utilisateur'];?></label>
+	</div>
+    <?php $i++;endforeach;?>
+</div>
+<input type="hidden" name="total-utilisateur" value="<?php echo $i;?>">

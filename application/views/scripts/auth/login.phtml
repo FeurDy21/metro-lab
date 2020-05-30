@@ -1,0 +1,49 @@
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .cadre{margin-top: 6%; border: 0px solid black!important; background-color: #FFFF; color:; box-shadow:5px 5px 20px 5px  #777; padding:20px 20px 20px 20px; font-family:helvertica!important;}
+       body{ background-color: #FFFF; }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+   
+   
+   
+
+    <div class="offset-md-4 col-md-3  cadre">
+
+  <form class="form-signin"   method="post">
+  <span class="text-center text-danger"> <?php echo $this->message; ?></span>
+  <img class="mb-4 text-center" src="<?php echo $this->baseUrl(); ?>/private/boosted/img/ORANGE_LOGO_rgb.jpg" alt="" width="72" height="72">
+
+  <h1 class="h3 mb-3 font-weight-normal text-center">AUTHENTIFICATION</h1>
+ 
+  <label for="inputLogin" class="sr-only">Nom utilisateur</label>
+  <input type="text" id="inputLogin" class="form-control" value="" name="username"   placeholder="Saisissez votre nom utilisateur" require autofocus autocomplete="off">
+  <br>
+  <label for="inputPassword" class="sr-only">Mot de passe</label>
+  <input type="password" id="inputPassword" class="form-control"  value="" name="password"  placeholder="Saisissez votre mot de passe" require autocomplete="on">
+  <br>
+  <!-- <span th:if="${param.erreur}"  style="color:red;"> Mot de passe ou login incorrecte</span>-->
+  <div class="checkbox mb-3 " style="float: left;">
+    <label>
+      <input type="checkbox" value="remember-me" autocomplete="off"> se souvenir
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">VALIDER</button>
+  <p class="mt-5 mb-3 text-muted">&copy; Orange OCI 2020</p>
+  </form>
+</div>
+
+<div class="offset-md-4"></div>
