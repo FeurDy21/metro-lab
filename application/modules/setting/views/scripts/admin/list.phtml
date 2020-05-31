@@ -41,7 +41,7 @@
               <th  class="header text-center">Login</th>
               <th class="header">Role</th>
               
-              <th scope="col"  class="header text-center" width="30%"  sytle="align:center;">Actions</th>
+              <th scope="col"  class="header text-center" width="20%"  sytle="align:center;">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -58,8 +58,8 @@
               
               <td class="align-middle">
               
-                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="icon-Pencil ml-1" aria-hidden="true"></span></a>
-                <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"  th:href="@{SupprimerAdmin(id=${p.idAdmin})}"  class="btn btn-sm btn-primary " ><span class="icon-Trash ml-1" aria-hidden="true"></span></a>
+                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
+                <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"  th:href="@{SupprimerAdmin(id=${p.idAdmin})}"  class="btn btn-sm btn-primary " ><span class="fa fa-trash ml-1" aria-hidden="true"></span></a>
               </td>
             </tr>
             <?php endforeach; ?>
@@ -70,18 +70,96 @@
          </div>
          
 
-         <div  class="col-md-5" style="padding:30px 30px 30px 30px;">
-        
+         <div  class="col-md-5" style="padding:1px 1px 1px 1px;">
+          
+
+      <div class="col-md-12">
+          <h1 id="search" class="text-success">Gérer les élements suivants:</h1>
+          <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" href="#equipements" data-toggle="tab">Equipements</a></li>
+            <li class="nav-item"><a class="nav-link" href="#type" data-toggle="tab">Types équipement</a></li>
+            <li class="nav-item"><a class="nav-link" href="#client" data-toggle="tab">Clients</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="equipements">
+              <form id="search-users" name="searchUsers" method="post" action="/">
+                <div class="row">
+                  <div class="form-group col-12 col-lg-6">
+                    <label for="phone" class="is-required">Phone</label>
+                    <input class="form-control required" required aria-required="true" name="phone" id="phone" maxlength="3" type="tel">
+                  </div>
+                  <div class="form-group col-12 col-lg-6">
+                    <label class="is-required" for="location">Location</label>
+                    <select class="custom-select" id="location" name="location">
+                      <option value="AF">Afghanistan</option>
+                      <option value="AL">Albania</option>
+                      <option value="DZ">Algeria</option>
+                      <option value="AS">American Samoa</option>
+                      <option value="AD">Andorra</option>
+                      <option value="AO">Angola</option>
+                      <option value="AI">Anguilla</option>
+                      <option value="AQ">Antarctica</option>
+                      <option value="AG">Antigua and Barbuda</option>
+                      <option value="AR">Argentina</option>
+                      <option value="AM">Armenia</option>
+                      <option value="AW">Aruba</option>
+                      <option value="AU">Australia</option>
+                      <option value="AT">Austria</option>
+                      <option value="AZ">Azerbaijan</option>
+                      <option value="BS">Bahamas</option>
+                      <option value="OT">…</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-12 col-lg-6 mb-lg-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="pro-check" autocomplete="off">
+                      <label class="custom-control-label" for="pro-check">Pro</label>
+                    </div>
+                  </div>
+                  <div class="form-group col-12 col-lg-6 mb-0">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane" id="type">
+              <form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
+                <div class="row">
+                  <div class="form-group col-12 col-md-10">
+                    <label for="mac" class="is-required">MAC</label>
+                    <input class="form-control required" required aria-required="true" name="mac" id="mac" maxlength="10">
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <button type="submit" class="btn btn-primary mt-4">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane" id="client">
+              <form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
+                <div class="row">
+                  <div class="form-group col-12 mb-0">
+                    <label for="regexp" class="is-required">Regular expression</label>
+                  </div>
+                  <div class="input-group col-12 col-md-10">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control" id="regexp" placeholder="regexp" title="Found a message by regexp">
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
               </div>
               
-           <!--   <span th:if="${param.succesAdd==true}"><script type="text/javascript"> alert("Nouvel utilisateur ajouté");</script> </span>
-              <span th:if="${param.succesAdd==false}"><script type="text/javascript"> alert("Une erreur s'est produite");</script> </span>-->
-              
-             <div   class="col-md-5" style="padding:30px 30px 30px 30px; margin-top:-60px;">
-                 
-                <!--th:action="@{CreerNewAdmin}"-->
-                
-              </div>
+
+            
          
          </div>
         
