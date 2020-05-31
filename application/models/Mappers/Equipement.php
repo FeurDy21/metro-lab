@@ -1,6 +1,6 @@
 <?php 
 
-class Application_Model_Mappers_Site  {
+class Application_Model_Mappers_Equipement  {
 
     protected $_dbTable;
     protected $logger;
@@ -39,7 +39,7 @@ class Application_Model_Mappers_Site  {
         
         $select = $table->select();
         $select->setIntegrityCheck(false)
-                ->from(array('s'=>'equipemennt'), array('s.*'))
+                ->from(array('s'=>'equipement'), array('s.*'))
                 ->order("s.libelle_equipement asc");
         
         return $this->getDbTable()->fetchAll($select);

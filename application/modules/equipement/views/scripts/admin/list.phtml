@@ -48,15 +48,15 @@
                             <i class="fa fa-cog"></i> Actions <span class="caret"></span>
                         </span>
                         <div class="dropdown-menu">
-                            <a href="#" data-target="#edit-modal-<?php echo $u['id']; ?>" data-toggle="modal" class="dropdown-item">Modifier</a>
-                            <a href="#" id="delete-<?php echo $u['id']; ?>" class="dropdown-item">Supprimer</a>
+                            <a href="#" data-target="#edit-modal-<?php echo $u['id-user']; ?>" data-toggle="modal" class="dropdown-item">Modifier</a>
+                            <a href="#" id="delete-<?php echo $u['id-user']; ?>" class="dropdown-item">Supprimer</a>
                         </div><!-- dropdown-menu -->
                     </div>
                 </td>
               </tr>
             
-            <div class="modal fade" id="edit-modal-<?php echo $u['id']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
-                <form method="post" id="form-<?php echo $u['id']; ?>">
+            <div class="modal fade" id="edit-modal-<?php echo $u['id-user']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+                <form method="post" id="form-<?php echo $u['id-user']; ?>">
                 <div class="modal-dialog">
                     <div class="modal-content">
 

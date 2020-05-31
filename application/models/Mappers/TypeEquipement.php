@@ -1,7 +1,7 @@
 <?php
 
 
-class Application_Model_Mappers_Pda   {
+class Application_Model_Mappers_TypeEquipement   {
 
     protected $_dbTable;
     protected $logger;

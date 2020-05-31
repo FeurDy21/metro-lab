@@ -67,7 +67,7 @@ class Application_Model_Mappers_Administrateurs   {
         $select = $table->select();
         $select->setIntegrityCheck(false)
                 ->from(array('a'=>'administrateurs'), array('a.*'))
-                ->join(array('g' => 'groupes'),'a.id_admin =  g.id_groupe',array('g.groupe'))
+                ->join(array('g' => 'groupes'),'a.id_groupe =  g.id_groupe',array('g.groupe'))
                 ->where("a.id_admin = ?",$id);
         
          return $this->getDbTable()->fetchAll($select);

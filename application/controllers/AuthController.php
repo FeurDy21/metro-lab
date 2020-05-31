@@ -11,7 +11,7 @@ class AuthController extends Zend_Controller_Action {
 
             $data = $this->getRequest()->getPost();
             $mAdministrateur = new Application_Model_Mappers_Administrateurs();
-            $mGroupeModule = new Application_Model_Mappers_GroupesModules();
+          
             $auth = $mAdministrateur->authenticate(array('login' => $data['username']));
             
             if ($auth)

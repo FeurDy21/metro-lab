@@ -15,9 +15,9 @@
         <div class="col-md-7">
          <table id="addTable" style="float:lef; margin-top:-40px;" >
          <tr> <td> <a  href="#" class="btn btn-danger newAdmin btn-sm">Ajouter  nouveau</a> </td>
-          <td>  <button  class="btn btn-primary attribuer btn-sm">Ajouter Equipement  </button></td>
-       <td> <button  class="btn btn-success attribuer btn-sm"> Ajouter client</button></td>
-       <td> <button  class="btn btn-info attribuer btn-sm">Ajouter partenaire</button></td>
+          <td>  <button  class="btn btn-primary equipement btn-sm">Ajouter Equipement  </button></td>
+       <td> <button  class="btn btn-success client btn-sm"> Ajouter client</button></td>
+       <td> <button  class="btn btn-info partenaire btn-sm">Ajouter partenaire</button></td>
          </tr>
          </table>
         </div>
@@ -25,7 +25,7 @@
       </div>
 
       <div class="row">
-      <div class="col-md-7 ">
+      <div class="col-md-6 ">
       
       <div class="table-responsive5">
       
@@ -70,11 +70,16 @@
          </div>
          
 
-         <div  class="col-md-5" style="padding:1px 1px 1px 1px;">
+
+
+
+
+
+         <div  class="col-md-6" >
           
 
       <div class="col-md-12">
-          <h1 id="search" class="text-success">Gérer les élements suivants:</h1>
+          <h3 id="search" class="text-success">Gérer les élements suivants:</h3>
           <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active" href="#equipements" data-toggle="tab">Equipements</a></li>
             <li class="nav-item"><a class="nav-link" href="#type" data-toggle="tab">Types équipement</a></li>
@@ -82,76 +87,143 @@
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="equipements">
-              <form id="search-users" name="searchUsers" method="post" action="/">
                 <div class="row">
-                  <div class="form-group col-12 col-lg-6">
-                    <label for="phone" class="is-required">Phone</label>
-                    <input class="form-control required" required aria-required="true" name="phone" id="phone" maxlength="3" type="tel">
-                  </div>
-                  <div class="form-group col-12 col-lg-6">
-                    <label class="is-required" for="location">Location</label>
-                    <select class="custom-select" id="location" name="location">
-                      <option value="AF">Afghanistan</option>
-                      <option value="AL">Albania</option>
-                      <option value="DZ">Algeria</option>
-                      <option value="AS">American Samoa</option>
-                      <option value="AD">Andorra</option>
-                      <option value="AO">Angola</option>
-                      <option value="AI">Anguilla</option>
-                      <option value="AQ">Antarctica</option>
-                      <option value="AG">Antigua and Barbuda</option>
-                      <option value="AR">Argentina</option>
-                      <option value="AM">Armenia</option>
-                      <option value="AW">Aruba</option>
-                      <option value="AU">Australia</option>
-                      <option value="AT">Austria</option>
-                      <option value="AZ">Azerbaijan</option>
-                      <option value="BS">Bahamas</option>
-                      <option value="OT">…</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-12 col-lg-6 mb-lg-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="pro-check" autocomplete="off">
-                      <label class="custom-control-label" for="pro-check">Pro</label>
-                    </div>
-                  </div>
-                  <div class="form-group col-12 col-lg-6 mb-0">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                  </div>
-                </div>
-              </form>
+                  <div class="form-group col-12 col-lg-12">
+                    
+                    <div class="table-responsive5">
+      
+        <table  class="table tablesorter mb-12 table-bordered" id="example3" border="">
+          <caption>
+            <!--on peut ecrire dans ce manchin-->
+          
+          </caption>
+          <thead class="cf">
+            <tr>
+              
+             
+              <th  class="header text-center">Login</th>
+              <th class="header">Role</th>
+              
+              <th scope="col"  class="header text-center" width="20%"  sytle="align:center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+                  
+          
+            
+            <?php foreach($this->users as $u): ?>
+            <tr>
+              
+              <td class="align-middle"  ><?php echo $u['LOGIN'];?></td>
+              <td class="align-middle" > <?php echo $u['groupe'];?></td>
+              
+              
+              <td class="align-middle">
+              
+                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
+               
+              </td>
+            </tr>
+            <?php endforeach; ?>
+            
+          </tbody>
+        </table>
+        </div>
             </div>
+          </div>
+
+                
+            </div>
+
+
             <div class="tab-pane" id="type">
-              <form id="search-devices" name="searchDevices" method="post" action="/" class="form-horizontal">
-                <div class="row">
-                  <div class="form-group col-12 col-md-10">
-                    <label for="mac" class="is-required">MAC</label>
-                    <input class="form-control required" required aria-required="true" name="mac" id="mac" maxlength="10">
-                  </div>
-                  <div class="col-12 col-md-2">
-                    <button type="submit" class="btn btn-primary mt-4">Search</button>
-                  </div>
-                </div>
-              </form>
+              
+                  <div class="table-responsive5">
+      
+        <table  class="table tablesorter mb-12 table-bordered" id="example2" border="">
+          <caption>
+            <!--on peut ecrire dans ce manchin-->
+          
+          </caption>
+          <thead class="cf">
+            <tr>
+              
+             
+              <th  class="header text-center">Login</th>
+              <th class="header">Role</th>
+              
+              <th scope="col"  class="header text-center" width="20%"  sytle="align:center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+                  
+          
+            
+            <?php foreach($this->users as $u): ?>
+            <tr>
+              
+              <td class="align-middle"  ><?php echo $u['LOGIN'];?></td>
+              <td class="align-middle" > <?php echo $u['groupe'];?></td>
+              
+              
+              <td class="align-middle">
+              
+                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
+               
+              </td>
+            </tr>
+            <?php endforeach; ?>
+            
+          </tbody>
+        </table>
+        </div>
+
+
             </div>
+
+
             <div class="tab-pane" id="client">
-              <form id="search-messages" name="searchMesages" method="post" action="/" class="form-horizontal">
-                <div class="row">
-                  <div class="form-group col-12 mb-0">
-                    <label for="regexp" class="is-required">Regular expression</label>
-                  </div>
-                  <div class="input-group col-12 col-md-10">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">@</div>
-                    </div>
-                    <input type="text" class="form-control" id="regexp" placeholder="regexp" title="Found a message by regexp">
-                  </div>
-                  <div class="col-12 col-md-2">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                  </div>
-                </div>
-              </form>
+              
+              <div class="table-responsive5">
+      
+        <table  class="table tablesorter mb-12 table-bordered" id="example1" border="">
+          <caption>
+            <!--on peut ecrire dans ce manchin-->
+          
+          </caption>
+          <thead class="cf">
+            <tr>
+              
+               <th  class="header text-center">Utilisateur</th>
+              <th  class="header text-center">Login</th>
+              <th class="header">Role</th>
+              
+              <th scope="col"  class="header text-center" width="20%"  sytle="align:center;">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+                  
+          
+            
+            <?php foreach($this->users as $u): ?>
+            <tr>
+                <td class="align-middle"  ><?php echo $u['ADMINISTRATEUR'];?></td>
+              <td class="align-middle"  ><?php echo $u['LOGIN'];?></td>
+              <td class="align-middle" > <?php echo $u['groupe'];?></td>
+              
+              
+              <td class="align-middle">
+              
+                <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
+               
+              </td>
+            </tr>
+            <?php endforeach; ?>
+            
+          </tbody>
+        </table>
+        </div>
+
             </div>
           </div>
         </div>
@@ -164,7 +236,153 @@
          </div>
         
         <!-- Modal -->
-        <div class="modal fade" id="confirm-dialog" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+        <div class="modal fade" id="clientModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title h4" id="myModalLabel">enregistrement de client</h2>
+                <!-- Boosted mod: using visually hidden text instead of aria-label -->
+                <button type="button" class="close" data-dismiss="modal">
+                  <span class="sr-only">Close confirmation modal</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <form class="row"  action="rechercherLogin" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
+                    <div class="col-16 col-lg-6">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required">Nom de l'entreprise</label>
+                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
+                    <span id="erreur_addnumero-client"></span>
+                 </div>
+                </div>
+
+                <div class="col-16 col-lg-6">
+                  <div class="form-group">
+                    <label for="mail" class="is-required">Mail</label>
+                    <input name="mail" class="form-control pays" maxlength="255" type="mail"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_mail"></span>
+                 </div>
+                </div>
+
+                <div class="col-16 col-lg-6">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required">telephone</label>
+                    <input name="tel" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_tel"></span>
+                 </div>
+                </div>
+                  
+                 <div class="col-16 col-lg-6">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required">Ville</label>
+                    <input name="ville" class="form-control ville" maxlength="255" type="text"     aria-required="true" title="autor is empty"/>
+                    <span id="erreur_ville"></span>
+                 </div>
+                </div>
+
+                 <div class="col-12 col-lg-12">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required">Pays</label>
+                    <select name="ville" class="form-control ville" maxlength="255" type="text"     aria-required="true" title="autor is empty">
+                       <option>côte d'ivoir</option>
+                    </select>
+                    <span id="erreur_pays"></span>
+                 </div>
+                </div>
+
+                  <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                  </div>
+                  </form>
+                </p>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+     
+   <!-- Equipement -->
+        <div class="modal fade" id="equipementModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title h4" id="myModalLabel">Enregistrer un équipement</h2>
+                <!-- Boosted mod: using visually hidden text instead of aria-label -->
+                <button type="button" class="close" data-dismiss="modal">
+                  <span class="sr-only">Close confirmation modal</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                <div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" href="#addEquipements" data-toggle="tab">Equipements</a></li>
+            <li class="nav-item"><a class="nav-link" href="#addType" data-toggle="tab">Types équipement</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="addEquipements">
+                <div class="row">
+                  <div class="form-group col-12 col-lg-12">
+                    
+                  <form class="row" id="equipementForm" accept-charset="utf-8">
+                    <div class="col-12 col-lg-8">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required">Designation</label>
+                    <input name="designation" class="form-control " maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
+                    <span id="erreur_designation"></span>
+                 </div>
+                </div>
+
+                  <div class=" col-lg-2">
+                     <br><br>
+                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                  </div>
+                  </form>
+                
+               </div>
+               </div>
+                
+            </div>
+
+
+            <div class="tab-pane" id="addType">
+               <div class="row">
+                  <div class="form-group col-12 col-lg-12">
+
+                  <form class="row" id="TypeForm" accept-charset="utf-8">
+                    <div class="col-12 col-lg-8">
+                  <div class="form-group ">
+                    <label for="PostUser" class="is-required col-lg-12">Designation</label>
+                    <input name="designation" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_designation"></span>
+                 </div>
+                </div>
+
+                  <div class=" col-lg-2">
+                    
+                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                 
+                  </div>
+                  </form>
+                </div>            
+          </div>
+
+            </div>            
+          </div>
+        </div>
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+       <!-- Modal -->
+        <div class="modal fade" id="partenaireModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -184,6 +402,14 @@
                     <label for="PostUser" class="is-required">Login</label>
                     <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
                     <span id="erreur_addnumero-client"></span>
+                 </div>
+                </div>
+
+                 <div class="col-12 col-lg-12">
+                  <div class="form-group">
+                    <label for="" class="is-required">De</label>
+                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_add"></span>
                  </div>
                 </div>
                   
@@ -283,9 +509,21 @@
     });
 
   
-    
+    $(document).on("click","table .equipement",function(){
+      $("#equipementModal").modal("show");
+    });
  
+  $(document).on("click","table .client",function(){
+      $("#clientModal").modal("show");
+    });
 
+ $(document).on("click","table .partenaire",function(){
+      $("#partenaireModal").modal("show");
+    });
+
+  $(document).on("click","table .type-equipementeModal",function(){
+      $("#type-equipementeModal").modal("show");
+    });
 
 
  $(document).on("click",".update", function(){

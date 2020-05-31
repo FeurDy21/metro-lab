@@ -21,6 +21,16 @@ class Setting_AdminController extends Zend_Controller_Action {
 
         $mAdmin = new Application_Model_Mappers_Administrateurs();
         $mGroupe = new Application_Model_Mappers_Groupes();
+
+        $mClient = new Application_Model_Mappers_Client();
+        $mEquipement = new Application_Model_Mappers_Equipement();
+        $mType = new Application_Model_Mappers_TypeEquipement();
+        //$mCertificat = new Application_Model_Mappers_Certificat();
+         $this->view->clients = $mClient->findAll();
+         $this->view->types = $mType->findAll();
+         $this->view->equipements = $mEquipement->findAll();
+       // $this->view->certificat = $mCertificat->findAll();   
+
         $this->view->users = $mAdmin->findAll();
         $this->view->groupes = $mGroupe->findAll();
 
