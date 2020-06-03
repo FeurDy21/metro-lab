@@ -4,8 +4,7 @@
       <div class="container-fluid">
         <div class="row">
         <div class="col-md-5">
-        <h2 style="margin-lef:60px; margin-top:-34px;"><span id="title">Metro-Lab ingenieurs  </span> <a class="nav-link d-inline-flex align-items-center" href="<?php echo $this->baseUrl(); ?>/setting/admin/list">
-                  
+        <h2 style="margin-lef:60px; margin-top:-34px;"><span id="title">Metro-Leb ingenieurs  </span> <a class="nav-link d-inline-flex align-items-center" href="<?php echo $this->baseUrl(); ?>/setting/admin/list">
                   <span class="fa fa-refresh" aria-hidden="true"></span>
                 </a></h2>
         
@@ -13,7 +12,7 @@
         </div> 
         
         <div class="col-md-7">
-         <table id="addTable" style="float:lef; margin-top:-40px;" >
+         <table id="addTable" style="float:left; margin-top:-40px;" >
          <tr> <td> <a  href="#" class="btn btn-danger newAdmin btn-sm">Ajouter  nouveau</a> </td>
           <td>  <button  class="btn btn-primary equipement btn-sm">Ajouter Equipement  </button></td>
        <td> <button  class="btn btn-success client btn-sm"> Ajouter client</button></td>
@@ -230,13 +229,11 @@
 
               </div>
               
-
-            
-         
          </div>
         
+
         <!-- Modal -->
-        <div class="modal fade" id="clientModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
+      <div class="modal fade" id="clientModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -248,7 +245,7 @@
               </div>
               <div class="modal-body">
                 <p>
-                  <form class="row"  action="rechercherLogin" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
+                  <form class="row"  id="clientForm" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
                     <div class="col-16 col-lg-6">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">Nom de l'entreprise</label>
@@ -285,14 +282,16 @@
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">Pays</label>
                     <select name="ville" class="form-control ville" maxlength="255" type="text"     aria-required="true" title="autor is empty">
-                       <option>côte d'ivoir</option>
+                       <option value="Côte d'Ivoire">côte d'ivoire</option>
+                       <option value="Ghana">Ghana</option>
+                        <option value="Guinée">Guinée</option>
+                         <option value="Ghana">Burkina</option>
                     </select>
                     <span id="erreur_pays"></span>
                  </div>
                 </div>
 
                   <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                    <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
                   </div>
                   </form>
@@ -328,17 +327,34 @@
                   <div class="form-group col-12 col-lg-12">
                     
                   <form class="row" id="equipementForm" accept-charset="utf-8">
-                    <div class="col-12 col-lg-8">
-                  <div class="form-group ">
-                    <label for="PostUser" class="is-required">Designation</label>
-                    <input name="designation" class="form-control " maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
-                    <span id="erreur_designation"></span>
+                    <div class="col-12 col-lg-12">
+                  <div class="form-group">
+                    <label for="PostUser" class="is-required">
+                     Nom de l'équipement 
+                    </label>
+                    <input name="equipement" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
+                    <span id="erreur_equipement"></span>
+                 </div>
+                </div >
+                 <div class="col-12 col-lg-12">
+                    <div class="row">
+                      <div class=" form-group col-11">
+                    <label for="PostUser" class="is-required">
+                      Type d'équipement
+                    </label>
+                    <select name="type-equipement" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty">
+
+                    </select>
+                    <span id="erreur_type-equipement"></span>
+                 </div>
+                 <a  href="#" class="fa fa-refresh rafrechir-type col-1" style="margin-top:6%; font-size: 1.6em;" ></a>
                  </div>
                 </div>
 
-                  <div class=" col-lg-2">
-                     <br><br>
-                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                  <div class="col-lg-2">
+                    
+                   <button  class="btn btn-primary"  name="submit" id="equipementButton"> Ajouter </button> 
+                  
                   </div>
                   </form>
                 
@@ -353,18 +369,16 @@
                   <div class="form-group col-12 col-lg-12">
 
                   <form class="row" id="TypeForm" accept-charset="utf-8">
-                    <div class="col-12 col-lg-8">
+                    <div class="col-9 col-lg-9">
                   <div class="form-group ">
-                    <label for="PostUser" class="is-required col-lg-12">Designation</label>
-                    <input name="designation" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
-                    <span id="erreur_designation"></span>
+                    <label for="PostUser" class="is-required col-lg-5">Type equipement</label>
+                    <input name="type_equipement" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_type_equipement"></span>
                  </div>
                 </div>
 
-                  <div class=" col-lg-2">
-                    
-                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
-                 
+                  <div class=" col-lg-2" style="margin-top: 4%;"  >
+                   <button type="submit" class="btn btn-primary " name="submit" > Ajouter</button>
                   </div>
                   </form>
                 </div>            
@@ -386,37 +400,34 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h2 class="modal-title h4" id="myModalLabel">Attribution de role</h2>
+                <h2 class="modal-title h4" id="myModalLabel">Enregistrez vos partenaires</h2>
                 <!-- Boosted mod: using visually hidden text instead of aria-label -->
                 <button type="button" class="close" data-dismiss="modal">
                   <span class="sr-only">Close confirmation modal</span>
                 </button>
               </div>
               <div class="modal-body">
-                
-               
                 <p>
-                  <form class="row"  action="rechercherLogin" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
+                  <form class="row"  action="addpartenaire" method="post"  accept-charset="utf-8">
                     <div class="col-12 col-lg-12">
                   <div class="form-group">
-                    <label for="PostUser" class="is-required">Login</label>
+                    <label for="PostUser" class="is-required">Nom de l'entréprise</label>
                     <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
-                    <span id="erreur_addnumero-client"></span>
+                    <span id="erreur_entreprise"></span>
                  </div>
                 </div>
 
                  <div class="col-12 col-lg-12">
                   <div class="form-group">
-                    <label for="" class="is-required">De</label>
-                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
-                    <span id="erreur_add"></span>
+                    <label for="" class="is-required">Logo</label>
+                    <input name="logo" class="form-control addfile" maxlength="255" type="file"    aria-required="true" title="autor is empty"/>
+                    <span id="erreur_"></span>
                  </div>
                 </div>
                   
 
                   <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                   <input  type="submit" class="btn btn-primary  " name="submit" value="Rechercher" />
+                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
                   </div>
                   </form>
                 </p>
@@ -552,6 +563,75 @@
     });
      
 
+
+ $(document).on("click","#typeButton", function(){
+
+
+      // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/addtype",
+                  data : (this).serialize(),
+                  dataType : 'text',
+                  success : function(result) {
+                       
+              if(result!=''){
+                   $("#addModal #myModalLabel").text("type d'equipements ajouter");
+                   $("#addModal .modal-body").html(result);
+                   $("#addModal").modal("show");
+             } else{
+                alert("une erreur s'est produite lors de l'enregistrement");
+                           
+                    //console.log(result);
+                 } }
+                });          
+    });
+     
+
+     $(document).on("click","#equipementForm", function(){
+
+      // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/addequipement",
+                  data : (this).serialize(),
+                  dataType : 'text',
+                  success : function(result) {
+             if(result!=''){
+                   $("#addModal #myModalLabel").text("équipements ajouté");
+                    $("#addModal #myModalLabel").css("color","green");
+                   $("#addModal .modal-body").html(result);
+                   $("#addModal").modal("show");
+             }else{
+                alert("une erreur s'est produite lors de l'enregistrement");
+                    //console.log(result);
+                 } }
+                });          
+    });
+
+
+     $(document).on("submit","#clientForm", function(){
+
+      // DO POSTcontentType : "application/JSON",
+                  $.ajax({
+                  type : "POST",
+                  url :"<?php echo $this->baseUrl(); ?>/setting/admin/addclient",
+                  data : (this).serialize(),
+                  dataType : 'text',
+                  success : function(result) {
+                      
+             if(result!=''){
+                   $("#clientModal #myModalLabel").text("client ajouté");
+                    $("#clientModal #myModalLabel").css("color","green");
+                   $("#clientModal .modal-body").html(result);
+                   $("#clientModal").modal("show");
+             } else{
+                alert("une erreur s'est produite lors de l'enregistrement");
+                    //console.log(result);
+                 } }
+                });          
+    });
 
    $(document).on('click','.updateuser',function(){
        
