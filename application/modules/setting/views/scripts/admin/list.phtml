@@ -58,7 +58,7 @@
               <td class="align-middle">
               
                 <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
-                <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"  th:href="@{SupprimerAdmin(id=${p.idAdmin})}"  class="btn btn-sm btn-primary " ><span class="fa fa-trash ml-1" aria-hidden="true"></span></a>
+                <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"   class="btn btn-sm btn-primary " ><span class="fa fa-trash ml-1" aria-hidden="true"></span></a>
               </td>
             </tr>
             <?php endforeach; ?>
@@ -192,8 +192,7 @@
           </caption>
           <thead class="cf">
             <tr>
-              
-               <th  class="header text-center">Utilisateur</th>
+              <th  class="header text-center">Utilisateur</th>
               <th  class="header text-center">Login</th>
               <th class="header">Role</th>
               
@@ -245,7 +244,7 @@
               </div>
               <div class="modal-body">
                 <p>
-                  <form class="row"  id="clientForm" method="post" th:object="${usercorbeille}" accept-charset="utf-8">
+                  <form class="row"  id="clientForm"  accept-charset="utf-8">
                     <div class="col-16 col-lg-6">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">Nom de l'entreprise</label>
@@ -315,12 +314,13 @@
                 </button>
               </div>
               <div class="modal-body">
-                
+                <span class="message"></span>
                 <div class="col-md-12">
           <ul class="nav nav-tabs">
-            <li class="nav-item"><a class="nav-link active" href="#addEquipements" data-toggle="tab">Equipements</a></li>
-            <li class="nav-item"><a class="nav-link" href="#addType" data-toggle="tab">Types équipement</a></li>
+            <li class="nav-item"><a class="nav-link openEquipement active" href="#addEquipements" data-toggle="tab">Equipements</a></li>
+            <li class="nav-item"><a class="nav-link openType" href="#addType" data-toggle="tab">Types équipement</a></li>
           </ul>
+
           <div class="tab-content">
             <div class="tab-pane active" id="addEquipements">
                 <div class="row">
@@ -332,7 +332,7 @@
                     <label for="PostUser" class="is-required">
                      Nom de l'équipement 
                     </label>
-                    <input name="equipement" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
+                    <input name="equipement" required="required" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
                     <span id="erreur_equipement"></span>
                  </div>
                 </div >
@@ -342,8 +342,8 @@
                     <label for="PostUser" class="is-required">
                       Type d'équipement
                     </label>
-                    <select name="type-equipement" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty">
-
+                    <select name="type-equipement" required="required" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty">
+                         
                     </select>
                     <span id="erreur_type-equipement"></span>
                  </div>
@@ -353,7 +353,7 @@
 
                   <div class="col-lg-2">
                     
-                   <button  class="btn btn-primary"  name="submit" id="equipementButton"> Ajouter </button> 
+                   <a href="#" class="btn btn-primary"  name="submit" id="equipementButton"> Ajouter </a> 
                   
                   </div>
                   </form>
@@ -372,13 +372,13 @@
                     <div class="col-9 col-lg-9">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required col-lg-5">Type equipement</label>
-                    <input name="type_equipement" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <input name="type_equipement" required="required" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
                     <span id="erreur_type_equipement"></span>
                  </div>
                 </div>
 
                   <div class=" col-lg-2" style="margin-top: 4%;"  >
-                   <button type="submit" class="btn btn-primary " name="submit" > Ajouter</button>
+                  <a href="#" class="btn btn-primary  submitetype" name="submit"> Ajouter</a>
                   </div>
                   </form>
                 </div>            
@@ -395,7 +395,7 @@
         </div>
 
 
-       <!-- Modal -->
+       <!-- Formulaire d'ajout d'un partenaire -->
         <div class="modal fade" id="partenaireModal" role="dialog" aria-labelledby="myModalLabel" tabindex="-1">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -408,11 +408,11 @@
               </div>
               <div class="modal-body">
                 <p>
-                  <form class="row"  action="addpartenaire" method="post"  accept-charset="utf-8">
+                  <form class="row"  id="addpartenaire"  accept-charset="utf-8">
                     <div class="col-12 col-lg-12">
                   <div class="form-group">
                     <label for="PostUser" class="is-required">Nom de l'entréprise</label>
-                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
+                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
                     <span id="erreur_entreprise"></span>
                  </div>
                 </div>
@@ -427,7 +427,7 @@
                   
 
                   <div class="modal-footer">
-                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                   <a  href="#" class="btn btn-primary  submitpartenaires" name="submit" > Ajouter</a>
                   </div>
                   </form>
                 </p>
@@ -564,52 +564,67 @@
      
 
 
- $(document).on("click","#typeButton", function(){
-
-
+ $(document).on("click",".submitetype", function(){
       // DO POSTcontentType : "application/JSON",
+                  // DO POSTcontentType : "application/JSON",
                   $.ajax({
                   type : "POST",
                   
                   url :"<?php echo $this->baseUrl(); ?>/setting/admin/addtype",
-                  data : (this).serialize(),
+                  data : $("#equipementModal #TypeForm").serialize(),
                   dataType : 'text',
                   success : function(result) {
-                       
-              if(result!=''){
-                   $("#addModal #myModalLabel").text("type d'equipements ajouter");
-                   $("#addModal .modal-body").html(result);
-                   $("#addModal").modal("show");
-             } else{
-                alert("une erreur s'est produite lors de l'enregistrement");
-                           
-                    //console.log(result);
-                 } }
-                });          
+                    if(result=="ok"){
+
+                     $("#equipementModal .message").html('<span class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span> équipement Enregistré</span>');
+                 //$('.message').text("");
+                 $('#equipementModal .message').css("font-size","1.2em");
+                  $('#equipementModal .message .alert').css("text-align","center");
+                     $('#equipementModal .message').css("color","green");
+                    }else{
+                  $("#equipementModal .message").html('<span class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span>Echec</span>');
+                      $('#equipementModal .message').css("color","red");
+                      $('#equipementModal .message .alert').css("text-align","center");
+                      $('#equipementModal .message').css("font-size","1.2em");
+                     }
+                   }
+                });      
     });
      
 
-     $(document).on("click","#equipementForm", function(){
-
-      // DO POSTcontentType : "application/JSON",
+     $(document).on("click","#equipementButton", function(){
+      // cette fonction est prevue pour permetre d'enregistrer les equipements dont on prend la mesure,
+                 
+                  // DO POSTcontentType : "application/JSON",
                   $.ajax({
                   type : "POST",
+                  
                   url :"<?php echo $this->baseUrl(); ?>/setting/admin/addequipement",
-                  data : (this).serialize(),
+                  data : $("#equipementModal #equipementForm").serialize(),
                   dataType : 'text',
                   success : function(result) {
-             if(result!=''){
-                   $("#addModal #myModalLabel").text("équipements ajouté");
-                    $("#addModal #myModalLabel").css("color","green");
-                   $("#addModal .modal-body").html(result);
-                   $("#addModal").modal("show");
-             }else{
-                alert("une erreur s'est produite lors de l'enregistrement");
-                    //console.log(result);
-                 } }
-                });          
+                      
+                    if(result=="ok"){
+                     $("#equipementModal .message").html('<span class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span> équipement Enregistré</span>');
+                 //$('.message').text("");
+                 $('#equipementModal .message').css("font-size","1.2em");
+                  $('#equipementModal .message .alert').css("text-align","center");
+                     $('#equipementModal .message').css("color","green");
+                    }else{
+                  $("#equipementModal .message").html('<span class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span>Echec</span>');
+                      $('#equipementModal .message').css("color","red");
+                      $('#equipementModal .message .alert').css("text-align","center");
+                      $('#equipementModal .message').css("font-size","1.2em");
+                     }
+                   }
+                });
+
     });
 
+$(document).on("click","#equipementModal .openType , #equipementModal .openEquipement",function(){
+  //c'est une fonction qui va nous permettre d'effacer le le resultat losequ'on ouvre une nouvelle fenetre
+   $("#equipementModal .message").text('');
+});
 
      $(document).on("submit","#clientForm", function(){
 

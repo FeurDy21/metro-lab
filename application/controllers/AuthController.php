@@ -19,10 +19,11 @@ class AuthController extends Zend_Controller_Action {
                 $session->user = array(
                     'user' => $auth['ADMINISTRATEUR'],
                     'id-user' => $auth['ID_ADMIN'],
+                    "login"=>$auth['LOGIN'],
                     'id-groupe' => $auth['ID_GROUPE'],
                     'groupe' => $auth['groupe']
              );
-
+               ;
                 $this->_redirect("/");
 
             else:
