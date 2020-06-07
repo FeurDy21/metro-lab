@@ -123,7 +123,7 @@ public function addequipementAction() {
 
         $eAdministrateur = new Application_Model_Entities_Equipement();
 
-        $result=$eAdministrateur->insert(array('libelle_equipement' => $data["equipement"],'id_type' => $data["type-equipement"],"created_at"=>date("d-m-y H:i:s"),"created_by"=>$session->user["user"]));
+        $result=$eAdministrateur->insert(array('libelle_equipement' => $data["equipement"],'id_type' => $data["type-equipement"],"created_at"=>date("d-m-y H:i:s"),"created_by"=>$session->user["logo"]));
         
         if($result)echo "ok";
           
@@ -152,6 +152,30 @@ public function addtypeAction() {
         $this->_helper->layout()->disableLayout();
         //$this->_helper->viewRenderer->setNoRender(true);
     }
+
+
+    public function addclientAction() {
+
+        $session = new Zend_Session_Namespace('Kinara');
+        if (!$session->user):
+            $this->_redirect("/auth/login");
+        else:
+            $this->view->user = $session->user;
+        endif;
+
+        $data = $this->getRequest()->getPost();
+
+        $eAdministrateur = new Application_Model_Entities_client();
+
+        $result=$eAdministrateur->insert(array("nom"=> htmlspecialchars($data["entreprise"]),"telephone"=>htmlspecialchars($data["tel"]),"ville"=>htmlspecialchars($data["ville"]),
+            "mail"=>htmlspecialchars($data["mail"]),"pays"=>htmlspecialchars($data["pays"]),"created_at"=>date("y-m-d H:i:s"),"created_by"=>$session->user["login"] ));
+        
+        if($result)echo "ok";
+          
+        $this->_helper->layout()->disableLayout();
+        //$this->_helper->viewRenderer->setNoRender(true);
+    }
+
 
     public function editAction() {
 

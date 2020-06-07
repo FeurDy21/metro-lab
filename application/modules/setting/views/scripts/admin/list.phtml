@@ -24,7 +24,7 @@
       </div>
 
       <div class="row">
-      <div class="col-md-6 ">
+         <div class="col-md-6 ">
       
       <div class="table-responsive5">
       
@@ -70,11 +70,7 @@
          
 
 
-
-
-
-
-         <div  class="col-md-6" >
+    <div  class="col-md-6" >
           
 
       <div class="col-md-12">
@@ -146,8 +142,6 @@
           </caption>
           <thead class="cf">
             <tr>
-              
-             
               <th  class="header text-center">Login</th>
               <th class="header">Role</th>
               
@@ -243,20 +237,21 @@
                 </button>
               </div>
               <div class="modal-body">
+                 <span class="message"></span>
                 <p>
                   <form class="row"  id="clientForm"  accept-charset="utf-8">
                     <div class="col-16 col-lg-6">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">Nom de l'entreprise</label>
-                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"  th:field="*{login}"   aria-required="true" title="autor is empty"/>
-                    <span id="erreur_addnumero-client"></span>
+                    <input name="entreprise" class="form-control entreprise" maxlength="255" type="text"     aria-required="true" title="autor is empty"/>
+                    <span id="erreur_entreprise"></span>
                  </div>
                 </div>
 
                 <div class="col-16 col-lg-6">
                   <div class="form-group">
                     <label for="mail" class="is-required">Mail</label>
-                    <input name="mail" class="form-control pays" maxlength="255" type="mail"    aria-required="true" title="autor is empty"/>
+                    <input name="mail" class="form-control mail" maxlength="255" type="mail"    aria-required="true" title="autor is empty"/>
                     <span id="erreur_mail"></span>
                  </div>
                 </div>
@@ -264,7 +259,7 @@
                 <div class="col-16 col-lg-6">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">telephone</label>
-                    <input name="tel" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <input name="tel" class="form-control tel" maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
                     <span id="erreur_tel"></span>
                  </div>
                 </div>
@@ -280,7 +275,7 @@
                  <div class="col-12 col-lg-12">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required">Pays</label>
-                    <select name="ville" class="form-control ville" maxlength="255" type="text"     aria-required="true" title="autor is empty">
+                    <select name="pays" class="form-control pays" maxlength="255" type="text"     aria-required="true" title="autor is empty">
                        <option value="Côte d'Ivoire">côte d'ivoire</option>
                        <option value="Ghana">Ghana</option>
                         <option value="Guinée">Guinée</option>
@@ -291,7 +286,7 @@
                 </div>
 
                   <div class="modal-footer">
-                   <input  type="submit" class="btn btn-primary  " name="submit" value="Ajouter" />
+                   <a href="#"  class="btn btn-primary  submitclient" > Ajouter</a>
                   </div>
                   </form>
                 </p>
@@ -332,7 +327,7 @@
                     <label for="PostUser" class="is-required">
                      Nom de l'équipement 
                     </label>
-                    <input name="equipement" required="required" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
+                    <input name="equipement" required="required" class="form-control equipement" maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
                     <span id="erreur_equipement"></span>
                  </div>
                 </div >
@@ -342,8 +337,11 @@
                     <label for="PostUser" class="is-required">
                       Type d'équipement
                     </label>
-                    <select name="type-equipement" required="required" class="form-control " maxlength="255" type="text"   aria-required="true" title="autor is empty">
-                         
+                    <select name="type-equipement" required="required" class="form-control type_equipement" maxlength="255" type="text"   aria-required="true" title="autor is empty">
+                         <option class="" value="" >---select---</option>
+                    <?php foreach($this->types as $val):?>
+                       <option class="" value="<?php echo($val['id_type']);?>" ><?php echo($val['libelle_type']);?></option>
+                    <?php endforeach; ?>
                     </select>
                     <span id="erreur_type-equipement"></span>
                  </div>
@@ -372,7 +370,8 @@
                     <div class="col-9 col-lg-9">
                   <div class="form-group ">
                     <label for="PostUser" class="is-required col-lg-5">Type equipement</label>
-                    <input name="type_equipement" required="required" class="form-control " maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    <input name="type_equipement" required="required" class="form-control type_equipement" maxlength="255" type="text"    aria-required="true" title="autor is empty"/>
+                    
                     <span id="erreur_type_equipement"></span>
                  </div>
                 </div>
@@ -412,7 +411,7 @@
                     <div class="col-12 col-lg-12">
                   <div class="form-group">
                     <label for="PostUser" class="is-required">Nom de l'entréprise</label>
-                    <input name="" class="form-control addnumero-client" maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
+                    <input name="" class="form-control entreprise" maxlength="255" type="text"   aria-required="true" title="autor is empty"/>
                     <span id="erreur_entreprise"></span>
                  </div>
                 </div>
@@ -451,12 +450,10 @@
                   <span class="sr-only">Close confirmation modal</span>
                 </button>
               </div>
-                <div class="modal-body">
+              <div class="modal-body">
                
               
-
-              
-               </div>
+            </div>
           </div>
         </div>
          </div>
@@ -567,16 +564,29 @@
  $(document).on("click",".submitetype", function(){
       // DO POSTcontentType : "application/JSON",
                   // DO POSTcontentType : "application/JSON",
+      
+         if($.trim($('#TypeForm .type_equipement').val())==''){
+             erreur_groupe="Saisissez le type d'equipements dont il s'agit";
+             $('#equipementModal .message').text(erreur_groupe);
+             $('#equipementModal .message').css('color', 'orange');
+              $('#TypeForm .type_equipement').css('border-color', 'red');
+             return false;
+         }else{
+                erreur_groupe='';
+              $('.equipementModal .message').text(erreur_groupe);
+               $('#TypeForm .type_equipement').css('border-color', 'black');
+             
+         }
+         
                   $.ajax({
                   type : "POST",
-                  
                   url :"<?php echo $this->baseUrl(); ?>/setting/admin/addtype",
                   data : $("#equipementModal #TypeForm").serialize(),
                   dataType : 'text',
                   success : function(result) {
                     if(result=="ok"){
 
-                     $("#equipementModal .message").html('<span class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span> équipement Enregistré</span>');
+                     $("#equipementModal .message").html('<span class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span> type d\'équipement Enregistré</span>');
                  //$('.message').text("");
                  $('#equipementModal .message').css("font-size","1.2em");
                   $('#equipementModal .message .alert').css("text-align","center");
@@ -594,7 +604,36 @@
 
      $(document).on("click","#equipementButton", function(){
       // cette fonction est prevue pour permetre d'enregistrer les equipements dont on prend la mesure,
-                 
+      var maVar=0;
+          if($.trim($('#equipementForm .equipement').val())==''){
+             erreur_groupe="Saisissez le nom de l'équipement";
+             $('#equipementModal #erreur_equipement').text(erreur_groupe);
+             $('#equipementModal #erreur_equipement').css('color', 'orange');
+              $('#equipementForm .equipement').css('border-color', 'red');
+             maVar++;
+         }else{
+                erreur_groupe='';
+              $('#equipementForm #erreur_equipement').text(erreur_groupe);
+              $('#equipementForm .equipement').css('border-color', 'black');
+             
+         }
+
+        if($.trim($('#equipementForm .type_equipement').val())==''){
+             erreur_groupe="selectionnez le type d'équipement";
+             $('#equipementModal #erreur_type-equipement').text(erreur_groupe);
+             $('#equipementModal #erreur_type-equipement').css('color', 'orange');
+              $('#equipementModal .type_equipement').css('border-color', 'red');
+            maVar++;
+         }else{
+                erreur_groupe='';
+              $('#equipementModal #erreur_type-equipement').text(erreur_groupe);
+              $('#equipementForm .type_equipement').css('border-color', 'black');
+             
+         }
+
+         if(maVar>0){ maVar=0; return false; }
+        
+
                   // DO POSTcontentType : "application/JSON",
                   $.ajax({
                   type : "POST",
@@ -624,29 +663,69 @@
 $(document).on("click","#equipementModal .openType , #equipementModal .openEquipement",function(){
   //c'est une fonction qui va nous permettre d'effacer le le resultat losequ'on ouvre une nouvelle fenetre
    $("#equipementModal .message").text('');
+
 });
 
-     $(document).on("submit","#clientForm", function(){
-
+     $(document).on("click",".submitclient", function(){
       // DO POSTcontentType : "application/JSON",
+
+         var maVar=0;
+          if($.trim($('#clientForm .entreprise').val())==''){
+             erreur_groupe="Saisissez le nom de l'entreprise";
+             $('#clientForm  #erreur_entreprise').text(erreur_groupe);
+             $('#clientForm  #erreur_entreprise').css('color', 'orange');
+              $('#clientForm  .entreprise').css('border-color', 'red');
+             maVar++;
+         }else{
+                erreur_groupe='';
+              $('#clientForm  #erreur_entreprise').text(erreur_groupe);
+              $('#clientForm  .entreprise').css('border-color', 'black');
+             
+         }
+
+        if($.trim($('#clientForm  .pays').val())==''){
+             erreur_groupe="selectionnez le pays où se trouve l'entreprise";
+             $('#clientForm  #erreur_pays').text(erreur_groupe);
+             $('#clientForm  #erreur_pays').css('color', 'orange');
+              $('#clientForm  .pays').css('border-color', 'red');
+            maVar++;
+         }else{
+                erreur_groupe='';
+              $('#clientForm  #erreur_pays').text(erreur_groupe);
+              $('#clientForm  .pays').css('border-color', 'black');
+             
+         }
+
+         if(maVar>0){ maVar=0; return false; }
+        
+
+
                   $.ajax({
                   type : "POST",
                   url :"<?php echo $this->baseUrl(); ?>/setting/admin/addclient",
-                  data : (this).serialize(),
+                  data : $("#clientForm").serialize(),
                   dataType : 'text',
                   success : function(result) {
-                      
-             if(result!=''){
-                   $("#clientModal #myModalLabel").text("client ajouté");
-                    $("#clientModal #myModalLabel").css("color","green");
-                   $("#clientModal .modal-body").html(result);
-                   $("#clientModal").modal("show");
-             } else{
-                alert("une erreur s'est produite lors de l'enregistrement");
-                    //console.log(result);
-                 } }
+                    alert(result);
+             if(result=='ok'){
+     
+                     $("#clientModal .message").html('<span class="alert alert-success border-0 mb-0"><span class="alert-icon"><span class="sr-only">Success</span></span> Client Enregistré</span>');
+                 //$('.message').text("");
+                 $('#clientModal .message').css("font-size","1.2em");
+                  $('#equipementModal .message .alert').css("text-align","center");
+                     $('#equipementModal .message').css("color","green");
+                    }else{
+                  $("#clientModal .message").html('<span class="alert alert-danger border-0 mb-0"><span class="alert-icon"><span class="sr-only">Failure</span></span>Echec</span>');
+                      $('#clientModal .message').css("color","red");
+                      $('#clientModal .message .alert').css("text-align","center");
+                      $('#clientModal .message').css("font-size","1.2em");
+                     }
+                 }
+
                 });          
     });
+
+
 
    $(document).on('click','.updateuser',function(){
        
@@ -656,10 +735,6 @@ $(document).on("click","#equipementModal .openType , #equipementModal .openEquip
          var erreur_type='';
          var erreur_groupe='';
          
-         
-        
-       
-            
              if($.trim($('.addadministrateur').val())==''){
              erreur_admin='Entrez le nom de l\'utilisateur';
              $('.erreur-administrateur').text(erreur_admin);

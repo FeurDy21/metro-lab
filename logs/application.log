@@ -838,3 +838,7 @@
 2020-06-03T23:28:04+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
 2020-06-04T11:48:21+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
 2020-06-04T11:48:28+00:00 INFO (6): /metro-lab/auth/login|{"username":"feurdy","password":"jdjd"}||::1
+2020-06-06T19:16:51+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
+2020-06-06T21:45:29+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
+2020-06-06T22:10:08+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
+2020-06-06T22:10:35+00:00 INFO (6): /metro-lab/auth/login|{"username":"kdiomande","password":"jdjd"}||::1
