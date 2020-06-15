@@ -13,8 +13,7 @@ class Site_IndexController extends Zend_Controller_Action {
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
             $this->_redirect("site/auth/login");
-        else:
-            $this->_redirect("site/dashboard");
+       
         endif;
         
     }

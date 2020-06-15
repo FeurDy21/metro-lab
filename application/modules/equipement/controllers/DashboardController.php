@@ -5,7 +5,6 @@ class Site_DashboardController extends Zend_Controller_Action {
     
     public function init() {
         parent::init();  
-         
     }
 
     public function indexAction() { 
@@ -13,8 +12,6 @@ class Site_DashboardController extends Zend_Controller_Action {
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
             $this->_redirect("/auth/login");
-        else:
-            $this->view->user = $session->user;
         endif;
         
         $this->view->classDashboard = "active";

@@ -1,0 +1,433 @@
+ <!-- az-header -->
+  <div class="skiplinks container-fluid">
+    <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  </div>
+
+ <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
+    <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepbar-item current">
+        <a class="stepbar-link" href="#" title="certificat d'étalonnage de balance" aria-current="step">balance</a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="#" title="2. certificat d'étalonnage d'éprouvette graduée" >éprouvette </a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="#" title="3. Certificat d'étalonnage de la central à beton" > Centrale à beton</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="4. Certificat d'étalonnage de comparateur">Comparateur</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="5. Certificat d'étalonnage de l'arranchement de carreaux">Arrachemant de carreaux</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="6. Certificat d'étalonnage de l'arranchement ">Equi. de pression</a>
+      </li>
+       <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="7. Certificat d'étalonnage de l'arranchement de carreaux">Arrachement de carreaux</a>
+      </li>
+
+       
+    </ol>
+  </nav>
+
+
+
+  <main role="main" id="content" class=" my-2">
+   
+      <form role="form" id="myForm" action="<?php echo $this->baseUrl(); ?>/certificat/balance/certificatdebalance">
+         <div class="row">
+        <div class="col-sm-4">
+          
+            <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
+            <div class="row">
+
+            <div class="form-group col-lg-12">
+              <label for="delivrance" class="is-required">Delivré à</label>
+              <input type="text" class="form-contr" name="designation" id="delivrance" required>
+            </div>
+             <div class="col-lg-6">
+            
+            <div class="form-group ">
+              <label for="designation" class="is-required">Designation:</label>
+              <input type="text" class="form-contr" id="designation" placeholder="" required>
+            </div>
+             <div class="form-group ">
+              <label for="modele" class="is-required">Modele:</label>
+              <input type="text" class="form-cont" id="modele" name="modele" placeholder="" required>
+            </div>
+             <div class="form-group ">
+              <label for="lbtp" class="is-required">Localisation materiel:</label>
+              <input type="text" class="form-" id="lbtp"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+            </div>
+            <div class="form-group">
+              <label for="lbtp" class="is-required">N°LBTP</label>
+              <input type="text" class="form-cont" id="lbtp"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="classe" class="is-required">Classe:</label>
+             <input type="text" name="classe" id="classe">
+            </div>
+
+             <div class="form-group" >
+              <label for="serie" class="is-required">N° serie</label>
+              <input type="text" class="" id="serie" name="serie" required aria-describedby="">
+              <span class="form-tex small text-muted" ></span>
+            </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+            <div class="form-group">
+              <label for="dateetalonnage">date d'etalonnage:</label>
+              <input type="date"  class="form-contr" name="dateetalonnage"  id="date"></input>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+            <div class="form-group" >
+               <label class="portee" for="">portee mini-max:</label>
+              <input type="text" class="" name="portee" id="porteminimax"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+            
+            <div class="form-group" >
+               <label class="echellon" for="">Echellon:</label>
+              <input type="text" class="" name="echellon" id="echellon"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+             <div class="form-group" >
+               <label class="echellon" for="">N°METROLEB:</label>
+              <input type="text" class="" name="nummetroleb" id="nummetroleb"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+            <div class="form-group" >
+               <label class="type" for="">Type:</label>
+              <input type="text" class="" name="type" id="type"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+             <div class="form-group" >
+               <label class="dateprochainetalon" for="">date prochain etalon. :</label>
+              <input type="date" class="" name="dateprochainetalon" id="dateprochainetalon"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+            
+
+
+            </div>
+            </div>
+            </fieldset>
+
+     <div class="col-lg-12" style="margin-top: 50px;">
+        <div class="form-group ">
+              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage de balance</button>
+            </div>
+      </div>
+            </div>
+            
+      
+
+      <div class="col-lg-8 ">
+          
+        <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
+             <div class="row"> 
+             <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="masse" id="masse" placeholder="masse" required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="a" id="a" placeholder="a"required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="b" id="b" required placeholder="b">
+               </div>
+              </div>
+              </div>
+           
+          <div class="table-responsive">
+            <legend style="font-size: 1em; font-weight: bold; color: red;">Fidélité charge à controler à max/2</legend>
+            <table border="1" class="tabl">
+              <tr >
+    <th>Points essais</th>  <th>Valeurs etalon</th>  <th>Valeur lue</th>  <th>Ecart maximal</th> <th>Tolérence</th>
+              </tr>
+<tr>
+    <td><input type="text" class="form-contr" name="p1" id="p1" placeholder="p1" required></td>
+     <td><input type="text" class="form-contr" name="a1" id="a1" placeholder="a1" required></td>
+     <td><input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
+     <td rowspan="4"><textarea rows="5" class="form-contr text-center" name="ecartmax" id="ecartmax" placeholder="ecartmax" style="font-size:0.9em; font-weight: bold;" required> </textarea></td>
+
+      <td rowspan="4" colspan="4"><textarea style="font-size:0.9em; font-weight: bold;" rows="5"  class="form-contr text-center" name="tolerence" id="tolerence" placeholder="tolerence" required>  </textarea></td>
+</tr>
+
+<tr>
+    <td><input type="text" class="form-contr" name="p2" id="p2" placeholder="p2" required></td>
+     <td><input type="text" class="form-contr" name="a2" id="a2" placeholder="a2" required></td>
+     <td><input type="text" class="form-contr" name="b2" id="b2" placeholder="b2" required></td>
+</tr>
+<tr>
+    <td><input type="text" class="form-contr" name="p3" id="p3" placeholder="p3" required></td>
+     <td><input type="text" class="form-contr" name="a3" id="a3" placeholder="a3" required></td>
+     <td><input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
+     
+</tr>
+<tr>
+    <td><input type="text" class="form-contr" name="p4" id="p4" placeholder="p4" required></td>
+     <td><input type="text" class="form-contr" name="a4" id="a4" placeholder="a4" required></td>
+     <td><input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
+     
+</tr>
+
+ <tr>
+    <th> Fidelité correcte ?</th>
+     <td colspan="4" class="text-cente">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="fidelite" id="fidelite-oui" autocomplete="off" checked> Oui
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="fidelite" id="fidelite-non" autocomplete="off"> Non
+            </label>
+          </div>
+      </td>
+       
+   </tr>
+              </table>
+ 
+
+              </div>
+
+
+
+
+              <div class="table-responsive">
+                <br> <legend style="font-size: 1em; font-weight: bold; color: red;">Essai de justesse</legend>
+            <table border="1" class="tabl">
+              <tr >
+    <th>Poids essai</th>  
+    <th>Valeurs nomminal</th>  
+    <th>Valeur lu en montée</th>
+     <th>Valeur lu en descente</th> 
+      <th>Moyenne de justesse</th> 
+     <th>Indication + charge de sensibilité</th> 
+     <th>Incertitude</th>
+              </tr>
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps1" id="ps1" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="vn1" id="vn1" placeholder="vn1" required></td>
+     <td><input type="text" class="form-contr" name="vm1" id="vm1" placeholder="vm1" required></td>
+      <td><input type="text" class="form-contr" name="vd1" id="vd1" placeholder="vd1" required></td>
+       <td><input type="text" class="form-contr" name="mj1" id="mj1" placeholder="mj1" required></td>
+       <td><input type="text" class="form-contr" name="ind1" id="ind1" placeholder="ind1" required></td>
+      <td><input type="text" class="form-contr" name="incert1" id="incert1" placeholder="incert1" required></td>
+     
+</tr>
+
+<tr><td>
+     <input type="text" class="form-contr" name="ps2" id="ps2" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="vn2" id="vn2" placeholder="vn1" required></td>
+     <td><input type="text" class="form-contr" name="vm2" id="vm2" placeholder="vm1" required></td>
+      <td><input type="text" class="form-contr" name="vd2" id="vd2" placeholder="vd1" required></td>
+       <td><input type="text" class="form-contr" name="mj2" id="mj2" placeholder="mj1" required></td>
+       <td><input type="text" class="form-contr" name="ind2" id="ind2" placeholder="ind1" required></td>
+      <td><input type="text" class="form-contr" name="incert2" id="incert2" placeholder="incert1" required></td>
+     
+</tr>
+<tr><td>
+     <input type="text" class="form-contr" name="ps3" id="ps3" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="vn3" id="vn3" placeholder="vn1" required></td>
+     <td><input type="text" class="form-contr" name="vm3" id="vm3" placeholder="vm1" required></td>
+      <td><input type="text" class="form-contr" name="vd3" id="vd3" placeholder="vd1" required></td>
+       <td><input type="text" class="form-contr" name="mj3" id="mj3" placeholder="mj1" required></td>
+       <td><input type="text" class="form-contr" name="ind3" id="ind3" placeholder="ind1" required></td>
+      <td><input type="text" class="form-contr" name="incert3" id="incert3" placeholder="incert1" required></td>
+     
+</tr>
+<tr> <td>
+     <input type="text" class="form-contr" name="ps4" id="ps4" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="vn4" id="vn4" placeholder="vn1" required></td>
+     <td><input type="text" class="form-contr" name="vm4" id="vm4" placeholder="vm1" required></td>
+      <td><input type="text" class="form-contr" name="vd4" id="vd4" placeholder="vd1" required></td>
+       <td><input type="text" class="form-contr" name="mj4" id="mj4" placeholder="mj4" required></td>
+       <td><input type="text" class="form-contr" name="ind4" id="ind4" placeholder="ind1" required></td>
+      <td><input type="text" class="form-contr" name="incert4" id="incert4" placeholder="incert1" required></td>
+     
+</tr>
+
+ <tr>
+
+    <th>Justesse correcte ?</th>
+     <td colspan="6" class="text-cente">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="fidelite" id="fidelite-oui" autocomplete="off" checked> Oui
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="fidelite" id="fidelite-non" autocomplete="off"> Non
+            </label>
+          </div>
+      </td>
+       
+   </tr>
+              </table>
+ 
+
+              </div>
+
+
+     <div class="table-responsive">
+                <br> <legend style="font-size: 1em; font-weight: bold; color: red;">Excentration: charge à controller à max/3</legend>
+            <table border="1" class="tabl">
+              <tr >
+    <th>Position</th>  
+    <th>1</th>  
+    <th>2</th>
+     <th>3</th> 
+      <th>4</th> 
+     <th>5</th> 
+     <th>Incertitude</th>
+              </tr>
+   <tr>
+     <th>Indication relevée</th>
+    <td><input type="text" class="form-contr" name="pos1" id="pos1"  required></td>
+     <td><input type="text" class="form-contr" name="pos2" id="pos2"  required></td>
+     <td><input type="text" class="form-contr" name="pos3" id="pos3"  required></td>
+      <td><input type="text" class="form-contr" name="pos4" id="pos4"  required></td>
+       <td><input type="text" class="form-contr" name="pos5" id="pos5"  required></td>
+       <td><input type="text" class="form-contr" name="tolerence2" id="tolerence2"  required></td>
+    </tr>
+    <th>Excentration correcte ?</th>
+     <td colspan="6" class="text-cente">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="excentration" id="excentration-oui" autocomplete="off" checked> Oui
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="excentration" id="excentration-non" autocomplete="off"> Non
+            </label>
+          </div>
+      </td>
+          </table>
+              </div>
+          
+
+            </div>
+        
+            </fieldset>
+
+
+            
+            </div>
+
+</div>
+             </div>
+          </form>
+       
+      
+    </main><!--/.container-->
+
+  
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+    <script src="form.js"></script>
+
+<script >
+ 
+  $( "#masse" ).mouseout(function() {
+
+        $('#p1').val($(this).val());
+        $('#p2').val($(this).val()*2);
+        $('#p3').val($(this).val()*3);
+        $('#p4').val($(this).val()*4);
+
+        $('#ps1').val($(this).val());
+        $('#ps2').val($(this).val()*2);
+        $('#ps3').val($(this).val()*3);
+        $('#ps4').val($(this).val()*4);
+   });
+
+
+
+     function getEcartMaximal() {
+       var moya=(parseInt($('#a1').val())+parseInt($('#a2').val())+parseInt($('#a3').val())+ parseInt($('#a4').val()))/4;
+
+        var moyb=(parseInt($('#b1').val())+parseInt($('#b2').val())+parseInt($('#b3').val())+ parseInt($('#b4').val()) )/4;
+        return moyb-moya;
+     }
+
+$( "#ecartmax" ).hover(function() {
+        $(this).val(getEcartMaximal());
+   });
+
+$( "#mj1" ).hover(function() {
+        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
+
+         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj2" ).hover(function() {
+        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
+
+         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj3" ).hover(function() {
+        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
+
+         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+
+$( "#mj4" ).hover(function() {
+        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
+
+         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+ $("#a,#b").mouseout(function(){
+    $("#incert1").val(getIncertitude());
+    $("#incert2").val(getIncertitude());
+    $("#incert3").val(getIncertitude());
+    $("#incert4").val(getIncertitude());
+ });
+
+
+
+function getIncertitude(){
+var Ures=parseFloat($('#a').val())/Math.sqrt(3);
+var Uref=parseFloat($('#b').val())/Math.sqrt(3);
+var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
+
+var U=Math.sqrt(Math.pow(Uc,2))*2;
+
+return U;
+}
+     function getNumber() {
+        var minNumber = 9; // le minimum
+        var maxNumber = 60; // le maximum
+
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
+        return false;
+    
+    }   
+    getNumber();
+ 
+</script>
