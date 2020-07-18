@@ -1,6 +1,6 @@
 <?php 
 
-class Application_Model_Mappers_Client  {
+class Application_Model_Mappers_Client {
 
     protected $_dbTable;
     protected $logger;

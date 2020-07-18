@@ -8,25 +8,25 @@
     <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
     <ol>
       <li class="stepbar-item current">
-        <a class="stepbar-link" href="#" title="certificat d'étalonnage de balance" aria-current="step">balance</a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" aria-current="step">balance</a>
       </li>
       <li class="stepbar-item ">
-        <a class="stepbar-link" href="#" title="2. certificat d'étalonnage d'éprouvette graduée" >éprouvette </a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/eprouvette/" title="2. certificat d'étalonnage d'éprouvette graduée" >éprouvette </a>
       </li>
       <li class="stepbar-item ">
         <a class="stepbar-link" href="#" title="3. Certificat d'étalonnage de la central à beton" > Centrale à beton</a>
       </li>
       <li class="stepbar-item">
-        <a class="stepbar-link" href="#" title="4. Certificat d'étalonnage de comparateur">Comparateur</a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/comparateur/" title="4. Certificat d'étalonnage de comparateur">Comparateur</a>
       </li>
       <li class="stepbar-item">
-        <a class="stepbar-link" href="#" title="5. Certificat d'étalonnage de l'arranchement de carreaux">Arrachemant de carreaux</a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/dimension/" title="5. Certificat d'equipement de dimension">Dimention</a>
       </li>
       <li class="stepbar-item">
-        <a class="stepbar-link" href="#" title="6. Certificat d'étalonnage de l'arranchement ">Equi. de pression</a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pression/" title="6. Certificat d'étalonnage de l'arranchement ">Equi. de pression</a>
       </li>
        <li class="stepbar-item">
-        <a class="stepbar-link" href="#" title="7. Certificat d'étalonnage de l'arranchement de carreaux">Arrachement de carreaux</a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/presse/" title="7. Certificat d'étalonnage de l'arranchement de carreaux">Equi. presse</a>
       </li>
 
        
@@ -35,7 +35,7 @@
 
   <main role="main" id="content" class=" my-2">
    
-      <form role="form" id="myForm" action="<?php echo $this->baseUrl(); ?>/certificat/balance/certificatdebalance">
+      <form role="form" id="myForm"  method="post" action="<?php echo $this->baseUrl(); ?>/certificat/balance/certificatdebalance">
          <div class="row">
         <div class="col-sm-4">
           
@@ -45,26 +45,29 @@
 
             <div class="form-group col-lg-12">
               <label for="delivrance" class="is-required">Delivré à</label>
-              <input type="text" class="form-contr" name="designation" id="delivrance" required>
+              <input type="text" class="form-contr" name="delivrance" id="delivrance" required>
             </div>
              <div class="col-lg-6">
             
             <div class="form-group ">
               <label for="designation" class="is-required">Designation:</label>
-              <input type="text" class="form-contr" id="designation" placeholder="" required>
+              <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
             </div>
+            
              <div class="form-group ">
               <label for="modele" class="is-required">Modele:</label>
               <input type="text" class="form-cont" id="modele" name="modele" placeholder="" required>
             </div>
+
              <div class="form-group ">
               <label for="lbtp" class="is-required">Localisation materiel:</label>
-              <input type="text" class="form-" id="lbtp"  required aria-describedby="">
+              <input type="text" class="form-" name="localisation" id="lbtp"  required aria-describedby="">
               <span class="form-text small text-muted" id="helpTextPassword"></span>
             </div>
+
             <div class="form-group">
-              <label for="lbtp" class="is-required">N°LBTP</label>
-              <input type="text" class="form-cont" id="lbtp"  required aria-describedby="">
+              <label for="lbtp" class="is-required">N°...:</label>
+              <input type="text" class="form-cont" name="lbtp" id="lbtp"  required aria-describedby="">
               <span class="form-text small text-muted" id="helpTextPassword"></span>
             </div>
             
@@ -119,9 +122,6 @@
               <span class=" small erreur_portee" id=""></span>
             </div>
 
-            
-
-
             </div>
             </div>
             </fieldset>
@@ -163,7 +163,7 @@
               <tr >
     <th>Points essais</th>  <th>Valeurs etalon</th>  <th>Valeur lue</th>  <th>Ecart maximal</th> <th>Tolérence</th>
               </tr>
-<tr>
+    <tr>
     <td><input type="text" class="form-contr" name="p1" id="p1" placeholder="p1" required></td>
      <td><input type="text" class="form-contr" name="a1" id="a1" placeholder="a1" required></td>
      <td><input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
@@ -195,10 +195,10 @@
      <td colspan="4" class="text-cente">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary active">
-              <input type="radio" name="fidelite" id="fidelite-oui" autocomplete="off" checked> Oui
+              <input type="radio" name="fidelite" id="fidelite-oui" value="oui" autocomplete="off" checked> Oui
             </label>
             <label class="btn btn-secondary">
-              <input type="radio" name="fidelite" id="fidelite-non" autocomplete="off"> Non
+              <input type="radio" name="fidelite" value="non" id="fidelite-non" autocomplete="off"> Non
             </label>
           </div>
       </td>
@@ -212,8 +212,9 @@
 
 
 
-              <div class="table-responsive">
-                <br> <legend style="font-size: 1em; font-weight: bold; color: red;">Essai de justesse</legend>
+        <div class="table-responsive">
+                
+      <br><legend style="font-size: 1em; font-weight: bold; color: red;">Essai de justesse</legend>
             <table border="1" class="tabl">
               <tr >
     <th>Poids essai</th>  
@@ -298,7 +299,7 @@
      <th>3</th> 
       <th>4</th> 
      <th>5</th> 
-     <th>Incertitude</th>
+     <th>Tolérence</th>
               </tr>
    <tr>
      <th>Indication relevée</th>
@@ -410,7 +411,7 @@ $( "#mj4" ).hover(function() {
 
 
 function getIncertitude(){
-var Ures=parseFloat($('#a').val())/Math.sqrt(3);
+var Ures=parseFloat($('#a').val())/(2*Math.sqrt(3));
 var Uref=parseFloat($('#b').val())/Math.sqrt(3);
 var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
 

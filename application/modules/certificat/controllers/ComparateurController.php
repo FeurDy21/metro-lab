@@ -1,7 +1,7 @@
 <?php
 
 
-class Certificat_BalanceController extends Zend_Controller_Action {
+class Certificat_ComparateurController extends Zend_Controller_Action {
     
     public function init() {
         parent::init();  
@@ -19,7 +19,7 @@ class Certificat_BalanceController extends Zend_Controller_Action {
     }
     
 
-    public function certificatdebalanceAction() {  
+    public function certificatcomparateurAction() {  
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
             $this->_redirect("setting/auth/login");   

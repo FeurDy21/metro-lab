@@ -1,7 +1,7 @@
 <?php
 
 
-class Certificat_BalanceController extends Zend_Controller_Action {
+class Certificat_AppareilcisaillementController extends Zend_Controller_Action {
     
     public function init() {
         parent::init();  

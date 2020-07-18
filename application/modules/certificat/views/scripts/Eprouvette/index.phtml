@@ -1,0 +1,371 @@
+ <!-- az-header -->
+  <div class="skiplinks container-fluid">
+  <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+  <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  </div>
+
+ <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
+    <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" >balance</a>
+      </li>
+      <li class="stepbar-item current">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/eprouvette/" title="2. certificat d'étalonnage d'éprouvette graduée" aria-current="step"  >éprouvette </a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="#" title="3. Certificat d'étalonnage de la central à beton" > Centrale à beton</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/comparateur/" title="4. Certificat d'étalonnage de comparateur">Comparateur</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="5. Certificat d'étalonnage de l'arranchement de carreaux">Arrachemant de carreaux</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pression/" title="6. Certificat d'étalonnage de l'arranchement ">Equi. de pression</a>
+      </li>
+       <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="7. Certificat d'étalonnage de l'arranchement de carreaux">Arrachement de carreaux</a>
+      </li>
+
+       
+    </ol>
+  </nav>
+
+  <main role="main" id="content" class=" my-2">
+   
+      <form role="form" id="myForm"  method="post" action="<?php echo $this->baseUrl(); ?>/certificat/eprouvette/certificateprouvette">
+         <div class="row">
+        <div class="col-sm-4">
+          
+            <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
+            <div class="row">
+
+            
+             <div class="col-lg-6">
+            <div class="form-group ">
+              <label for="delivrance" class="is-required">Delivré à</label>
+              <input type="text" class="form-contr" name="delivrance" id="delivrance" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="designation" class="is-required">Designation:</label>
+              <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="marque" class="is-required">Marque:</label>
+              <input type="text" class="form-cont" id="marque" name="marque" placeholder="" required>
+            </div>
+
+             <div class="form-group">
+              <label for="localisation" class="is-required">Localisation:</label>
+              <input type="text" class="form-" name="localisation" id="localisation"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+             </div>
+
+            <div class="form-group">
+              <label for="date_emission" class="is-required">Date d'émission:</label>
+              <input type="text" class="form-cont" name="date_emission" id="date_emission"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+            </div>
+            
+            <div class="form-group">
+             <label for="classe" class="is-required">Classe:</label>
+             <input type="text" name="classe" id="classe">
+            </div>
+
+             
+
+            </div>
+
+            <div class="col-lg-6">
+
+            <div class="form-group">
+              <label for="Capacite_nominale">Capacité nominale:</label>
+              <input type="text"  class="form-contr" name="dateetalonnage"  id="date"></input>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+            <div class="form-group" >
+              <label class="num_metroleb" for="">N°METROLEB:</label>
+              <input type="text" class="" name="num_metroleb" id="num_metroleb"/>
+              <span class=" small erreur_num_metroleb" id=""></span>
+            </div>
+            
+            <div class="form-group" >
+              <label class="nb_pesees" for="">Nombre de pesées individuel:</label>
+              <input type="text" class="" name="nb_pesees" id="nb_pesees"/>
+              <span class=" small erreur_nb_pesees" id=""></span>
+            </div>
+
+            <div class="form-group" >
+              <label class="thermometre" for="">Thermometre étalon N°CE:</label>
+              <input type="text" class="" name="thermometre" id="thermometre"/>
+              <span class=" small erreur_nb_pesees" id=""></span>
+            </div>
+          <div class="form-group" >
+              <label class="eau_distillee" for="">Eau distillée a:</label>
+              <input type="text" class="" name="eau_distillee" id="eau_distillee"/>
+              <span class=" small erreur_nb_pesees" id=""></span>
+            </div>
+
+             <div class="form-group" >
+              <label class="facteur_correction" for="">Z(facteur de correction):</label>
+              <input type="text" class="" name="facteur_correction" id="facteur_correction"/>
+              <span class=" small erreur_nb_pesees" id=""></span>
+            </div>
+          
+            </div>
+            </div>
+            </fieldset>
+
+     <div class="col-lg-12" style="margin-top: 50px;">
+        <div class="form-group ">
+              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage d'éprouvette graduée</button>
+            </div>
+      </div>
+            </div>
+            
+      
+
+      <div class="col-lg-8 ">
+          
+    <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
+             <div class="row"> 
+             <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="masse" id="masse" placeholder="masse" required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="a" id="a" placeholder="a"required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="b" id="b" required placeholder="b">
+               </div>
+              </div>
+              </div>
+           
+
+              <div class="table-responsive">
+                
+                <br> <legend style="font-size: 1em; font-weight: bold; color: red;">Essai de justesse</legend>
+            <table border="1" class="tabl">
+              <tr>
+              <th>No de pesee</th>  
+              <th>Quantité mesurée avec l'éprouvette X (ml)</th>  
+              <th>Volume correspondant au poids mesure Cm (ML)</th>
+               <th>Ecarts</th> 
+                <th>Incertitude</th> 
+              </tr>
+<tr>
+    <td> <input type="text" class="form-contr" name="ps1" id="ps1" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="qm1" id="qm1" placeholder="qm1" required></td>
+     <td><input type="text" class="form-contr" name="vc1" id="vc1" placeholder="vc1" required></td>
+      <td><input type="text" class="form-contr" name="ecart1" id="ecart1" placeholder="ecart1" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert1" id="incert1" placeholder="incert1" required></td>
+     
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps2" id="ps2" placeholder="ps2" required></td>
+     <td><input type="text" class="form-contr" name="qm2" id="qm2" placeholder="qm2" required></td>
+     <td><input type="text" class="form-contr" name="vc2" id="vc2" placeholder="vc2" required></td>
+      <td><input type="text" class="form-contr" name="ecart2" id="ecart2" placeholder="ecart2" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert2" id="incert2" placeholder="incert2" required></td> 
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps3" id="ps3" placeholder="ps3" required></td>
+     <td><input type="text" class="form-contr" name="qm3" id="qm3" placeholder="vn3" required></td>
+     <td><input type="text" class="form-contr" name="vc3" id="vc3" placeholder="vm3" required></td>
+      <td><input type="text" class="form-contr" name="ecart3" id="ecart3" placeholder="vm3" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert3" id="incert3" placeholder="incert3" required></td>
+     
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps4" id="ps4" placeholder="ps1" required></td>
+     <td><input type="text" class="form-contr" name="qm4" id="qm4" placeholder="qm4" required></td>
+     <td><input type="text" class="form-contr" name="vc4" id="vc4" placeholder="vc4" required></td>
+      <td><input type="text" class="form-contr" name="ecart4" id="ecart4" placeholder="ecart4" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert4" id="incert4" placeholder="incert4" required></td>
+     
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps5" id="ps5" placeholder="ps5" required></td>
+     <td><input type="text" class="form-contr" name="qm5" id="qm5" placeholder="qm5" required></td>
+     <td><input type="text" class="form-contr" name="vc5" id="vc5" placeholder="vc5" required></td>
+      <td><input type="text" class="form-contr" name="ecart5" id="ecart5" placeholder="ecart5" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert5" id="incert5" placeholder="incert5" required></td>
+     
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps6" id="ps6" placeholder="ps6" required></td>
+     <td><input type="text" class="form-contr" name="qm6" id="qm6" placeholder="qm6" required></td>
+     <td><input type="text" class="form-contr" name="vc6" id="vc6" placeholder="vc6" required></td>
+      <td><input type="text" class="form-contr" name="ecart6" id="ecart6" placeholder="ecart6" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert6" id="incert6" placeholder="incert6" required></td>  
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps7" id="ps7" placeholder="ps7" required></td>
+     <td><input type="text" class="form-contr" name="qm7" id="qm7" placeholder="qm7" required></td>
+     <td><input type="text" class="form-contr" name="vc7" id="vc7" placeholder="vc7" required></td>
+      <td><input type="text" class="form-contr" name="ecart7" id="ecart7" placeholder="ecart7" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert7" id="incert7" placeholder="incert7" required></td>
+     
+</tr>
+
+<tr>
+    <td>
+      <input type="text" class="form-contr" name="ps8" id="ps8" placeholder="ps8" required></td>
+     <td><input type="text" class="form-contr" name="qm8" id="qm8" placeholder="qm8" required></td>
+     <td><input type="text" class="form-contr" name="vc8" id="vc8" placeholder="vc8" required></td>
+      <td><input type="text" class="form-contr" name="ecart8" id="ecart8" placeholder="ecart8" required></td>
+      
+      <td><input type="text" class="form-contr" name="incert8" id="incert8" placeholder="incert8" required></td>  
+</tr>
+
+ <tr>
+
+    <th>Date du prohain etalonnage: ?</th>
+     <td colspan="6" class="text-cente">
+            <div class="btn-group col-lg-12" >
+              <input type="date" name="date_etalonnage" id="date_etalonnage" > 
+          </div>
+    </td>
+       
+   </tr>
+              </table>
+ 
+
+              </div>
+
+
+            </div>
+        
+            </fieldset>
+
+            
+            </div>
+
+</div>
+             </div>
+          </form>
+       
+      
+    </main><!--/.container-->
+
+  
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+    <script src="form.js"></script>
+
+<script >
+ 
+  $( "#masse" ).mouseout(function() {
+
+        $('#p1').val($(this).val());
+        $('#p2').val($(this).val()*2);
+        $('#p3').val($(this).val()*3);
+        $('#p4').val($(this).val()*4);
+
+        $('#ps1').val($(this).val());
+        $('#ps2').val($(this).val()*2);
+        $('#ps3').val($(this).val()*3);
+        $('#ps4').val($(this).val()*4);
+   });
+
+
+
+     function getEcartMaximal() {
+       var moya=(parseInt($('#a1').val())+parseInt($('#a2').val())+parseInt($('#a3').val())+ parseInt($('#a4').val()))/4;
+
+        var moyb=(parseInt($('#b1').val())+parseInt($('#b2').val())+parseInt($('#b3').val())+ parseInt($('#b4').val()) )/4;
+        return moyb-moya;
+     }
+
+$( "#ecartmax" ).hover(function() {
+        $(this).val(getEcartMaximal());
+   });
+
+$( "#mj1" ).hover(function() {
+        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
+
+         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj2" ).hover(function() {
+        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
+
+         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj3" ).hover(function() {
+        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
+
+         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+
+$( "#mj4" ).hover(function() {
+        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
+
+         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+ $("#a,#b").mouseout(function(){
+    $("#incert1").val(getIncertitude());
+    $("#incert2").val(getIncertitude());
+    $("#incert3").val(getIncertitude());
+    $("#incert4").val(getIncertitude());
+ });
+
+
+
+function getIncertitude(){
+var Ures=parseFloat($('#a').val())/(2*Math.sqrt(3));
+var Uref=parseFloat($('#b').val())/Math.sqrt(3);
+var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
+
+var U=Math.sqrt(Math.pow(Uc,2))*2;
+
+return U;
+}
+     function getNumber() {
+        var minNumber = 9; // le minimum
+        var maxNumber = 60; // le maximum
+
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
+        return false;
+    
+    }   
+    getNumber();
+ 
+</script>

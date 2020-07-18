@@ -1,0 +1,583 @@
+ <!-- az-header -->
+  <div class="skiplinks container-fluid">
+  <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+  <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  </div>
+
+ <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
+    <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" >RETOUR</a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/presse/" title="2.  Certificat de la presse à CBR"   >Presse CBR</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pressemarshal/" title="3.  Certificat de la presse à marshal" > Presse à marshal</a>
+      </li>
+      <li class="stepbar-item current">
+        <a class="stepbar-link" aria-current="step" href="<?php echo $this->baseUrl();?>/certificat/presseciment/" title="4.  Certificat de la presse à ciment">Presse à ciment</a>
+      </li>
+
+       <li class="stepbar-item">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pressebeton/" title="5. Certificat de la presse à beton">Presse à beton</a>
+      </li>
+
+       
+    </ol>
+  </nav>
+
+  <main role="main" id="content" class=" my-2">
+   
+      <form role="form" id="myForm"  method="post" action="<?php echo $this->baseUrl(); ?>/certificat/eprouvette/certificateprouvette">
+         <div class="row">
+        <div class="col-sm-4">
+          
+            <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
+            <div class="row">
+             <div class="form-group ">
+              <label for="delivrance" class="is-required">Delivré à</label>
+              <input type="text" class="form-contr" name="delivrance" id="delivrance" required/>
+              </div>
+            
+             <div class="col-lg-6">
+
+            <div class="form-group ">
+              <label for="designation" class="is-required">Designation:</label>
+              <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="Constructeur" class="is-required">Constructeur:</label>
+              <input type="text" class="form-cont" id="Constructeur" name="Constructeur" placeholder="" required>
+            </div>
+              
+             <div class="form-group">
+              <label for="date_emission" class="is-required">Type:</label>
+              <input type="text" class="form-" name="type" id="type"  required aria-describedby="">
+              <span class="form-text small text-muted" id="message_type"></span>
+             </div>
+
+             <div class="form-group">
+              <label for="date_emission" class="is-required">Date d'émission:</label>
+              <input type="date" class="form-" name="date_emission" id="date_emission"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+             </div>
+              
+              <div class="form-group">
+            <label for="numero" class="is-required">N°..................:</label>
+              <input type="text" class="form-" name="numero" id="numero"  required aria-describedby="">
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+             </div>
+            
+              <div class="form-group">
+            <label for="examen_visuel" class="is-required">Examen visual:</label>
+              <SELECT type="text" class="form-" name="examen_visuel" id="examen_visuel"  required aria-describedby="">
+                <option value="">---------</option>
+                <option value="satisfaisant">Satisfaisant</option>
+                 <option value="insatisfaisant">Insatisfaisant</option>
+
+              </SELECT>
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+             </div>
+
+          
+            
+            <div class="form-group">
+             <label for="numero_serie" class="is-required">N° Serie:</label>
+             <input type="text" name="numero_serie" id="numero_serie">
+            </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+            <div class="form-group">
+              <label for="plage_de_mesure">Modele:</label>
+              <input type="text"  class="form-contr" name="modele"  id="modele"></input>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+            <div class="form-group" >
+              <label class="num_metroleb" for="">N°METROLEB:</label>
+              <input type="text" class="" name="num_metroleb" id="num_metroleb"/>
+              <span class=" small erreur_num_metroleb" id=""></span>
+            </div>
+
+             <div class="form-group" >
+              <label class="label-echelon" for="">Echelon:</label>
+              <input type="text" class="echelon" name="echelon" id="echelon"/>
+              <span class=" small erreur_echelon" id="erreur_echelon"></span>
+            </div>
+               
+
+            <div class="form-group" >
+              <label class="localisation" for="">Localisation:</label>
+              <input type="text" class="" name="localisation" id="localisation"/>
+              <span class=" small erreur_nb_pesees" id=""></span>
+            </div>
+            
+            <div class="form-group" >
+              <label class="date_etalonnage" for="">Localisation:</label>
+              <input type="date" class="" name="date_etalonnage" id="date_etalonnage"/>
+              <span class=" small erreur_date_etalonnage" id=""></span>
+            </div>
+
+    <div class="form-group">
+            <label for="examen_visuel" class="is-required">Fonctionnement:</label>
+              <SELECT type="text" class="form-" name="fonctionnement" id="fonctionnement"  required aria-describedby="">
+                <option value="">---------</option>
+                <option value="satisfaisant">Satisfaisant</option>
+                 <option value="insatisfaisant">Insatisfaisant</option>
+
+              </SELECT>
+              <span class="form-text small text-muted" id="helpTextPassword"></span>
+             </div>
+               
+               <div class="form-group">
+               <label class="trace_choc" for=""> Lieu de mesure:</label>
+   
+            <label class="btn btn-secondary active">
+              <input type="radio" name="en_laboratoire" id="en_laboratoire" value="en_laboratoire" autocomplete="off" checked> Labo
+            </label>
+
+            <label class="btn btn-secondary">
+              <input type="radio" name="sur_site" value="sur_site" id="sur_site" autocomplete="off">  site
+            </label>
+          </div>
+          
+            </div>
+
+            <div class="form-group" style="margin-left: 3%;">
+              <label class="methode_mesure" for=""> Methode de mesure:</label>
+              <textarea rows="5" class="col-lg-12" class="" name="methode_mesure" id="methode_mesure"></textarea> 
+              <span class=" small erreur_metroleb_mesure" id=""></span>
+            </div>
+
+            </div>
+            </fieldset>
+
+     <div class="col-lg-12" style="margin-top: 50px;">
+        <div class="form-group ">
+              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage d'arrachement de carreaux</button>
+            </div>
+      </div>
+            </div>
+            
+      
+
+      <div class="col-lg-8 ">
+          
+    <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
+             <div class="row"> 
+             <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="masse" id="masse" placeholder="masse" required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="a" id="a" placeholder="a"required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="b" id="b" required placeholder="b">
+               </div>
+              </div>
+              </div>
+           
+
+              <div class="table-responsive">
+                
+                <br> <legend style="font-size: 1em; font-weight: bold;  ">
+                   <div class="row">
+                  <div class="form-group  col-lg-6 col-md-8 col-sm-12" >
+              <label class="label-echelon" for="">Temperature:</label>
+              <input type="text" class="temperature" name="temperature" id="temperature"/> °C
+              <span class=" small erreur_temperature" id="erreur_temperature"></span>
+            </div>
+
+
+                  <div class="form-group col-lg-6 col-md-8 col-sm-12" >
+              <label class="valise_etalon" for="valise_etalon">Valise etalon N°:</label>
+              <input type="text" class="valise_etalon" name="valise_etalon" id="valise_etalon"/>
+              <span class=" small erreur_valise_etalon" id="erreur_valise_etalon"></span>
+            </div>
+          </div>
+          </legend>
+
+            <table border="1" class="tabl" style="  text-align: center; ">
+              <tr>
+              <th rowspan="2">Charge lue Fi</th>  
+              <th colspan="3">Charge reelle</th>  
+              <th rowspan="2">Moyenne Fmoy</th>
+                <th rowspan="2">Erreur relative de justesse %</th> 
+                 <th rowspan="2">Erreur de rentabilité %</th> 
+                  <th rowspan="2">Incertitude mesure</th> 
+              </tr>
+
+              <tr>
+              <th >Serie 1</th> 
+              <th >Serie 2</th>  
+              <th >Serie 3</th>
+              </tr>
+   <tr>
+   <td> 
+    <input type="text" class="form-contr" name="a1" id="a1" placeholder="a1" required></td>
+    <td> <input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
+     <td><input type="text" class="form-contr" name="c1" id="c1" placeholder="c1" required></td>
+     <td><input type="text" class="form-contr" name="d1" id="d1" placeholder="d1" required></td>
+     
+      <td><input type="text" class="form-contr" name="e1" id="e1" placeholder="e1" required></td>
+      
+      <td><input type="text" class="form-contr" name="f1" id="f1" placeholder="f1" required></td>
+      <td><input type="text" class="form-contr" name="g1" id="g1" placeholder="g1" required></td>
+      
+      <td><input type="text" class="form-contr" name="h1" id="h1" placeholder="h1" required></td>
+  </tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a2" id="a2" placeholder="a2" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b2" id="b2" placeholder="b2" required></td>
+     <td><input type="text" class="form-contr" name="c2" id="c2" placeholder="c2" required></td>
+     <td><input type="text" class="form-contr" name="d2" id="d2" placeholder="d2" required></td>
+      <td><input type="text" class="form-contr" name="e2" id="e2" placeholder="e2" required></td>
+      
+      <td><input type="text" class="form-contr" name="f2" id="f2" placeholder="f2" required></td> 
+      <td><input type="text" class="form-contr" name="g2" id="g2" placeholder="g2" required></td>
+      
+      <td><input type="text" class="form-contr" name="h2" id="h2" placeholder="h2" required></td> 
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a3" id="a3" placeholder="ps1" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
+     <td><input type="text" class="form-contr" name="c3" id="c3" placeholder="c3" required></td>
+     <td><input type="text" class="form-contr" name="d3" id="d3" placeholder="d3" required></td>
+      <td><input type="text" class="form-contr" name="e3" id="e3" placeholder="e3" required></td>
+      
+      <td><input type="text" class="form-contr" name="f3" id="f3" placeholder="f3" required></td>
+
+       <td><input type="text" class="form-contr" name="g3" id="g3" placeholder="g3" required></td>
+      
+      <td><input type="text" class="form-contr" name="h3" id="h3" placeholder="h3" required></td>
+     
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a4" id="pa4" placeholder="a4" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
+     <td><input type="text" class="form-contr" name="c4" id="c4" placeholder="c4" required></td>
+     <td><input type="text" class="form-contr" name="d4" id="d4" placeholder="d4" required></td>
+      <td><input type="text" class="form-contr" name="e4" id="e4" placeholder="e4" required></td>
+      
+      <td><input type="text" class="form-contr" name="f4" id="f4" placeholder="f4" required></td>
+
+       <td><input type="text" class="form-contr" name="g4" id="g4" placeholder="g4" required></td>
+      
+      <td><input type="text" class="form-contr" name="h4" id="h4" placeholder="h4" required></td>
+     
+</tr>
+
+<tr>
+  <td><input type="text" class="form-contr" name="a5" id="a5" placeholder="b5" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b5" id="b5" placeholder="b5" required></td>
+     <td><input type="text" class="form-contr" name="c5" id="c5" placeholder="c5" required></td>
+     <td><input type="text" class="form-contr" name="d5" id="d5" placeholder="d5" required></td>
+      <td><input type="text" class="form-contr" name="e5" id="e5" placeholder="e5" required></td>
+      
+      <td><input type="text" class="form-contr" name="f5" id="f5" placeholder="f5" required></td>
+       <td><input type="text" class="form-contr" name="g5" id="g5" placeholder="g5" required></td>
+      
+      <td><input type="text" class="form-contr" name="h5" id="h5" placeholder="h5" required></td>
+     
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a6" id="a6" placeholder="a6" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b6" id="b6" placeholder="b6" required></td>
+     <td><input type="text" class="form-contr" name="c6" id="c6" placeholder="c6" required></td>
+     <td><input type="text" class="form-contr" name="d6" id="d6" placeholder="d6" required></td>
+      <td><input type="text" class="form-contr" name="e6" id="e6" placeholder="e6" required></td>
+      
+      <td><input type="text" class="form-contr" name="f6" id="f6" placeholder="f6" required></td>  
+
+       <td><input type="text" class="form-contr" name="g6" id="g6" placeholder="e6" required></td>
+      
+      <td><input type="text" class="form-contr" name="h6" id="h6" placeholder="h6" required></td>  
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a7" id="a7" placeholder="a7" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b7" id="b7" placeholder="b7" required></td>
+     <td><input type="text" class="form-contr" name="c7" id="c7" placeholder="c7" required></td>
+     <td><input type="text" class="form-contr" name="d7" id="d7" placeholder="d7" required></td>
+      <td><input type="text" class="form-contr" name="e7" id="e7" placeholder="e7" required></td>
+      
+      <td><input type="text" class="form-contr" name="f7" id="f7" placeholder="f7" required></td>
+
+      <td><input type="text" class="form-contr" name="g7" id="g7" placeholder="g7" required></td>
+      
+      <td><input type="text" class="form-contr" name="h7" id="h7" placeholder="h7" required></td>
+     
+</tr>
+
+
+ <tr>
+
+    <th>Date du prohain etalonnage: ?</th>
+     <td colspan="6" class="text-cente">
+            <div class="btn-group col-lg-12" >
+              <input type="date" name="date_etalonnage" id="date_etalonnage" > 
+          </div>
+    </td>
+       
+   </tr>
+              </table>
+ 
+
+              </div>
+        
+            </fieldset>
+<br>
+   <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Resultat anneaux dynanometrique</legend>
+             
+              <div class="table-responsive">
+                
+                <br> <legend style="font-size: 1em; font-weight: bold;  ">
+                  
+          </legend>
+
+            <table border="1" class="tabl" style="  text-align: center; ">
+              <tr>
+              <th >Lectrure comparateur (mm)</th>  
+              <th >Force (KN)</th>  
+              <th >Lecture comparateur (mm)</th>
+                <th >Force (KN)</th> 
+                 <th >Lecture comparateur (mm)</th> 
+                  <th >Force (KN)</th> 
+              </tr>     
+   <tr>
+   <td> 
+    <input type="text" class="form-contr" name="a11" id="a11" placeholder="a11" required></td>
+    <td> <input type="text" class="form-contr" name="b11" id="b11" placeholder="b11" required></td>
+     <td><input type="text" class="form-contr" name="c11" id="c11" placeholder="c11" required></td>
+     <td><input type="text" class="form-contr" name="d11" id="d11" placeholder="d11" required></td>
+     
+      <td><input type="text" class="form-contr" name="e11" id="e1" placeholder="e11" required></td>
+      
+      <td><input type="text" class="form-contr" name="f11" id="f11" placeholder="f11" required></td>
+     
+  </tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a22" id="a22" placeholder="a22" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b22" id="b22" placeholder="b2" required></td>
+     <td><input type="text" class="form-contr" name="c22" id="c22" placeholder="c22" required></td>
+     <td><input type="text" class="form-contr" name="d22" id="d22" placeholder="d22" required></td>
+      <td><input type="text" class="form-contr" name="e22" id="e22" placeholder="e22" required></td>
+      
+      <td><input type="text" class="form-contr" name="f22" id="f22" placeholder="f22" required></td> 
+      
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a33" id="a33" placeholder="a33" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b33" id="b33" placeholder="b33" required></td>
+     <td><input type="text" class="form-contr" name="c33" id="c33" placeholder="c33" required></td>
+     <td><input type="text" class="form-contr" name="d33" id="d33" placeholder="d33" required></td>
+      <td><input type="text" class="form-contr" name="e33" id="e33" placeholder="e33" required></td>
+      
+      <td><input type="text" class="form-contr" name="f33" id="f33" placeholder="f33" required></td>
+
+      
+     
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a44" id="pa44" placeholder="a44" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b44" id="b44" placeholder="b44" required></td>
+     <td><input type="text" class="form-contr" name="c44" id="c44" placeholder="c44" required></td>
+     <td><input type="text" class="form-contr" name="d44" id="d44" placeholder="d44" required></td>
+      <td><input type="text" class="form-contr" name="e44" id="e44" placeholder="e44" required></td>
+      
+      <td><input type="text" class="form-contr" name="f44" id="f44" placeholder="f44" required></td>
+
+       
+     
+</tr>
+
+<tr>
+  <td><input type="text" class="form-contr" name="a55" id="a55" placeholder="b55" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b55" id="b55" placeholder="b55" required></td>
+     <td><input type="text" class="form-contr" name="c55" id="c55" placeholder="c55" required></td>
+     <td><input type="text" class="form-contr" name="d55" id="d55" placeholder="d55" required></td>
+      <td><input type="text" class="form-contr" name="e55" id="e55" placeholder="e55" required></td>
+      
+      <td><input type="text" class="form-contr" name="f55" id="f55" placeholder="f5" required></td>
+       
+     
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a66" id="a66" placeholder="a66" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b66" id="b66" placeholder="b66" required></td>
+     <td><input type="text" class="form-contr" name="c66" id="c6" placeholder="c66" required></td>
+     <td><input type="text" class="form-contr" name="d66" id="d66" placeholder="d66" required></td>
+      <td><input type="text" class="form-contr" name="e66" id="e66" placeholder="e66" required></td>
+      
+      <td><input type="text" class="form-contr" name="f66" id="f66" placeholder="f66" required></td>  
+
+      
+</tr>
+
+<tr>
+  <td> <input type="text" class="form-contr" name="a77" id="a77" placeholder="a77" required></td>
+    <td>
+      <input type="text" class="form-contr" name="b77" id="b77" placeholder="b77" required></td>
+     <td><input type="text" class="form-contr" name="c77" id="c77" placeholder="c77" required></td>
+     <td><input type="text" class="form-contr" name="d77" id="d77" placeholder="d77" required></td>
+      <td><input type="text" class="form-contr" name="e77" id="e77" placeholder="e77" required></td>
+      
+      <td><input type="text" class="form-contr" name="f77" id="f77" placeholder="f77" required></td>
+     
+</tr>
+
+
+ 
+              </table>
+ 
+
+              </div>
+        
+            </fieldset>
+        
+
+        
+
+    
+       
+  
+
+  </div>
+
+
+
+
+            
+            </div>
+
+           </div>
+             </div>
+          </form>
+       
+      
+    </main><!--/.container-->
+
+  
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+    <script src="form.js"></script>
+
+<script >
+ 
+  $( "#masse" ).mouseout(function() {
+
+        $('#p1').val($(this).val());
+        $('#p2').val($(this).val()*2);
+        $('#p3').val($(this).val()*3);
+        $('#p4').val($(this).val()*4);
+
+        $('#ps1').val($(this).val());
+        $('#ps2').val($(this).val()*2);
+        $('#ps3').val($(this).val()*3);
+        $('#ps4').val($(this).val()*4);
+   });
+
+
+
+     function getEcartMaximal() {
+       var moya=(parseInt($('#a1').val())+parseInt($('#a2').val())+parseInt($('#a3').val())+ parseInt($('#a4').val()))/4;
+
+        var moyb=(parseInt($('#b1').val())+parseInt($('#b2').val())+parseInt($('#b3').val())+ parseInt($('#b4').val()) )/4;
+        return moyb-moya;
+     }
+
+$( "#ecartmax" ).hover(function() {
+        $(this).val(getEcartMaximal());
+   });
+
+$( "#mj1" ).hover(function() {
+        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
+
+         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj2" ).hover(function() {
+        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
+
+         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj3" ).hover(function() {
+        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
+
+         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+
+$( "#mj4" ).hover(function() {
+        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
+
+         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+ $("#a,#b").mouseout(function(){
+    $("#incert1").val(getIncertitude());
+    $("#incert1").val(getIncertitude());
+    $("#incert2").val(getIncertitude());
+    $("#incert3").val(getIncertitude());
+    $("#incert4").val(getIncertitude());
+ });
+
+
+
+function getIncertitude(){
+var Ures=parseFloat($('#a').val())/(2*Math.sqrt(3));
+var Uref=parseFloat($('#b').val())/Math.sqrt(3);
+var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
+
+var U=Math.sqrt(Math.pow(Uc,2))*2;
+
+return U;
+}
+     function getNumber() {
+        var minNumber = 9; // le minimum
+        var maxNumber = 60; // le maximum
+
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
+        return false;
+    
+    }   
+    getNumber();
+ 
+</script>

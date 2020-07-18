@@ -17,7 +17,6 @@ $obj_pdf->setFont('helvetica', '', 11);
 $obj_pdf->AddPage();  
 $content = '';  
 
-  
 	# code...
 
   # code...
@@ -36,15 +35,15 @@ $content .= '
 <br>
 
 <div class=" text-center" style="border:2px solid black; border-radius:7px/8px ; text-align:center; ">
-   <span style="color:black;font-weight:bold;">CERTIFICAT D\'ETALONNAGE DE BALANCE</span>
-   <br> <span>N° B '.$this->numero_certificat.'</span>
+   <span style="color:black;font-weight:bold;">CERTIFICAT D\'ETALONNAGE D\'EPROUVETTE GRADUEE</span>
+   <br> <span>N°V/ '.$this->numero_certificat.'</span>
 </div>
 <br>
 <span><b>DELIVRE A </b>: '.$this->balance['delivrance'].' </span>
 
 <br>	
  
-<div  style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>INSTRUMENT ETALONNE</u></div>
+<div  style="text-align:center;font-weight:bolder; font-size:0.7em;"><u> IDENTIFICATION DE L\'EQUIPEMENT</u></div>
 <br>
 
 <table border="0"  style="font-size:0.7em;">  
@@ -53,62 +52,77 @@ $content .= '
 <th width="30%">DESIGNATION:</th>
 <td width="20%" > '.$this->balance['designation'].'</td>
 
-<th width="30%" >DATE D\'ETALONNAGE:</th> 
-<td width="20%" > '.$this->balance['dateetalonnage'].'</td> 
+<th width="30%" >CAPACITE NOMINALE:</th> 
+<td width="20%" > '.$this->balance['capacitenominale'].'</td> 
 </tr>
 
 <tr>
-<th width="30%">MODELE:</th>
-<td width="20%" >'.$this->balance['modele'].' </td> 
-
-<th width="30%" >PORTEE MINI-MAX:</th> 
-<td width="20%" >'.$this->balance['portee'].'</td> 
-</tr>
-
-<tr>
-<th width="30%">LOCALISATION DU MATERIEL:</th> 
-<td width="20%" >'. $this->balance['localisation'].'</td> 
-<th width="30%" >ECHELLON:</th> 
-<td width="20%" >'. $this->balance['echellon'].' </td> 
-</tr>
-
-<tr>
-<th width="30%" >N°....................:</th> 
-<td width="20%" > '. $this->balance['lbtp'].'</td> 
+<th width="30%">MARQUE:</th>
+<td width="20%" > '.$this->balance['marque'].'</td> 
 
 <th width="30%" >N°METROLEB:</th> 
-<td width="20%" >'. $this->balance['nummetroleb'].' </td> 
+<td width="20%" >'.$this->balance['num_metroleb'].'</td> 
+</tr>
+
+<tr>
+<th width="30%">LOCALISATION:</th> 
+<td width="20%" >'. $this->balance['localisation'].'</td> 
+<th width="30%" > </th> 
+<td width="20%" > </td> 
+</tr>
+
+<tr>
+<th width="30%" >DATE D\'EMISSION:</th> 
+<td width="20%" > '. $this->balance['date_emission'].'</td> 
+
+<th width="30%" >CLASSE:</th> 
+<td width="20%" >'. $this->balance['classe'].' </td> 
 </tr>
 
 <tr>
 <th width="30%" >CLASSE:</th> 
 <td width="20%" > '. $this->balance['classe'].'</td>
 
-<th width="30%" >TYPE:</th> 
-<td width="20%" >'. $this->balance['type'].'</td>  
+<th width="30%" > </th> 
+<td width="20%" ></td>  
 </tr>
-
-<tr>
-<th width="30%" >N°SERIE</th> 
-<td width="20%" > '. $this->balance['serie'].'</td> 
-
-<th width="30%" >DATE DU PROCHAIN ETALONNAGE:</th> 
-<td width="20%" > '. $this->balance['dateprochainetalon'].'</td> 
-</tr>  
 
 </table>
 
 <br>	
 
-<div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>MOYEN DE MESURE</u></div>
+<div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>METHODE DE MESURE</u></div>
 <br>
 
-<span style="font-size:0.8em;">Masse étalon CE: '. $this->balance['masse'].' <span>
+<span style="font-size:0.8em;">Nombre de pesees individuelle : '. $this->balance['nb_pesees_ind'].' 
+<span>
 
-<br><br>
+<br>
+<br>  
+
+<div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>MOYENS DE MESURE</u></div>
+<br>
+
+<span style="font-size:0.8em;">Masses étalons : '. $this->balance['masses_etalons'].' <span>
+
+<br>
+
+<span style="font-size:0.8em;">Thermometre Etalon N°CE: '. $this->balance['Thermometre'].' <span>
+
+<br>
+  <div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>CONDITION DE MESURE   </u></div>
+<br>
+<br>
+
+<span style="font-size:0.8em;">Ces mesures ont été efectuées sur site <span>
+<br>
+
+<span style="font-size:0.8em;">Thermometre Etalon N°CE: '. $this->balance['thermometre'].' <span>
+
 
   <legend style="font-size: 1em; font-weight: bold; color: red;">Fidélité charge à controler à max/2</legend><br>
             <table border="1"  style="text-align:center; ">
+
               <tr >
     <th>Points essais</th>  <th>Valeurs étalons</th>  <th>Valeur lue</th>  <th>Ecart maximal</th> <th>Tolérence</th>
               </tr>

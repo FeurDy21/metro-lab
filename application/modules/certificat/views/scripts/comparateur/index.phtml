@@ -1,0 +1,476 @@
+ <!-- az-header -->
+  <div class="skiplinks container-fluid">
+    <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to content</a>
+  </div>
+
+ <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
+    <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
+    <ol>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" >balance</a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/eprouvette/" title="2. certificat d'étalonnage d'éprouvette graduée" >éprouvette </a>
+      </li>
+      <li class="stepbar-item ">
+        <a class="stepbar-link" href="#" title="3. Certificat d'étalonnage de la central à beton" > Centrale à beton</a>
+      </li>
+      <li class="stepbar-item current">
+        <a class="stepbar-link" aria-current="step" href="<?php echo $this->baseUrl();?>/certificat/comparateur/" title="4. Certificat d'étalonnage de comparateur">Comparateur</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="5. Certificat d'étalonnage de l'arranchement de carreaux">Arrachemant de carreaux</a>
+      </li>
+      <li class="stepbar-item">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pression/" title="6. Certificat d'étalonnage de l'arranchement ">Equi. de pression</a>
+      </li>
+       <li class="stepbar-item">
+        <a class="stepbar-link" href="#" title="7. Certificat d'étalonnage de l'arranchement de carreaux">Arrachement de carreaux</a>
+      </li>
+
+       
+    </ol>
+  </nav>
+
+  <main role="main" id="content" class=" my-2">
+   
+      <form role="form" id="myForm"  method="post" action="<?php echo $this->baseUrl(); ?>/certificat/balance/certificatcomparateur">
+         <div class="row">
+        <div class="col-sm-4">
+          
+            <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
+            <div class="row">
+
+            <div class="form-group col-lg-6">
+              <label for="realisation" class="is-required">Realisé à</label>
+              <input type="text" class="form-contr" name="realisation" id="realisation" required>
+            </div>
+
+            <div class="form-group col-lg-6">
+              <label for="date_delivrance" class="is-required">Delivré à :</label>
+              <input type="text" class="form-contr" name="date_delivrance" id="date_delivrance" required>
+            </div>
+             <div class="col-lg-6">
+            
+             <div class="form-group ">
+              <label for="designation" class="is-required">Designation:</label>
+              <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="temperature_ambiante" class="is-required">Temperature ambiante:</label>
+              <input type="text" class="form-contr" name="temperature_ambiante" id="temperature_ambiante" placeholder="" required>
+            </div>
+             
+             
+    
+            <div class="form-group ">
+              <label for="constructeur_marque" class="is-required">Constructeur/Marque:</label>
+              <input type="text" class="form-cont" id="constructeur_marque" name="constructeur_marque" placeholder="" required>
+            </div>
+
+           <div class="form-group ">
+              <label for="etendu_mesure" class="is-required">Etendu de mesure:</label>
+              <input type="text" class="form-contr" name="etendu_mesure" id="etendu_mesure" placeholder="" required>
+            </div>
+
+            <div class="form-group ">
+              <label for="type" class="is-required">Type:</label>
+              <input type="text" class="form-cont" id="type" name="modele" placeholder="" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="classe" class="is-required">Classe:</label>
+             <input type="text" name="classe" id="classe">
+             <span class="form-tex small text-muted" ></span>
+            </div>
+
+            <div class="form-group" >
+               <label class="trace_choc" for=""> Bon fonctionnement:</label>
+   
+            <label class="btn btn-secondary active">
+              <input type="radio" name="bon_fonctionnement" id="bon_fonctionnement" value="oui" autocomplete="off" checked> Oui
+            </label>
+
+            <label class="btn btn-secondary">
+              <input type="radio" name="bon_fonctionnement" value="non" id="mauvais_fonctionnement-non" autocomplete="off"> Non
+            </label>
+          </div>
+
+
+           
+            </div>
+
+            <div class="col-lg-6">
+
+               <div class="form-group" >
+              <label for="numero_serie" class="is-required">N° serie:</label>
+              <input type="text" class="" id="numero_serie" name="numero_serie" required aria-describedby="">
+              <span class="form-tex small text-muted" ></span>
+            </div>
+
+               <div class="form-group" >
+              <label for="nummetroleb" class="is-required">N° metroleb:</label>
+              <input type="text" class="" id="nummetroleb" name="nummetroleb" required aria-describedby="">
+              <span class="form-tex small text-muted" ></span>
+            </div>
+
+            <div class="form-group" >
+              <label for="examen-visio" class="is-required">Examen visio-tactile:</label>
+              <input type="text" class="" id="examen-visio" name="examen-visio" required aria-describedby="">
+              <span class="form-tex small text-muted" ></span>
+            </div>
+
+            
+            <div class="form-group" >
+               <label class="echellon" for="">Valeur de l'échelon:</label>
+              <input type="text" class="" name="echellon" id="echellon"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+             <div class="form-group" >
+               <label class="numero_lbtp" for="">Numero LBTP:</label>
+              <input type="text" class="" name="numero_lbtp" id="numero_lbtp"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+
+             <div class="form-group" >
+               <label class="localisation" for="">Localisation :</label>
+              <input type="text" class="" name="localisation" id="localisation"/>
+              <span class=" small erreur_portee" id=""></span>
+            </div>
+
+         <div class="form-group" >
+               <label class="trace_choc" for=""> Abscence de trace de choc</label>
+   
+            <label class="btn btn-secondary active">
+              <input type="radio" name="trace_choc" id="trace_choc" value="oui" autocomplete="off" checked> Oui
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="trace_choc" value="non" id="trace_choc" autocomplete="off"> Non
+            </label>
+          </div>
+
+
+            </div>
+            </div>
+            </fieldset>
+
+     <div class="col-lg-12" style="margin-top: 50px;">
+        <div class="form-group ">
+              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage de balance</button>
+            </div>
+      </div>
+            </div>
+            
+      
+
+      <div class="col-lg-8 ">
+          
+        <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
+             <div class="row"> 
+             <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="masse" id="masse" placeholder="masse" required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="a" id="a" placeholder="a"required>
+               </div>
+              </div>
+              <div class="col-sm-4">  
+                  <div class="form-group ">
+              <input type="text" class="form-contr" name="b" id="b" required placeholder="b">
+               </div>
+              </div>
+              </div>
+           
+          <div class="table-responsive">
+            <legend style="font-size: 1em; font-weight: bold; color: red;">Resultats des mesures</legend>
+            tableau 1
+            <table border="1" class="tabl">
+              
+<tr>
+   <th width="20%">Valeur conventionnelles (en mm)</th>
+    <td width="5%"><input type="text" class="form-contr" name="a1" id="a1" placeholder="a1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a2" id="a2" placeholder="a2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="a3" id="a3" placeholder="a3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a4" id="a4" placeholder="a4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a5" id="a5" placeholder="a5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a6" id="a6" placeholder="a6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a7" id="a7" placeholder="a7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a8" id="a8" placeholder="a8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a9" id="a9" placeholder="a9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a10" id="a10" placeholder="a10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a11" id="a11" placeholder="a11" required></td>
+      
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.6em!important;">Valeur indiquée par le comparateur</th>
+    <td width="5%"><input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a2" id="a2" placeholder="b2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b5" id="b5" placeholder="b5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b6" id="b6" placeholder="b6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b7" id="b7" placeholder="b7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b8" id="b8" placeholder="b8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b9" id="b9" placeholder="b9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b10" id="b10" placeholder="b10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b11" id="b11" placeholder="b11" required></td>
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.8em;">Valeur indiquée par le comparateur sans tige sortante</th>
+    <td width="5%"><input type="text" class="form-contr" name="ab1" id="ab1" placeholder="ab1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab2" id="ab2" placeholder="ab2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="ab3" id="ab3" placeholder="ab3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab4" id="ab4" placeholder="ab4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab5" id="ab5" placeholder="ab5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab6" id="ab6" placeholder="ab6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab7" id="ab7" placeholder="ab7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b8" id="b8" placeholder="ab8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab9" id="ab9" placeholder="ab9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab10" id="ab10" placeholder="ab10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab11" id="ab11" placeholder="ab11" required></td>
+</tr>
+
+              </table>
+ 
+
+              </div>
+
+
+
+
+              <div class="table-responsive">
+                
+   <br>    <legend style="font-size: 1em; font-weight: bold; color: red;">Les erreurs</legend>
+            tableau 2
+            <table border="1" class="tabl">
+              
+<tr>
+   <th width="20%">Valeur conventionnelles (en mm)</th>
+    <td width="5%"><input type="text" class="form-contr" name="v1" id="v1" placeholder="v1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v2" id="v2" placeholder="v2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="v3" id="v3" placeholder="v3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v4" id="v4" placeholder="v4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v5" id="v5" placeholder="v5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v6" id="v6" placeholder="v6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v7" id="v7" placeholder="v7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v8" id="v8" placeholder="v8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v9" id="v9" placeholder="v9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v10" id="v10" placeholder="v10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v11" id="v11" placeholder="v11" required></td>
+      
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.6em!important;">Valeur indiquée par le comparateur</th>
+    <td width="5%"><input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a2" id="a2" placeholder="b2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b5" id="b5" placeholder="b5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b6" id="b6" placeholder="b6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b7" id="b7" placeholder="b7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b8" id="b8" placeholder="b8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b9" id="b9" placeholder="b9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b10" id="b10" placeholder="b10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b11" id="b11" placeholder="b11" required></td>
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.8em;">Valeur indiquée par le comparateur sans tige sortante</th>
+    <td width="5%"><input type="text" class="form-contr" name="ab1" id="ab1" placeholder="ab1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab2" id="ab2" placeholder="ab2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="ab3" id="ab3" placeholder="ab3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab4" id="ab4" placeholder="ab4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab5" id="ab5" placeholder="ab5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab6" id="ab6" placeholder="ab6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab7" id="ab7" placeholder="ab7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b8" id="b8" placeholder="ab8" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab9" id="ab9" placeholder="ab9" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab10" id="ab10" placeholder="ab10" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab11" id="ab11" placeholder="ab11" required></td>
+</tr>
+
+              </table>
+ 
+
+              </div>
+
+
+     <div class="table-responsive">
+                  <br>  <legend style="font-size: 1em; font-weight: bold; color: red;">Les erreurs</legend>
+            tableau 3
+            <table border="1" class="tabl">
+              
+<tr>
+   <th width="20%">Position (en mm)</th>
+    <td width="5%"><input type="text" class="form-contr" name="v1" id="v1" placeholder="v1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v2" id="v2" placeholder="v2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="v3" id="v3" placeholder="v3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v4" id="v4" placeholder="v4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v5" id="v5" placeholder="v5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v6" id="v6" placeholder="v6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="v7" id="v7" placeholder="v7" required></td>
+     <td width="5%">Ecart type µm</td>
+     <td width="5%">Facteur de securité</td>
+     <td width="5%">Ef µm</td>
+    
+      
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.6em!important;">Valeurs lues:</th>
+    <td width="5%"><input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="a2" id="a2" placeholder="b2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b5" id="b5" placeholder="b5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b6" id="b6" placeholder="b6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b7" id="b7" placeholder="b7" required></td>
+     <td width="5%" rowspan="3"><input type="text" class="form-contr" name="b8" id="b8" placeholder="b8" required></td>
+     <td width="5%" rowspan="3"><input type="text" class="form-contr" name="b9" id="b9" placeholder="b9" required></td>
+     <td width="5%" rowspan="3"><input type="text" class="form-contr" name="b10" id="b10" placeholder="b10" required></td>
+    
+</tr>
+
+<tr>
+   <th width="20%" style="font-size: :0.8em;">Ecart     relevés en µm</th>
+    <td width="5%"><input type="text" class="form-contr" name="ab1" id="ab1" placeholder="ab1" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab2" id="ab2" placeholder="ab2" required></td>
+
+     <td width="5%"><input type="text" class="form-contr" name="ab3" id="ab3" placeholder="ab3" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab4" id="ab4" placeholder="ab4" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab5" id="ab5" placeholder="ab5" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab6" id="ab6" placeholder="ab6" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="ab7" id="ab7" placeholder="ab7" required></td>
+     <td width="5%"><input type="text" class="form-contr" name="b8" id="b8" placeholder="ab8" required></td>
+    
+</tr>
+
+              </table>
+              </div>
+          
+
+            </div>
+        
+            </fieldset>
+
+
+            
+            </div>
+
+</div>
+             </div>
+          </form>
+       
+      
+    </main><!--/.container-->
+
+  
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/js/boosted.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
+   <script src="<?php echo $this->baseUrl(); ?>/private/boosted/material/material.min.js"></script>
+    <script src="form.js"></script>
+
+<script >
+ 
+  $( "#masse" ).mouseout(function() {
+
+        $('#p1').val($(this).val());
+        $('#p2').val($(this).val()*2);
+        $('#p3').val($(this).val()*3);
+        $('#p4').val($(this).val()*4);
+
+        $('#ps1').val($(this).val());
+        $('#ps2').val($(this).val()*2);
+        $('#ps3').val($(this).val()*3);
+        $('#ps4').val($(this).val()*4);
+   });
+
+
+
+     function getEcartMaximal() {
+       var moya=(parseInt($('#a1').val())+parseInt($('#a2').val())+parseInt($('#a3').val())+ parseInt($('#a4').val()))/4;
+
+        var moyb=(parseInt($('#b1').val())+parseInt($('#b2').val())+parseInt($('#b3').val())+ parseInt($('#b4').val()) )/4;
+        return moyb-moya;
+     }
+
+$( "#ecartmax" ).hover(function() {
+        $(this).val(getEcartMaximal());
+   });
+
+$( "#mj1" ).hover(function() {
+        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
+
+         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj2" ).hover(function() {
+        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
+
+         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+$( "#mj3" ).hover(function() {
+        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
+
+         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+
+$( "#mj4" ).hover(function() {
+        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
+
+         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+   });
+
+ $("#a,#b").mouseout(function(){
+    $("#incert1").val(getIncertitude());
+    $("#incert2").val(getIncertitude());
+    $("#incert3").val(getIncertitude());
+    $("#incert4").val(getIncertitude());
+ });
+
+
+
+function getIncertitude(){
+var Ures=parseFloat($('#a').val())/(2*Math.sqrt(3));
+var Uref=parseFloat($('#b').val())/Math.sqrt(3);
+var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
+
+var U=Math.sqrt(Math.pow(Uc,2))*2;
+
+return U;
+}
+     function getNumber() {
+        var minNumber = 9; // le minimum
+        var maxNumber = 60; // le maximum
+
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
+        return false;
+    
+    }   
+    getNumber();
+ 
+</script>
