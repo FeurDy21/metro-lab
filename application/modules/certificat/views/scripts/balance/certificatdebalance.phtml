@@ -1,5 +1,10 @@
 <?php  
 
+if (!$this->balance){
+    header("location:/metro-lab/certificat/eprouvette");
+   exit();
+}
+
 require_once('library/tcpdf/tcpdf.php');  
 $obj_pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);  
 $obj_pdf->setCreator(PDF_CREATOR);  
@@ -111,7 +116,7 @@ $content .= '
             <table border="1"  style="text-align:center; ">
               <tr >
     <th>Points essais</th>  <th>Valeurs étalons</th>  <th>Valeur lue</th>  <th>Ecart maximal</th> <th>Tolérence</th>
-              </tr>
+</tr>
 <tr>
     <td>'. $this->balance['p1'].'</td>
      <td>'. $this->balance['a1'].'</td>

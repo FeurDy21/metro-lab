@@ -7,18 +7,13 @@
  <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
     <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
     <ol>
-      <li class="stepbar-item ">
-        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" >balance</a>
-      </li>
-      <li class="stepbar-item ">
-        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/pression/" title="2. certificat d'étalonnage d'Arrachement de carreaux">Arrachement de carreaux </a>
+      <li class="stepbar-item current">
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="retour à la page precedante" >Retour</a>
       </li>
       <li class="stepbar-item current">
-        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/nanomettre/" aria-current="step" title="3. Certificat d'étalonnage de nomomettre" > Nanomettre</a>
+        <a class="stepbar-link" aria-current="step" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="Certificat d'etalonnage de tamis" >tamis</a>
       </li>
-      <li class="stepbar-item">
-        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/appareilcisaillement/" title="4. Certificat d'étalonnage d'appareil de cisaillement">Appareil de cisaillement recticligne</a>
-      </li>
+      
 
        
     </ol>
@@ -33,21 +28,29 @@
             <fieldset  style="background-color:#6495ED; border: 1px solid black;">
                         <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
             <div class="row">
+              <div class="col-lg-6">
              <div class="form-group ">
               <label for="delivrance" class="is-required">Delivré à</label>
               <input type="text" class="form-contr" name="delivrance" id="delivrance" required/>
               </div>
+              </div>
+              <div class="col-lg-6">
+             <div class="form-group ">
+              <label for="titre" class="is-required">Titre:</label>
+              <input type="text" class="form-contr" name="titre" id="titre" required/>
+              </div>
+              </div>
             
              <div class="col-lg-6">
 
-            <div class="form-group ">
+            <div class="form-group">
               <label for="designation" class="is-required">Designation:</label>
               <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
             </div>
 
-            <div class="form-group ">
+            <div class="form-group">
               <label for="Constructeur" class="is-required">Constructeur:</label>
-              <input type="text" class="form-cont" id="Constructeur" name="Constructeur" placeholder="" required>
+              <input type="text" class="form-cont" id="constructeur" name="constructeur" placeholder="" required>
             </div>
               
              <div class="form-group">
@@ -65,7 +68,7 @@
             
             <div class="form-group">
              <label for="numero_serie" class="is-required">N° Serie:</label>
-             <input type="text" name="numero_serie" id="numero_serie">
+             <input type="text" required="required" name="numero_serie" id="numero_serie">
             </div>
 
             </div>
@@ -73,59 +76,63 @@
             <div class="col-lg-6">
 
             <div class="form-group">
-              <label for="plage_de_mesure">Plage de mesure:</label>
-              <input type="text"  class="form-contr" name="plage_de_mesure"  id="plage_de_mesure"></input>
-              <span class=" small erreur_portee" id=""></span>
+            <label for="plage_de_mesure">Plage de mesure:</label>
+            <input type="text"  class="form-contr" required="required" name="plage_de_mesure"  id="plage_de_mesure"></input>
+            <span class=" small erreur_portee" id="plage_de_mesure"></span>
             </div>
 
-            <div class="form-group" >
+            <div class="form-group">
               <label class="num_metroleb" for="">N°METROLEB:</label>
-              <input type="text" class="" name="num_metroleb" id="num_metroleb"/>
-              <span class=" small erreur_num_metroleb" id=""></span>
+              <input type="text" class="" required="required" name="num_metroleb" id="num_metroleb"/>
+              <span class="small erreur_num_metroleb" id=""></span>
             </div>
 
-             <div class="form-group" >
+             <div class="form-group">
               <label class="label-echelon" for="">Echelon:</label>
-              <input type="text" class="echelon" name="echelon" id="echelon"/>
+              <input type="text" class="echelon" required="required" name="echelon" id="echelon"/>
               <span class=" small erreur_echelon" id="erreur_echelon"></span>
             </div>
                
 
             <div class="form-group" >
               <label class="localisation" for="">Localisation:</label>
-              <input type="text" class="" name="localisation" id="localisation"/>
+              <input type="text" class="" name="localisation" id="localisation"/ required="required">
               <span class=" small erreur_nb_pesees" id=""></span>
             </div>
                
-               <div class="form-group">
-               <label class="trace_choc" for=""> Lieu de mesure:</label>
+        <div class="form-group ">
+           <label class="trace_choc" for=""> Lieu:</label>
    
             <label class="btn btn-secondary active">
-              <input type="radio" name="en_laboratoire" id="en_laboratoire" value="en_laboratoire" autocomplete="off" checked> Labo
+              <input type="radio" name="en_laboratoire" required="required" id="en_laboratoire" value="en_laboratoire" autocomplete="off" checked>Labo
             </label>
 
             <label class="btn btn-secondary">
-              <input type="radio" name="sur_site" value="sur_site" id="sur_site" autocomplete="off">  site
+              <input type="radio" name="sur_site" required="required" value="sur_site" id="sur_site" autocomplete="off">site
             </label>
           </div>
           
+
             </div>
+
+             <div class="form-group col-lg-12">
+               <label class="methodedemesure" for="">Methode de mesure:</label>
+              <textarea class="col-lg-12 " rows="5" cols="6"> </textarea>
+           </div>
             </div>
+
+           
             </fieldset>
 
-     <div class="col-lg-12" style="margin-top: 50px;">
-        <div class="form-group ">
-              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage de nomomettre</button>
-            </div>
-      </div>
+    
             </div>
             
-      
+          
 
-      <div class="col-lg-8 ">
+      <div class="col-lg-8 col-md-8">
           
     <fieldset  style="background-color:#6495ED; border: 1px solid black;">
-                        <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
+              <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage</legend>
              <div class="row"> 
              <div class="col-sm-4">  
                   <div class="form-group ">
@@ -146,7 +153,6 @@
            
 
               <div class="table-responsive">
-                
                 <br> <legend style="font-size: 1em; font-weight: bold;  ">
                   <div class="form-group" >
               <label class="label-echelon" for="">Temperature:</label>
@@ -157,126 +163,76 @@
 
             <table border="1" class="tabl" style="  text-align: center; ">
               <tr>
-              <th rowspan="2">VALEURS GENEREES PAR LE GENERATEUR DE PRESSION ETALON</th>  
-              <th colspan="2">VALEURS LUES SUR LE MANOMETRE SOUS TEST</th>  
-              <th colspan="2">ECARTS</th>
-                <th rowspan="2">INCERTITUDE</th> 
+              <th>MESURES</th>  
+              <th >VALEURS LUE SUR LE TAMIS  SOUS TEST</th>  
+              <th >VALEURS DU CALE ETALON</th>
+                <th >ECARTS</th> 
+                  <th >INCERTITUDE</th> 
               </tr>
 
-              <tr>
-                 <th >MONTEE</th> 
-              <th >DESCENTE</th>  
-              <th >MONTEE</th>
-                <th >DESCENTE</th> 
-              </tr>
+             
   <tr>
-  <td> 
-    <input type="text" class="form-contr" name="a1" id="a1" placeholder="a1" required></td>
+     <th> MAILLE (...)</th>
     <td> <input type="text" class="form-contr" name="b1" id="b1" placeholder="b1" required></td>
-     <td><input type="text" class="form-contr" name="c1" id="c1" placeholder="b2" required></td>
+     <td><input type="text" class="form-contr" name="c1" id="c1" placeholder="c2" required></td>
      <td><input type="text" class="form-contr" name="d1" id="d1" placeholder="d1" required></td>
       <td><input type="text" class="form-contr" name="e1" id="e1" placeholder="e1" required></td>
-      
-      <td><input type="text" class="form-contr" name="f1" id="f1" placeholder="f1" required></td>
+    
   </tr>
 
 <tr>
-  <td> <input type="text" class="form-contr" name="a2" id="a2" placeholder="a2" required></td>
+  <th>DIAMETRE</th>
     <td>
       <input type="text" class="form-contr" name="b2" id="b2" placeholder="b2" required></td>
      <td><input type="text" class="form-contr" name="c2" id="c2" placeholder="c2" required></td>
      <td><input type="text" class="form-contr" name="d2" id="d2" placeholder="d2" required></td>
       <td><input type="text" class="form-contr" name="e2" id="e2" placeholder="e2" required></td>
-      
-      <td><input type="text" class="form-contr" name="f2" id="f2" placeholder="incert2" required></td> 
+    
 </tr>
-
-<tr>
-  <td> <input type="text" class="form-contr" name="a3" id="a3" placeholder="ps1" required></td>
-    <td>
-      <input type="text" class="form-contr" name="b3" id="b3" placeholder="b3" required></td>
-     <td><input type="text" class="form-contr" name="c3" id="c3" placeholder="c3" required></td>
-     <td><input type="text" class="form-contr" name="d3" id="d3" placeholder="d3" required></td>
-      <td><input type="text" class="form-contr" name="e3" id="e3" placeholder="f3" required></td>
-      
-      <td><input type="text" class="form-contr" name="g3" id="g3" placeholder="g3" required></td>
-     
-</tr>
-
-<tr>
-  <td> <input type="text" class="form-contr" name="a4" id="pa4" placeholder="a4" required></td>
-    <td>
-      <input type="text" class="form-contr" name="b4" id="b4" placeholder="b4" required></td>
-     <td><input type="text" class="form-contr" name="c4" id="c4" placeholder="c4" required></td>
-     <td><input type="text" class="form-contr" name="d4" id="d4" placeholder="d4" required></td>
-      <td><input type="text" class="form-contr" name="e4" id="e4" placeholder="e4" required></td>
-      
-      <td><input type="text" class="form-contr" name="f4" id="f4" placeholder="f4" required></td>
-     
-</tr>
-
-<tr>
-  <td><input type="text" class="form-contr" name="a5" id="a5" placeholder="b5" required></td>
-    <td>
-      <input type="text" class="form-contr" name="b5" id="b5" placeholder="b5" required></td>
-     <td><input type="text" class="form-contr" name="c5" id="c5" placeholder="c5" required></td>
-     <td><input type="text" class="form-contr" name="d5" id="d5" placeholder="d5" required></td>
-      <td><input type="text" class="form-contr" name="e5" id="e5" placeholder="e5" required></td>
-      
-      <td><input type="text" class="form-contr" name="f5" id="f5" placeholder="f5" required></td>
-     
-</tr>
-
-<tr>
-  <td> <input type="text" class="form-contr" name="a6" id="a6" placeholder="a6" required></td>
-    <td>
-      <input type="text" class="form-contr" name="b6" id="b6" placeholder="b6" required></td>
-     <td><input type="text" class="form-contr" name="c6" id="c6" placeholder="c6" required></td>
-     <td><input type="text" class="form-contr" name="d6" id="d6" placeholder="d6" required></td>
-      <td><input type="text" class="form-contr" name="e6" id="e6" placeholder="e6" required></td>
-      
-      <td><input type="text" class="form-contr" name="f6" id="f6" placeholder="f6" required></td>  
-</tr>
-
-<tr>
-  <td> <input type="text" class="form-contr" name="a7" id="a7" placeholder="a7" required></td>
-    <td>
-      <input type="text" class="form-contr" name="b7" id="b7" placeholder="b7" required></td>
-     <td><input type="text" class="form-contr" name="c7" id="c7" placeholder="c7" required></td>
-     <td><input type="text" class="form-contr" name="d7" id="d7" placeholder="d7" required></td>
-      <td><input type="text" class="form-contr" name="e7" id="e7" placeholder="e7" required></td>
-      
-      <td><input type="text" class="form-contr" name="f7" id="f7" placeholder="f7" required></td>
-     
-</tr>
-
 
  <tr>
 
     <th>Date du prohain etalonnage: ?</th>
      <td colspan="6" class="text-cente">
-            <div class="btn-group col-lg-12" >
-              <input type="date" name="date_etalonnage" id="date_etalonnage" > 
+          <div class="btn-group col-lg-12" >
+           <input type="date" name="date_etalonnage" id="date_etalonnage" > 
           </div>
     </td>
        
-   </tr>
-              </table>
- 
-
-              </div>
+</tr>
 
 
+
+  </table>
+  
+  </div>
+  
+   <br> <br> <br>
+    <div class="col-lg-12" style="margin-top: 50px;">
+        <div class="form-group ">
+              <button type="submit" class="btn btn-danger">Télécharger Certificat d'etalonnage du four</button>
             </div>
-        
-            </fieldset>
-
-            
-            </div>
+      </div> 
+  
 
 </div>
-             </div>
-          </form>
+    
+    
+  </fieldset>
+    
+  </div>
+    
+
+</div>
+   
+     
+
+</div>
+  
+ 
+
+</form>
+
        
       
     </main><!--/.container-->
@@ -313,34 +269,46 @@
         return moyb-moya;
      }
 
+
 $( "#ecartmax" ).hover(function() {
         $(this).val(getEcartMaximal());
    });
 
-$( "#mj1" ).hover(function() {
-        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
-
-         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
-   });
-
-$( "#mj2" ).hover(function() {
-        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
-
-         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
-   });
-
-$( "#mj3" ).hover(function() {
-        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
-
-         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+$( "#ecart1" ).hover(function() {
+        $(this).val(parseInt($('#qm1').val())-parseInt($('#vc1').val()));
    });
 
 
-$( "#mj4" ).hover(function() {
-        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
-
-         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+$( "#ecart2" ).hover(function() {
+      $(this).val(parseInt($('#qm2').val())-parseInt($('#vc2').val()));
    });
+
+$( "#ecart3" ).hover(function() {
+    $(this).val(parseInt($('#qm3').val())-parseInt($('#vc3').val()));
+   });
+
+
+$( "#ecart4").hover(function() {
+        $(this).val(parseInt($('#qm4').val())+parseInt($('#vc4').val()));
+   });
+
+$( "#ecart5").hover(function() {
+        $(this).val(parseInt($('#qm5').val())+parseInt($('#vc5').val()));
+   });
+
+$( "#ecart6").hover(function() {
+        $(this).val(parseInt($('#qm6').val())+parseInt($('#vc6').val()));
+   });
+
+$( "#ecart7").hover(function() {
+        $(this).val(parseInt($('#qm7').val())+parseInt($('#vc7').val()));
+   });
+
+$( "#ecart8").hover(function() {
+        $(this).val(parseInt($('#qm8').val())+parseInt($('#vc8').val()));
+   });
+
+
 
  $("#a,#b").mouseout(function(){
     $("#incert1").val(getIncertitude());

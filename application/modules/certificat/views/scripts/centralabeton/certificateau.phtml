@@ -1,0 +1,212 @@
+<?php  
+if (!$this->balance){
+    header("location:/metro-lab/certificat/centralabeton/eau");
+   exit();
+}
+require_once('library/tcpdf/tcpdf.php');  
+$obj_pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);  
+$obj_pdf->setCreator(PDF_CREATOR);  
+$obj_pdf->setTitle("Certificat_de_ciment") ;  
+$obj_pdf->setHeaderData('', '', PDF_HEADER_TITLE, PDF_HEADER_STRING);  
+$obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));  
+$obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));  
+$obj_pdf->setDefaultMonospacedFont('helvetica');  
+$obj_pdf->setFooterMargin(PDF_MARGIN_FOOTER);  
+$obj_pdf->setMargins(PDF_MARGIN_LEFT, '10', PDF_MARGIN_RIGHT);  
+$obj_pdf->setPrintHeader(false);  
+$obj_pdf->setPrintFooter(false);  
+$obj_pdf->setAutoPageBreak(TRUE, 10);  
+$obj_pdf->setFont('helvetica', '', 11);  
+$obj_pdf->AddPage();  
+$content = '';  
+
+  # code...
+
+  # code...
+
+$content .= '  
+<table border="0" >  
+<tr>  
+<th width="20%"><img src="public/images/logo-metrolab.png"   class="d-inline-block align-bottom mr-3" alt="Back to homepage" title="Back to homepage" width="80" height="30" loading="lazy"/> </th>  
+<th width="40%"  style="color:black;font-size:0.6em; font-weight:bold;">METROLEB SARL Siege social Plateau dokui, non loin de la pharmacie Dokui. 21 BP 4776 Abidjan 21<br>
+   Tel:(+225) 24002626 / 47711000 <br>sales@metroleb.com   www.metroleb.com
+</th>  
+<th width="20%">Logo partenaire</th>  
+<th width="40%" style="color:black;font-weight:bold;">MEB/MET/001 <br> Version...</th>  
+</tr>  
+</table>
+<br>
+
+<div class=" text-center" style="border:2px solid black; border-radius:7px/8px ; text-align:center;">
+   <span style="color:black;font-weight:bold;">CERTIFICAT D\'ETALONNAGE DE CENTRAL A BETON</span>
+   <br> <span>N°F/ '.$this->numero_certificat.'</span>
+</div>
+<br>
+<span><b>DELIVRE A </b>: '.$this->balance['delivrance'].' </span>
+
+<br>  
+ 
+<h5 style="text-align:center;"> IDENTIFICATION DE L\'EQUIPEMENT</h5>
+<br>
+
+<table border="0"  style="font-size:0.7em; font-weight:bold;">  
+
+<tr>  
+<th width="30%">DESIGNATION:</th>
+<td width="20%" > Eau </td>
+
+<th width="30%">PLAGE DE MESURE :</th> 
+<td width="20%" > '.$this->balance['plage_de_mesure'].'</td> 
+</tr>
+
+<tr>
+<th width="30%">MODELE:</th>
+<td width="20%" > '.$this->balance['model'].'</td> 
+
+<th width="30%" >N°METROLEB:</th> 
+<td width="20%" >'.$this->balance['num_metroleb'].'</td> 
+</tr>
+
+<tr>
+<th width="30%">TYPE:</th> 
+<td width="20%" >'. $this->balance['type'].'</td> 
+
+<th width="30%" >N°SI  BETON </th> 
+<td width="20%" > '. $this->balance['numero_beton'].'</td>
+</tr>
+
+
+<tr>
+
+<th width="30%" >N° DE SERIE:</th> 
+<td width="20%" > '. $this->balance['numero_serie'].'</td>  
+
+<th width="30%" > </th> 
+<td width="20%">'. $this->balance['localisation'].'</td>  
+</tr>
+
+</table>
+
+
+
+<h5 style="text-align:center;">PROCEDURE UTILISEE</h5>
+
+<table border="0" style="font-size:0.8em; font-weight:bold;">
+<tr>
+<th width="30%">METHODE DE MESURE : </th> 
+<td>'. $this->balance['methodedemesure'].'</td>
+</tr> 
+</table>
+
+<br>
+<h5 style="text-align:center;">MOYENS DE MESURE</h5>
+
+<br>
+
+<span style="font-size:0.8em;">Temperature : '. $this->balance['temperature'].' °C</span>
+
+           <h5 style="text-align:center;"> TABLEAU DE RESULTAT </h5>
+  <br>
+      
+<table border="1"  style="text-align:center; font-size:0.8em; font-weight:bold;">
+
+              <tr>
+              <th rowspan="2">Mesures etalons:</th>  
+              <th colspan="2">Poids affichés kg</th>  
+              <th colspan="2">Ecart en kg</th>
+               
+                  <th rowspan="2">Incertitude</th> 
+              </tr>
+
+               <tr>
+              <th >Chargement </th>  
+              <th >Dechargement </th>  
+              <th >Chargement </th>
+              <th >Dechargement </th> 
+                  
+              </tr>
+
+<tr>
+    <td> '. $this->balance['a1'].'</td>
+    <td>'. $this->balance['b1'].'</td>
+     <td>'. $this->balance['c1'].'</td>
+     <td>'. $this->balance['d1'].'</td>
+      <td>'. $this->balance['e1'].'</td>
+      <td>'. round( $this->balance['f1'],3).'</td>
+  </tr>
+
+<tr>
+  <td> '. $this->balance['a2'].'</td>
+    <td>'. $this->balance['b2'].'</td>
+     <td>'. $this->balance['c2'].'</td>
+     <td>'. $this->balance['d2'].'</td>
+      <td>'. $this->balance['e2'].'</td>
+      <td>'. round( $this->balance['f2'],3).'</td>
+</tr>
+
+<tr>
+  <td> '. $this->balance['a3'].'</td>
+    <td>'. $this->balance['b3'].'</td>
+     <td>'. $this->balance['c3'].'</td>
+     <td>'. $this->balance['d3'].'</td>
+      <td>'. $this->balance['e3'].'</td>
+      <td>'.  round($this->balance['f3'],3).'</td>
+     
+    
+</tr>
+
+<tr>
+ <td> '. $this->balance['a4'].'</td>
+    <td>'. $this->balance['b4'].'</td>
+     <td>'. $this->balance['c4'].'</td>
+     <td>'. $this->balance['d4'].'</td>
+      <td>'. $this->balance['e4'].'</td>
+      <td>'. round( $this->balance['f4'],3).'</td>
+    
+</tr>
+
+<tr>
+ <td> '. $this->balance['a5'].'</td>
+    <td>'. $this->balance['b5'].'</td>
+     <td>'. $this->balance['c5'].'</td>
+     <td>'. $this->balance['d5'].'</td>
+      <td>'. $this->balance['e5'].'</td>
+      <td>'.  round($this->balance['f5'],3).'</td>
+    
+</tr>
+
+<tr>
+  <td> '. $this->balance['a6'].'</td>
+    <td>'. $this->balance['b6'].'</td>
+     <td>'. $this->balance['c6'].'</td>
+     <td>'. $this->balance['d6'].'</td>
+      <td>'. $this->balance['e6'].'</td>
+      <td>'.  round($this->balance['f6'],3).'</td>
+      
+</tr>
+
+  </table>
+
+  <br>  <br>
+<b>Prochain etalonnage: '.$this->balance["date_etalonnage"].'</b>
+
+   
+
+<br><br><br>
+<table border="0">
+<tr >
+<td width="60%" style="font-weight:bold; font-size:1em">Etalonnage réalisé par: </td> <td width="40%" style="text-align:right;font-weight:bold; font-size:1em;">Service Metrologie : </td>
+</tr>
+</table>
+
+<br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br>
+<p style="text-align:center; font-size:0.8em; font-weight:bold;" > La reproduction de ce document n\'est  autorisée que sous forme de fac-similé photographique integrale. Ce certificat est conforme au fascicule de documentation FD X 07-012 </p>
+  
+';  
+ 
+
+
+$obj_pdf->writeHTML($content);  
+$obj_pdf->Output('Certificat  de balance_'.$this->numero_certificat.'.pdf', 'D');  
+
+?>

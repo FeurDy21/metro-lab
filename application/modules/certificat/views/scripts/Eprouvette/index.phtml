@@ -68,7 +68,7 @@
 
             <div class="form-group">
               <label for="date_emission" class="is-required">Date d'émission:</label>
-              <input type="text" class="form-cont" name="date_emission" id="date_emission"  required aria-describedby="">
+              <input type="date" class="form-cont" name="date_emission" id="date_emission"  required aria-describedby="">
               <span class="form-text small text-muted" id="helpTextPassword"></span>
             </div>
             
@@ -85,7 +85,7 @@
 
             <div class="form-group">
               <label for="Capacite_nominale">Capacité nominale:</label>
-              <input type="text"  class="form-contr" name="dateetalonnage"  id="date"></input>
+              <input type="text"  class="form-contr" name="capacitenominale"  id="capacite_nominale"></input>
               <span class=" small erreur_portee" id=""></span>
             </div>
 
@@ -138,7 +138,7 @@
              <div class="row"> 
              <div class="col-sm-4">  
                   <div class="form-group ">
-              <input type="text" class="form-contr" name="masse" id="masse" placeholder="masse" required>
+              <input type="text" class="form-contr" name="masse_etalons" id="masse" placeholder="masse" required>
                </div>
               </div>
               <div class="col-sm-4">  
@@ -290,16 +290,17 @@
 <script >
  
   $( "#masse" ).mouseout(function() {
-
-        $('#p1').val($(this).val());
-        $('#p2').val($(this).val()*2);
-        $('#p3').val($(this).val()*3);
-        $('#p4').val($(this).val()*4);
-
+     
         $('#ps1').val($(this).val());
         $('#ps2').val($(this).val()*2);
         $('#ps3').val($(this).val()*3);
         $('#ps4').val($(this).val()*4);
+
+        $('#ps5').val($(this).val()*5);
+        $('#ps6').val($(this).val()*6);
+        $('#ps7').val($(this).val()*7);
+        $('#ps8').val($(this).val()*8);
+
    });
 
 
@@ -315,41 +316,57 @@ $( "#ecartmax" ).hover(function() {
         $(this).val(getEcartMaximal());
    });
 
-$( "#mj1" ).hover(function() {
-        $(this).val((parseInt($('#vm1').val())+parseInt($('#vd1').val()))/2);
 
-         $("#ind1").val(parseInt($(this).val())+ parseInt($("#echellon").val()));
-   });
-
-$( "#mj2" ).hover(function() {
-        $(this).val((parseInt($('#vm2').val())+parseInt($('#vd2').val()))/2);
-
-         $("#ind2").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
-   });
-
-$( "#mj3" ).hover(function() {
-        $(this).val((parseInt($('#vm3').val())+parseInt($('#vd3').val()))/2);
-
-         $("#ind3").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+$( "#ecart1" ).hover(function() {
+        $(this).val(parseInt($('#qm1').val())-parseInt($('#vc1').val()));
    });
 
 
-$( "#mj4" ).hover(function() {
-        $(this).val((parseInt($('#vm4').val())+parseInt($('#vd4').val()))/2);
-
-         $("#ind4").val(parseFloat($(this).val())+ parseInt($("#echellon").val()));
+$( "#ecart2" ).hover(function() {
+      $(this).val(parseInt($('#qm2').val())-parseInt($('#vc2').val()));
    });
+
+$( "#ecart3" ).hover(function() {
+    $(this).val(parseInt($('#qm3').val())-parseInt($('#vc3').val()));
+   });
+
+$( "#ecart4").hover(function() {
+        $(this).val(parseInt($('#qm4').val())-parseInt($('#vc4').val()));
+   });
+
+$( "#ecart5").hover(function() {
+        $(this).val(parseInt($('#qm5').val())-parseInt($('#vc5').val()));
+   });
+
+$( "#ecart6").hover(function() {
+        $(this).val(parseInt($('#qm6').val())-parseInt($('#vc6').val()));
+   });
+
+$( "#ecart7").hover(function() {
+        $(this).val(parseInt($('#qm7').val())-parseInt($('#vc7').val()));
+   });
+
+$( "#ecart8").hover(function() {
+        $(this).val(parseInt($('#qm8').val())-parseInt($('#vc8').val()));
+   });
+
 
  $("#a,#b").mouseout(function(){
     $("#incert1").val(getIncertitude());
     $("#incert2").val(getIncertitude());
     $("#incert3").val(getIncertitude());
     $("#incert4").val(getIncertitude());
+    $("#incert5").val(getIncertitude());
+    $("#incert6").val(getIncertitude());
+    $("#incert7").val(getIncertitude());
+    $("#incert8").val(getIncertitude());
  });
 
 
 
 function getIncertitude(){
+
+//fonction de calcul de insertitude
 var Ures=parseFloat($('#a').val())/(2*Math.sqrt(3));
 var Uref=parseFloat($('#b').val())/Math.sqrt(3);
 var Uc=Math.sqrt(Math.pow(Ures,2) + Math.pow(Uref,2));
@@ -358,11 +375,14 @@ var U=Math.sqrt(Math.pow(Uc,2))*2;
 
 return U;
 }
-     function getNumber() {
+
+
+
+    function getNumber() {
         var minNumber = 9; // le minimum
         var maxNumber = 60; // le maximum
 
-        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
+    var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // la fonction magique
         return false;
     
     }   

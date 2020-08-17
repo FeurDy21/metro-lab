@@ -1,5 +1,8 @@
 <?php  
-
+if (!$this->balance){
+    header("location:/metro-lab/certificat/eprouvette");
+   exit();
+}
 require_once('library/tcpdf/tcpdf.php');  
 $obj_pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8', false);  
 $obj_pdf->setCreator(PDF_CREATOR);  
@@ -34,7 +37,7 @@ $content .= '
 </table>
 <br>
 
-<div class=" text-center" style="border:2px solid black; border-radius:7px/8px ; text-align:center; ">
+<div class=" text-center" style="border:2px solid black; border-radius:7px/8px ; text-align:center;">
    <span style="color:black;font-weight:bold;">CERTIFICAT D\'ETALONNAGE D\'EPROUVETTE GRADUEE</span>
    <br> <span>N°V/ '.$this->numero_certificat.'</span>
 </div>
@@ -43,16 +46,16 @@ $content .= '
 
 <br>	
  
-<div  style="text-align:center;font-weight:bolder; font-size:0.7em;"><u> IDENTIFICATION DE L\'EQUIPEMENT</u></div>
+<h5 style="text-align:center;"> IDENTIFICATION DE L\'EQUIPEMENT</h5>
 <br>
 
-<table border="0"  style="font-size:0.7em;">  
+<table border="0"  style="font-size:0.7em; font-weight:bold;">  
 
 <tr>  
 <th width="30%">DESIGNATION:</th>
 <td width="20%" > '.$this->balance['designation'].'</td>
 
-<th width="30%" >CAPACITE NOMINALE:</th> 
+<th width="30%">CAPACITE NOMINALE:</th> 
 <td width="20%" > '.$this->balance['capacitenominale'].'</td> 
 </tr>
 
@@ -80,8 +83,8 @@ $content .= '
 </tr>
 
 <tr>
-<th width="30%" >CLASSE:</th> 
-<td width="20%" > '. $this->balance['classe'].'</td>
+<th width="30%" > </th> 
+<td width="20%" > </td>
 
 <th width="30%" > </th> 
 <td width="20%" ></td>  
@@ -89,215 +92,133 @@ $content .= '
 
 </table>
 
-<br>	
 
-<div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>METHODE DE MESURE</u></div>
+
+<h5 style="text-align:center;">METHODE DE MESURE</h5>
+
+
+<span style="font-size:0.8em;">Nombre de pesees individuelle : '. $this->balance['nb_pesees'].' 
+</span>
+
+
+<h5 style="text-align:center;">MOYENS DE MESURE</h5>
+
+
+<span style="font-size:0.8em;">Masses étalons : '. $this->balance['masse_etalons'].' </span>
+
+<br><br>
+
+<span style="font-size:0.8em;">Thermometre Etalon N°CE: '. $this->balance['thermometre'].' </span>
+
+
+  <h5 style="text-align:center;">CONDITION DE MESURE  </h5>
+
+
+
+<span style="font-size:0.8em;">Ces mesures ont été effectuées sur site </span>
+<br><br>
+<span style="font-size:0.8em;">Eau distillée à :'. $this->balance['eau_distillee'].' </span>
 <br>
-
-<span style="font-size:0.8em;">Nombre de pesees individuelle : '. $this->balance['nb_pesees_ind'].' 
-<span>
-
 <br>
-<br>  
+<span style="font-size:0.8em;"> Z(Facteur de correction)='.$this->balance['facteur_correction'].' uL/mg </span>
 
-<div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>MOYENS DE MESURE</u></div>
-<br>
-
-<span style="font-size:0.8em;">Masses étalons : '. $this->balance['masses_etalons'].' <span>
-
-<br>
-
-<span style="font-size:0.8em;">Thermometre Etalon N°CE: '. $this->balance['Thermometre'].' <span>
-
-<br>
-  <div style="text-align:center;font-weight:bolder; font-size:0.7em;"><u>CONDITION DE MESURE   </u></div>
-<br>
-<br>
-
-<span style="font-size:0.8em;">Ces mesures ont été efectuées sur site <span>
-<br>
-
-<span style="font-size:0.8em;">Thermometre Etalon N°CE: '. $this->balance['thermometre'].' <span>
-
-
-  <legend style="font-size: 1em; font-weight: bold; color: red;">Fidélité charge à controler à max/2</legend><br>
-            <table border="1"  style="text-align:center; ">
+           <h5 style="text-align:center;"> TABLEAU DE RESULTAT </h5>
+  
+   EMT:+_ .......mL <br>
+            <table border="1"  style="text-align:center; font-size:0.8em; font-weight:bold; ">
 
               <tr >
-    <th>Points essais</th>  <th>Valeurs étalons</th>  <th>Valeur lue</th>  <th>Ecart maximal</th> <th>Tolérence</th>
+    <th>N° de pesee</th>  <th>Quantité mesurée avec l\'éprouvette X(ml)</th>  <th>Volume correspondant au poids mesure Cm (mL)</th>  <th>Ecarts</th> <th>Incertitude</th>
               </tr>
 <tr>
-    <td>'. $this->balance['p1'].'</td>
-     <td>'. $this->balance['a1'].'</td>
-     <td>'.$this->balance['b1'].'</td>
-     <td rowspan="4">'. $this->balance['ecartmax'].'</td>
+    <td>'. $this->balance['ps1'].'</td>
+     <td>'. $this->balance['qm1'].'</td>
+     <td>'.$this->balance['vc1'].'</td>
+     <td >'. $this->balance['ecart1'].'</td>
 
-      <td rowspan="4" colspan="4">'. $this->balance['tolerence'].' </td>
+      <td >'. round($this->balance['incert1'],3).' </td>
 </tr>
 
 <tr>
-     <td>'. $this->balance['p2'].'</td>
-     <td>'. $this->balance['a2'].'</td>
-     <td>'.$this->balance['b2'].'</td>
-</tr>
-<tr>
-     <td>'. $this->balance['p3'].'</td>
-     <td>'. $this->balance['a3'].'</td>
-     <td>'.$this->balance['b3'].'</td>
-     
-</tr>
-<tr>
-     <td>'. $this->balance['p4'].'</td>
-     <td>'. $this->balance['a4'].'</td>
-     <td>'.$this->balance['b4'].'</td>
-     
-</tr>
+     <td>'. $this->balance['ps2'].'</td>
+     <td>'. $this->balance['qm2'].'</td>
+     <td>'.$this->balance['vc2'].'</td>
+     <td >'. $this->balance['ecart2'].'</td>
 
+      <td >'. round($this->balance['incert2'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps3'].'</td>
+     <td>'. $this->balance['qm3'].'</td>
+     <td>'.$this->balance['vc3'].'</td>
+     <td >'. $this->balance['ecart3'].'</td>
+
+      <td >'. round($this->balance['incert3'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps4'].'</td>
+     <td>'. $this->balance['qm4'].'</td>
+     <td>'.$this->balance['vc4'].'</td>
+     <td >'. $this->balance['ecart4'].'</td>
+
+      <td >'. round($this->balance['incert4'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps5'].'</td>
+     <td>'. $this->balance['qm5'].'</td>
+     <td>'.$this->balance['vc5'].'</td>
+     <td >'. $this->balance['ecart5'].'</td>
+
+      <td >'. round($this->balance['incert5'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps6'].'</td>
+     <td>'. $this->balance['qm6'].'</td>
+     <td>'.$this->balance['vc6'].'</td>
+     <td >'. $this->balance['ecart6'].'</td>
+
+      <td >'. round($this->balance['incert6'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps7'].'</td>
+     <td>'. $this->balance['qm7'].'</td>
+     <td>'.$this->balance['vc7'].'</td>
+     <td >'. $this->balance['ecart7'].'</td>
+
+      <td >'. round($this->balance['incert7'],3).' </td>
+</tr>
+<tr>
+     <td>'. $this->balance['ps8'].'</td>
+     <td>'. $this->balance['qm8'].'</td>
+     <td>'.$this->balance['vc8'].'</td>
+     <td >'. $this->balance['ecart8'].'</td>
+
+      <td >'. round($this->balance['incert8'],3).' </td>
+</tr>
 
   </table>
 <br>
- Fidelité correcte ?
-<label for="subscribeNews">OUI</label><input type="checkbox" checked="checked" id="subscribeNews" name="subscribe" value="newsletter"/>
+Cm=X.Z avec X=Valeur nominale des pesées effectuées
+  <br>  <br>
+<b>Prochain etalonnage: '.$this->balance["date_etalonnage"].'</b>
 
-<label for="subscribeNews">NON</label><input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter"/> 
+   
 
-<br><br>
-
- <legend style="font-size: 1em; font-weight: bold; color: red;">Essai de justesse</legend><br>
-            <table border="1" class="tabl" style="text-align:center;" cellspan="3">
-              <tr >
-    <th>Poids essai</th>  
-    <th>Valeurs nomminales</th>  
-    <th>Valeur lu en montée</th>
-     <th>Valeur lu en descente</th> 
-      <th>Moyenne de justesse</th> 
-     <th>Indication + charge de sensibilité</th> 
-     <th>Incertitude</th>
-  </tr>
-<tr>
-      <td>'. $this->balance['ps1'].'</td>
-       <td>'. $this->balance['vn1'].'</td>
-       <td>'. $this->balance['vm1'].'</td>
-       <td>'. $this->balance['vd1'].'</td>
-       <td>'. $this->balance['mj1'].'</td>
-       <td>'. $this->balance['ind1'].'</td>
-      <td>'. round($this->balance['incert1'], 3).'</td> 
-</tr>
-
-<tr><td>
-        '. $this->balance['ps2'].'
-       </td>
-       <td>'. $this->balance['vn2'].'</td>
-       <td>'. $this->balance['vm2'].'</td>
-       <td>'. $this->balance['vd2'].'</td>
-       <td>'. $this->balance['mj2'].'</td>
-       <td>'. $this->balance['ind2'].'</td>
-      <td>'. round($this->balance['incert2'], 3).'</td>
-</tr>
-<tr><td>
-        '. $this->balance['ps3'].'
-       </td>
-       <td>'. $this->balance['vn3'].'</td>
-       <td>'. $this->balance['vm3'].'</td>
-       <td>'. $this->balance['vd3'].'</td>
-       <td>'. $this->balance['mj3'].'</td>
-       <td>'. $this->balance['ind3'].'</td>
-      <td>'. round($this->balance['incert3'], 3).'</td>
-     
-</tr>
-<tr> <td>
-        '. $this->balance['ps4'].'
-       </td>
-       <td>'. $this->balance['vn4'].'</td>
-       <td>'. $this->balance['vm4'].'</td>
-       <td>'. $this->balance['vd4'].'</td>
-       <td>'. $this->balance['mj4'].'</td>
-       <td>'. $this->balance['ind4'].'</td>
-      <td>'. round($this->balance['incert4'], 3).'</td>
-     
-</tr>
-
-
-    </table>
-<br>
-
-<table border="0">
-<tr >
-<td width="20%"> Justesse correcte ?</td> 
-<td width="50%" style="text-align:left;"><label for="subscribeNews">OUI</label><input type="checkbox" checked="checked" id="subscribeNews" name="subscribe" value="newsletter"/>    
-
-<label for="subscribeNews">NON</label><input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter"/> 
- </td>
-
- <td width="30%"> Sensibilité correcte: OUI</td>
-
-</tr>
-</table>
-
- 
-  
-<br>
-   <br><legend style="font-size: 1em; font-weight: bold; color: red;">Excentration: charge à controler à max/3</legend><br>
-            <table border="1" class="tabl" style="text-align:center;">
-              <tr >
-    <th>Position</th>  
-    <th>1</th>  
-    <th>2</th>
-     <th>3</th> 
-      <th>4</th> 
-     <th>5</th> 
-     <th>Tolérence</th>
-              </tr>
-   <tr>
-     <th>Indication relevée</th>
-    <td>'. $this->balance['pos1'].'</td>
-     <td>'. $this->balance['pos2'].'</td>
-     <td>'. $this->balance['pos2'].'</td>
-      <td>'. $this->balance['pos3'].'</td>
-       <td>'. $this->balance['pos4'].'</td>
-       <td>'. $this->balance['tolerence2'].'</td>
-    </tr>
-    
-          </table>
-        <br>  
-    Excentration correcte ? 
-   <label for="subscribeNews">OUI</label><input type="checkbox" checked="checked" id="subscribeNews" name="subscribe" value="newsletter">
-    
- <label for="subscribeNews">NON</label><input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
-    
-<br><br>
-Schéma du récepteur et position de la charge de contrôle
-<br>
-
-<div style="border:2px solid black;">
-<table border="1" style="margin-left:20%;">
-   <tr>
-     <td width="5%">1</td> <td width="5%"> </td> <td width="5%">2</td>
- </tr>
- <tr>
-     <td width="5%"></td> <td width="5%"> 5</td> <td width="5%"> </td>
- </tr>
-
-   <tr>
-     <td width="5%">4</td> <td width="5%"> </td> <td width="5%">3</td>
-   </tr>
-<table>
-</div>
 <br><br>
 <table border="0">
 <tr >
-<td width="60%" style="font-weight:bold; font-size:1.2em">Etalonnage réalisé par: </td> <td width="40%" style="text-align:right;font-weight:bold; font-size:1.2em;">Service Metrologie : </td>
+<td width="60%" style="font-weight:bold; font-size:1em">Etalonnage réalisé par: </td> <td width="40%" style="text-align:right;font-weight:bold; font-size:1em;">Service Metrologie : </td>
 </tr>
 </table>
 
-<br><br><br><br><br><br><br><br><br>
-<p style="text-align:center;"> La reproduction de ce document n\'est  autorisée que sous forme de fac-similé photographique integrale. Ce certificat est conforme au fascicule de documentation FD X 07-012 <p>
+<br><br><br><br><br><br> <br>
+<p style="text-align:center; font-size:0.8em; font-weight:bold;" > La reproduction de ce document n\'est  autorisée que sous forme de fac-similé photographique integrale. Ce certificat est conforme au fascicule de documentation FD X 07-012 <p>
   
 ';  
  
 
 
 $obj_pdf->writeHTML($content);  
-$obj_pdf->Output('Certificat_de_balance.pdf', 'I');  
+$obj_pdf->Output('Certificat eprouvette graduee.pdf', 'D');  
 
 ?>
