@@ -43,19 +43,13 @@
             </tr>
           </thead>
           <tbody>
-                  
-          
-            
+                
             <?php foreach($this->users as $u): ?>
             <tr>
-              
               <td class="align-middle" ><?php echo $u['ADMINISTRATEUR'];?></td>
               <td class="align-middle"  ><?php echo $u['LOGIN'];?></td>
               <td class="align-middle" > <?php echo $u['groupe'];?></td>
-              
-              
               <td class="align-middle">
-              
                 <a th:href=""  class="btn btn-sm btn-danger update" id="<?php echo $u['ID_ADMIN'];?>"><span class="fa fa-pencil ml-1" aria-hidden="true"></span></a>
                 <a onclick="return confirm('voulez vous supprimer cet utilisateur ?');"   class="btn btn-sm btn-primary " ><span class="fa fa-trash ml-1" aria-hidden="true"></span></a>
               </td>
@@ -132,7 +126,7 @@
 
             <div class="tab-pane" id="type">
               
-                  <div class="table-responsive5">
+        <div class="table-responsive5">
       
         <table  class="table tablesorter mb-12 table-bordered" id="example2" border="">
           <caption>
@@ -380,7 +374,7 @@
                   </div>
                   </form>
                 </div>            
-          </div>
+             </div>
 
             </div>            
           </div>
