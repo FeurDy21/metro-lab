@@ -7,13 +7,13 @@
  <nav role="navigation" class="o-stepbar" aria-label="Checkout process">
     <p class="float-left mt-2 mr-2 font-weight-bold d-sm-none">Step</p>
     <ol>
-      <li class="stepbar-item ">
+      <li class="stepbar-item">
         <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/balance/" title="certificat d'étalonnage de balance" >balance</a>
       </li>
       <li class="stepbar-item current">
-        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/eprouvette/" title="2. certificat d'étalonnage d'éprouvette graduée" aria-current="step"  >éprouvette </a>
+        <a class="stepbar-link" href="<?php echo $this->baseUrl();?>/certificat/eprouvette/" title="2.certificat d'étalonnage d'éprouvette graduée" aria-current="step">éprouvette</a>
       </li>
-      <li class="stepbar-item ">
+      <li class="stepbar-item">
         <a class="stepbar-link" href="#" title="3. Certificat d'étalonnage de la central à beton" > Centrale à beton</a>
       </li>
       <li class="stepbar-item">
@@ -36,89 +36,85 @@
    
       <form role="form" id="myForm"  method="post" action="<?php echo $this->baseUrl(); ?>/certificat/eprouvette/certificateprouvette">
          <div class="row">
-        <div class="col-sm-4">
+        <div class="col-lg-4 col-md-12  col-sm-12">
           
             <fieldset  style="background-color:#6495ED; border: 1px solid black;">
                         <legend style="font-size: 1em; font-weight: bold;" class="text-center">Remplissage des champs</legend>
             <div class="row">
-
-            
-             <div class="col-lg-6">
-            <div class="form-group ">
+ 
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="delivrance" class="is-required">Delivré à</label>
+
               <input type="text" class="form-contr" name="delivrance" id="delivrance" required>
             </div>
 
-            <div class="form-group ">
+
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="designation" class="is-required">Designation:</label>
               <input type="text" class="form-contr" name="designation" id="designation" placeholder="" required>
             </div>
 
-            <div class="form-group ">
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="marque" class="is-required">Marque:</label>
               <input type="text" class="form-cont" id="marque" name="marque" placeholder="" required>
             </div>
 
-             <div class="form-group">
+             <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="localisation" class="is-required">Localisation:</label>
               <input type="text" class="form-" name="localisation" id="localisation"  required aria-describedby="">
               <span class="form-text small text-muted" id="helpTextPassword"></span>
              </div>
 
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="date_emission" class="is-required">Date d'émission:</label>
               <input type="date" class="form-cont" name="date_emission" id="date_emission"  required aria-describedby="">
               <span class="form-text small text-muted" id="helpTextPassword"></span>
             </div>
             
-            <div class="form-group">
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
              <label for="classe" class="is-required">Classe:</label>
              <input type="text" name="classe" id="classe">
             </div>
 
-             
-
-            </div>
-
-            <div class="col-lg-6">
-
-            <div class="form-group">
+            
+            <div class="form-group col-lg-6 col-md-12 col-sm-12">
               <label for="Capacite_nominale">Capacité nominale:</label>
               <input type="text"  class="form-contr" name="capacitenominale"  id="capacite_nominale"></input>
               <span class=" small erreur_portee" id=""></span>
             </div>
 
-            <div class="form-group" >
+            <div class="form-group col-lg-6 col-md-12 col-sm-12" >
               <label class="num_metroleb" for="">N°METROLEB:</label>
               <input type="text" class="" name="num_metroleb" id="num_metroleb"/>
               <span class=" small erreur_num_metroleb" id=""></span>
             </div>
             
-            <div class="form-group" >
+            <div class="form-group col-lg-6 col-md-12 col-sm-12" >
               <label class="nb_pesees" for="">Nombre de pesées individuel:</label>
               <input type="text" class="" name="nb_pesees" id="nb_pesees"/>
               <span class=" small erreur_nb_pesees" id=""></span>
             </div>
 
-            <div class="form-group" >
+            <div class="form-group col-lg-6 col-md-12 col-sm-12" >
               <label class="thermometre" for="">Thermometre étalon N°CE:</label>
               <input type="text" class="" name="thermometre" id="thermometre"/>
               <span class=" small erreur_nb_pesees" id=""></span>
             </div>
-          <div class="form-group" >
+
+          <div class="form-group col-lg-6 col-md-12 col-sm-12" >
               <label class="eau_distillee" for="">Eau distillée a:</label>
               <input type="text" class="" name="eau_distillee" id="eau_distillee"/>
               <span class=" small erreur_nb_pesees" id=""></span>
-            </div>
+          </div>
 
-             <div class="form-group" >
+             <div class="form-group col-lg-6 col-md-12 col-sm-12" >
               <label class="facteur_correction" for="">Z(facteur de correction):</label>
               <input type="text" class="" name="facteur_correction" id="facteur_correction"/>
               <span class=" small erreur_nb_pesees" id=""></span>
             </div>
           
             </div>
-            </div>
+          
             </fieldset>
 
      <div class="col-lg-12" style="margin-top: 50px;">
@@ -130,9 +126,9 @@
             
       
 
-      <div class="col-lg-8 ">
+      <div class="col-lg-8  col-md-12 col-sm-12">
           
-    <fieldset  style="background-color:#6495ED; border: 1px solid black;">
+      <fieldset  style="background-color:#6495ED; border: 1px solid black;">
                         <legend style="font-size: 1em; font-weight: bold; color:black;" class="text-center text-danger">Saisissez les valeurs de calcul pour le certificat d'etalonnage de balance</legend>
              <div class="row"> 
              <div class="col-sm-4">  
@@ -220,8 +216,7 @@
     <td><input type="text" class="form-contr" name="ps7" id="ps7" placeholder="ps7" required></td>
      <td><input type="text" class="form-contr" name="qm7" id="qm7" placeholder="qm7" required></td>
      <td><input type="text" class="form-contr" name="vc7" id="vc7" placeholder="vc7" required></td>
-      <td><input type="text" class="form-contr" name="ecart7" id="ecart7" placeholder="ecart7" required></td>
-      
+      <td><input type="text" class="form-contr" name="ecart7" id="ecart7" placeholder="ecart7" required></td>  
       <td> <input type="text" class="form-contr" name="incert7" id="incert7" placeholder="incert7" required></td>
      
 </tr>
@@ -231,7 +226,10 @@
      <td><input type="text" class="form-contr" name="qm8" id="qm8" placeholder="qm8" required></td>
      <td><input type="text" class="form-contr" name="vc8" id="vc8" placeholder="vc8" required></td>
       <td><input type="text" class="form-contr" name="ecart8" id="ecart8" placeholder="ecart8" required></td>
-      <td><input type="text" class="form-contr" name="incert8" id="incert8" placeholder="incert8" required></td>  
+      <td><input type="text" class="form-contr" name="incert8" id="incert8" placeholder="incert8" required></td>
+
+
+
 </tr>
 
  <tr>
