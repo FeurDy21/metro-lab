@@ -12,7 +12,7 @@ class Certificat_EtuliveController extends Zend_Controller_Action {
         
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
-            $this->_redirect("setting/auth/login");   
+            $this->_redirect("auth/login");   
         endif;
 
         $this->_helper->layout()->setLayout("certificat_layout");
@@ -22,7 +22,7 @@ class Certificat_EtuliveController extends Zend_Controller_Action {
     public function certificateprouvetteAction() {  
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
-            $this->_redirect("setting/auth/login");   
+            $this->_redirect("auth/login");   
         endif;
      
      $data = $this->getRequest()->getPost();

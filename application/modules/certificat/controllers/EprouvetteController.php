@@ -12,7 +12,7 @@ class Certificat_EprouvetteController extends Zend_Controller_Action {
         
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
-            $this->_redirect("setting/auth/login");   
+            $this->_redirect("auth/login");   
         endif;
 
         $this->_helper->layout()->setLayout("certificat_layout");
@@ -22,13 +22,12 @@ class Certificat_EprouvetteController extends Zend_Controller_Action {
     public function certificateprouvetteAction() {  
         $session =new Zend_Session_Namespace('Kinara');
         if(!$session->user):
-            $this->_redirect("setting/auth/login");   
+            $this->_redirect("auth/login");   
         endif;
      
      $data = $this->getRequest()->getPost();
 
    $identifiant=date("d").date("m").'-'.substr(md5(uniqid(rand(), true)),1,3).'-'.date("Y");
-
 
      $this->view->numero_certificat=$identifiant;
 

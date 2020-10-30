@@ -34,7 +34,7 @@ class Setting_AdminController extends Zend_Controller_Action {
         $this->view->users = $mAdmin->findAll();
         $this->view->groupes = $mGroupe->findAll();
 
-        $this->_helper->layout()->setLayout('Bootstrap_layout');
+        $this->_helper->layout()->setLayout('bootstrap_layout');
     }
 
 public function findbyidAction() {
